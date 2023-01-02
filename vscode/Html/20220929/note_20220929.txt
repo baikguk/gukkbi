@@ -1,0 +1,16 @@
+padding(margin) 순서 -- ex06
+
+padding: 10px ;
+상,우,하,좌 모두 10px
+
+padding: 10px 5px;
+상=하 10px    좌=우 5px
+          
+padding: 1px 2px   4px
+         상  좌=우 하
+
+padding: 1px 2px  3px  4px
+         상  우   하   좌
+
+
+  

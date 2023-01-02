@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function test1(){
+      console.log('2초뒤에 출력됨');
+    }
+    let after2 = setTimeout(test1,2000);
+    //clearTimeout : 2초 뒤에 실행될 test1의 실행을 취소함
+    clearTimeout(after2);
+
+    //setInterval() 2초 ㅁ마다 주기적으로 실행됨
+    let interval2sec = setInterval(()=>console.log('2초마다 출력됨'),2000);
+
+    //7초후에 반복을 정지함
+    setTimeout(()=>{
+      clearInterval(interval2sec);
+      console.log('7초후 정지~~');
+    },7000);
+
+  </script>
+</body>
+</html>

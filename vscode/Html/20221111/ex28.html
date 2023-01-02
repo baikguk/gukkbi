@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let element = document.body;
+    // 1 : element node
+    console.log(element.nodeType)
+
+    //3: text node
+    console.log(element.firstChild.nodeType);
+
+    //9 : document object (문서 객체)
+    console.log(document.nodeType);
+
+    //nodeName / tagName -> tag이름 확인
+    console.log(document.body.nodeName); //BODY
+    console.log(document.body.tagName); // BDOY
+
+    //undefined : tagnmae은 element node에서 확인할 수있는데
+    // document.body.firstChild는 text node이지 element node가 아니라서
+    // undefined를 반환함
+    console.log(document.body.firstChild.tagName);
+    //text : nodeName으로 확인하면 text node 임을 확인할 수 있다
+    console.log(document.body.firstChild.nodeName);
+
+    // undefined :tagnmae은 element node에서 확인할 수있는데
+    // document.tagname는 문서 node이지 element node가 아니라서
+    // undefined를 반환함
+    console.log(document.tagName);
+    // #document : 문서노드임을 확인해줌
+    console.log(document.nodeName);
+  </script>
+</body>
+</html>

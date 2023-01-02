@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #div2{
+      color : red;
+      margin: 40px
+    }
+  </style>
+</head>
+<body>
+  <div id ="div">DIV Tag</div>
+  <div id ="div2">DIV Tag2</div>
+  <script>
+    // div.style.margin = '20'; ->동작하지 않음
+    div.style.margin = '20px';
+
+    console.log(div.style.margin);
+    console.log(div.style.marginTop);
+    console.log(div.style.marginBottom);
+    console.log(div.style.marginLeft);
+    console.log(div.style.marginRight);
+
+    //c css에서 설정된 값은 바로 확인이 안됨
+    console.log('div2.style.color : ' +div2.style.color); //css에서 지정한 color은 자바스크립트 메모리에 없다
+
+    //c css에서 설정된 값은 getComputedStyle 객체로 확인함
+    // 현재 chrome에서는 확인되나, firefox에서는 안됨
+    div_2 =getComput
+    edStyle(div2);
+    console.log('div2.color : ' +div_2.color); //etComputedStyle style을 지정하고 있기때문에 div_2.style.color은 오류가 발생함
+
+  </script>
+</body>
+</html>

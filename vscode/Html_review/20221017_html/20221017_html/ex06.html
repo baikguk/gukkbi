@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    p{
+      width: 300px; padding: 20px;
+      border: 4px solid rgb(147, 84, 13);
+      text-align: justify;
+    }
+    /* 문단 중 첫 번째 글자만 선택하기 */
+    p::first-letter{font-size: 3em;}
+
+    /* 문단 중 첫 번째 줄만 선택하기 */
+    p::first-line{color: red;}
+
+    /* 문단 중 드래그한 부분만 선택하기 */
+    p::selection{ background-color: red; color: aqua;}
+
+    form{
+      padding: 30px; background-color: rgb(104, 103, 103);
+    }
+    input{
+      width: 300px; height: 50px;
+      background-color: transparent;
+      border: 2px solid #fff;
+      padding: 0 20px;
+      /* 사용자가 입력하는 글자색 */
+      color: #fff;
+    }
+    input::placeholder{color: #fff;}
+
+  </style>
+</head>
+<body>
+  <form action="#"> 
+    <input type="text" placeholder="검색어를 입력하세요">
+  </form>
+
+  <p>
+    사라지지 청춘 놀이 내는 얼마나 풀이 보라. 보이는 이상의 든 품으며, 그들의 위하여서. 때에, 피고 않는 대한 내는 이 같이, 황금시대를 이것이다. 힘차게 기관과 가진 사람은 원질이 끓는 되는 같은 아름다우냐? 얼음이 대중을 하는 몸이 들어 같지 아름다우냐? 공자는 열매를 피에 그림자는 설산에서 되려니와, 옷을 원질이 뿐이다. 얼마나 수 이상이 얼음이 것이다. 뭇 것이 그러므로 있는가? 실현에 것은 하였으며, 힘있다.
+  </p>
+  
+</body>
+</html>

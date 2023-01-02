@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form name = "my-form">
+    <div class = "article">본문 글</div>
+    <div class = "long article">본문 긴글</div>
+    </form>
+  <script>
+    //getElementByName() : name 속성의 값으로 element가져오기
+    let forms =document.getElementsByName('my-form');
+    console.log(forms);
+
+    let form =document.getElementsByName('my-form')[0];
+    console.log(form);
+
+    //form 내에서 class 이름으로 element 가져오기
+    // class = "long article" 의 경우에는 class 이름을 두개 지정한것
+    let articles = form.getElementsByClassName('article');
+    console.log('aricles.lengh : '+ articles.length);
+    console.log('articles[0].innerHTML : ' + articles[0].innerHTML)
+    console.log('articles[1].innerHTML : ' + articles[1].innerHTML)
+  </script>
+</body>
+</html>

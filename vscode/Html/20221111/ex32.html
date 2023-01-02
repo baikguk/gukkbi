@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div> Hello, JavaScript</div>
+  <script>
+    let div = document.querySelector('div');
+
+    // <div> element를 <p> element로 변경함
+    div.outerHTML = '<p>HTML5(CSS3)</p>'
+
+    /*
+      div.outerHTML = '<p>HTML5(CSS3)</p>'; 가 동작하는 순서
+      1) documnet에서 div 객체(11행을 )삭제함
+      2) 1)에서 삭제된 공간에 <p>HTML5(CSS)</p>를 삽입함
+      3) 그런데/.. 11행의 변수 div에는 <p> elemnet가 저장되지 않음
+            ㄴ console.log(div.outerHTML)를 실행하지 앟고
+            기존의 <div> Hello, JavaScript</div>가 출력됨
+              ㄴ ***사용할 때, 주의 해야함 ***
+    */
+    console.log(div.outerHTML);
+  </script>
+</body>
+</html>

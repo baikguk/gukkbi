@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input type="button" id="hider1" value="아래 글자를 숨기려면 클릭 !!!"><br><br>
+  <input type="button" id="hider2" value="아래 글자를 보이려면 클릭 !!!"><br><br>
+  <div id="text">안녕하세요 JacaScript !!!</div>
+
+  <script>
+    document.getElementById('hider1').onclick = function(){
+      document.getElementById('text').hidden = true;
+    }
+    document.getElementById('hider2').onclick = function(){
+      document.getElementById('text').hidden = false;
+    }
+  </script>
+</body>
+</html>

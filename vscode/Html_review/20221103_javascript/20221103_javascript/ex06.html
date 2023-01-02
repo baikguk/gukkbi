@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    /*
+      기본 자료형 
+        숫자형 (number-정수형, 실수형), bigint,
+        문자형 (string),
+        불린형 (boolean),
+        
+        null
+        undefined
+
+        객체형(Object)
+        심볼형(Symbol)
+
+    */
+    /*
+      javascript 에서 객체 생성하는 두 가지 방법
+      1) new 연사자로 생성자 호출하는 방법 : 객체 생성자
+      2) {} 를 사용하는 방법 : 객체 리터럴
+    */
+    let obj1 = new Object();
+    let obj2 = {};
+
+    // 첫 번째 property(member variable) > name(key) : '글로벌'(value)
+    // 두 번째 property(member variable) > age(key) : 25 (value)
+    let student = {name:'글로벌', age:25};
+    console.log('student.name : ' + student.name);
+    console.log('student.age : ' + student.age);
+
+    student.isMale = true;
+    console.log('student.isMale : ' + student.isMale);
+
+    // delete 연산자(명령어)
+    // 객체의 property 를 메모리에서 삭제함
+    delete student.age;
+    console.log('student.age : ' + student.age);
+
+    // max score 처럼 key 에 공백이 있는 경우 '' 로 묶어줌
+    let person = {name:'유관순', age:19, 'max score':100, }
+    console.log("person['max score'] : " + person['max score']);
+    person.weight = 65;
+    let key = 'favorite fruit';
+
+    // key 로 사용할 'favorite fruit' 내부에 공백이 있기 때문에
+    // person[key] <-- [] 를 사용해야 함
+    person[key] = 'apple';
+    console.log('person["favorite fruit"] : ' + person[key]);
+
+    
+
+    /*
+     (Java)
+      class Student{
+        data status(상태) - 속성 - property
+        String name = '글로벌';   member variable : property
+        int age = 25;
+        
+        (동작)
+        member method
+      }
+      Student std1 = new Student();
+      std1.name = '이순신';
+      std1.age = 46;
+      std1.height = 192;
+    */
+  </script>
+</body>
+</html>

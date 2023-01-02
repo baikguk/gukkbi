@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let fruits = ['apple', 'mango', 'banana'];
+    fruits.push(function (){
+      console.log(this);
+    })
+    //  ['apple', 'mango', 'banana', function (){console.log(this)}]
+    fruits[3]();
+    console.log('================================');
+
+
+    function sum(){
+      let nums = [];
+      while(true){
+        let number = prompt('숫자를 입력해 주세요', '0');
+        if(number === '' || number === null) break;
+        nums.push(+number);
+      }
+      let sum = 0;
+      for(let num of nums){
+        sum += num;
+      }
+      return sum;
+    }
+    let result = sum();
+    console.log('nums 배열의 요소들의 합 : ' + result);
+  </script>
+</body>
+</html>

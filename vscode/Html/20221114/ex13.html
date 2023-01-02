@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .alert{
+      padding: 15px;
+      border: 6px solid red;
+      border-radius: 10px;
+      color:#3c763d ;
+      background-color: #dff0d8;
+    }
+  </style>
+</head>
+<body>
+  <script>
+    // document.body 에 element 만들기
+    let div = document.createElement('div');
+
+    //<div> element의 class 속성값을 alert로 설정함
+    div.className = 'alert';
+
+    div.innerHTML = '<strong>하이요</strong> 중요한 메세지입니다';
+
+    // 설정한 div를 body에 넣기
+    document.body.append(div);
+
+    /*
+      node.append(div) - node나 문자열을 node 끝에 삽입함
+      node.prepend(div) - node나 문자열을 node 맨 앞에 삽입히마
+      node.before(div) - node나 문자열을 node 이전에 삽입히마
+      node.after(div) - node나 문자열을 node 다음 삽입히마
+      node.replaceWith(div) - node를 새로운 node나 문자열로 변경함
+    */
+  </script>
+</body>
+</html>

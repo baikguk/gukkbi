@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // let name = prompt('우리 학원 이름은 무엇인가요?', '');
+
+    // if 문에 속한 명령문이 하나인 경우에는 { } 를 생략할 수 있음
+    if(name == '글로벌 IT 인재개발원') console.log('맞았습니다 !!!');
+
+    // if 의 괄호에 들어간 값이나 식은 모두 boolean 값으로 반환됨
+    // 숫자 0, 빈문자열('', ""), null, undefined, NaN 은
+    // boolean type 으로 형변환하면 모두 false 가 됨
+    // 이 외의 값들은 모두 true 를 반환함
+
+    let age = prompt('나이를 입력해 주세요', '');
+    let entry;
+
+    if(age > 18){
+      entry = true;
+    }else{
+      entry = false;
+    }
+    console.log(entry);
+
+
+  </script>
+</body>
+</html>

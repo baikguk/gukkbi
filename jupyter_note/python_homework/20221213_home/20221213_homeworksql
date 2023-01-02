@@ -1,0 +1,54 @@
+CREATE TABLE global(
+  no NUMBER(10),
+  name VARCHAR2(20),
+  age NUMBER(3),
+  gender VARCHAR2(10)
+);
+DROP TABLE global purge; -- 테이블 완전 삭제(원래는 휴지통으로 이동)
+                  --rollback해도 테이블의 형태는 사라지지 않음 당연히 삭제된 테이블 복구 x
+DESC global;
+
+INSERT INTO global VALUES (1,'백국현',27,'남자');
+
+SELECT * FROM global;
+
+INSERT INTO global g (g.no,g.name)  VALUES(2,'백범현');
+COMMIT;
+savepoint s1; 
+
+INSERT INTO global (no,name) SELECT studno,name FROM student;
+CREATE TABLE global2 (no,name) AS SELECT studno,name FROM student;
+ROLLBACK;
+COMMIT;
+SELECT * FROM global;
+SELECT * FROM global2;
+SELECT * FROM student;
+DESC student;
+DROP TABLE global2;
+DELETE FROM global WHERE no=2;
+
+--테이블 열 추가 ALTER add( 컬럼 타입) -> 괄호쓰고 반점을 안쓰네 ㄷㄷ
+ALTER TABLE global2 ADD(height NUMBER);
+ALTER TABLE global2 DROP COLUMN height;
+SELECT * FROM global2;
+ALTER TABLE global2 ADD(height NUMBER(5) DEFAULT 170);
+DESC global2;
+ALTER TABLE global2 MODIFY height NUMBER(10); --> 옹 크기변경시 작게하려면 다 지워야함
+RENAME global2 TO baiks;
+SELECT * FROM baiks;
+
+SELECT * FROM tab;
+SELECT * FROM tabs;
+
+CREATE SEQUENCE seq
+INCREMENT BY 1
+START WITH 1
+MAXVALUE 5;
+
+SELECT * FROM user_sequences;
+
+SELECT seq.CURRVAL FROM dual; -- 시퀀스 시작은 nextval로 하고 이후 currval을 통해 확인
+SELECT seq.NEXTVAL FROM dual;
+SELECT seq.CURRVAL FROM dual;
+SELECT seq.NEXTVAL FROM dual;
+SELECT seq.NEXTVAL FROM dual;

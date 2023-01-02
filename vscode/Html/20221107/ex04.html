@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    /*
+      Symbol : 유일한 식별자를 만들 때 사용함
+               unique identifer 
+    */
+   let id = Symbol();
+   console.log(typeof id);
+
+   //Symbol 이름 붙이기
+   let id1 = Symbol("identifier");
+   let id2 = Symbol("identifier");
+
+   console.log(id1 == id2);
+
+  //  alert(id1.toString());
+
+   console.log(id1);
+   console.log(id1.toString());
+
+   //Symbol 이름만 출력하기
+   alert(id1.description);
+   console.log(id1.description);
+  </script>
+</body>
+</html>

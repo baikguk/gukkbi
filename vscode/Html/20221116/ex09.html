@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let form = document.createElement('form');
+    form.action = 'https://google.com';
+    form.method = 'GET';
+    form.innerHTML = '<input type = "text" name="question" value="테스트">';
+    form.innerHTML += '<br><input type ="submit" value ="전송">';
+    document.body.append(form);
+    // form.submit();
+    // form.submit();으로 하면 전송을 누르지 않아도 페이지가 넘어가고
+    // 해당 주소를 확인하면 https://www.google.com/?question=테스트 임을 확인할 수있는데
+    // ? 는 ulr과 넘어가는 데이터의 구분자이며 name,value 데이터 값이 넘어간것을 확인할 수 있다
+  </script>
+</body>
+</html>

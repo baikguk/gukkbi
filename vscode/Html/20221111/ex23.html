@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #table td{
+      border:1px solid black;
+      border-collapse: c;
+    }
+  </style>
+</head>
+<body>
+  <table id = 'table'>
+    <tr>
+      <td> 나이 : </td>
+      <td>
+        <lable>
+        <input type = "radio" name ="age" value="young" checked>18세 미만</input>
+      </lable>
+      <lable>
+        <input type = "radio" name ="age" value="mature" >18세 이상, 60세 미만</input>
+      </lable>
+        <lable>
+        <input type = "radio" name ="age" value="senior" >60세 이상</input>
+      </lable>
+      </td>
+    </tr>
+  </table>
+  <script>
+    // getElementByTagName()   : 태그 이름으로 element 가져오기
+    let inputs = table.getElementsByTagName('input');
+    for(let input of inputs){
+      console.log(input.value + " : "+ input.checked);
+    }
+    console.log(inputs[0].value);
+  </script>
+</body>
+</html>

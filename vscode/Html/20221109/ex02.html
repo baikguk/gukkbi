@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    /*
+      iterable - 반복가능한
+      배열이 대포젹인 iterable type임
+      문자열도 itreable type임
+    */
+
+    let range = {
+      from : 1,
+      to : 5
+    };
+
+    // for(let number of range){ //range is not iterable
+    //   console.log(number);
+    // }
+
+    numbers = [1,2,3,4,5]
+    for(let number of numbers){ //range is not iterable
+      console.log(number);
+    }
+
+    range[Symbol.iterator] = function(){
+      // Symbol.iterator 객체 반환
+      return{
+        current : this.from,
+        last : this.to,
+
+        // for...of 반복문에서 반복할 때마다 next()자동으로 호출됨
+        next(){
+          if(this.current <= this.last){
+            return{done:false, value:this.current++}
+          }else{
+            return {done:true}
+          }
+        }
+      }
+    };
+    for(let number of range){ //range is not iterable
+      console.log(number);
+    }
+
+    let str1 = 'javascript'; //str은 iterator을 가지고 있음
+    for(let str of str1){
+      console.log(str);
+    }
+
+    let iterator = str1[Symbol.iterator]();
+    while(true){
+      let result = iterator.next();
+      if(result.done) break;
+      console.log(result.value)
+    }
+  </script>
+</body>
+</html>

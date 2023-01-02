@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    /*
+    JSON(JavaScript Object Notation)
+    {name:"global",age:23}
+
+    JSON.stringify() : 객체를 JSON으로 변환함
+    JSON.parse()  : JSON을 객체로 변환함
+    */
+   let student = {
+    name:'tom',
+    age :17,
+    isAdmin : false,
+    courses:['java','html','oracle'],
+    wife: null
+   };
+   let json1 = JSON.stringify(student);
+
+   //string type
+   console.log(typeof json1);
+   console.log(json1);
+   /*
+   JSON-encoded/serialized/stringified/marshalled 된 객체
+   JSON 에서 문자열은 ""로 감싸야 됨 ''은 안됨
+   {"name":"tom",
+   "age":17,
+   "isAdmin":false,
+   "courses":["java","html","oracle"],
+   "wife":null}
+
+   JSON을 적용할 수 있는 자료형
+   객체, 배열 / 문자형, 숫자형, 불린형(boolean type), null
+
+   */
+
+   console.log(JSON.stringify(1));
+   console.log(JSON.stringify('JSONtest'));
+   console.log(JSON.stringify(true));
+   console.log(JSON.stringify([1,2,3]));
+
+   console.log(JSON.stringify(typeof 1));
+   console.log(JSON.stringify(typeof 'JSONtest'));
+   console.log(JSON.stringify(typeof true));
+   console.log(JSON.stringify(typeof [1,2,3]));
+
+   //Json,stringify() 호출시 적용되지 않는 property
+   // 함수(메소드), Symbol(key 가 Symbol인 경우),
+   // 값이 undefined 인 property
+
+   let person = {
+    test1(){console.log('java');},
+    [Symbol('id')]:123,
+    name : undefined,
+    age : 27,
+    room : {
+      number :52,
+      participant: ['global','it']
+    }
+  }
+  
+  console.log(JSON.stringify(person));
+
+    let room = {
+      number : 17
+    };
+    let meetup = {
+      title : "Conference",
+      participant : ["global","it"]
+    };
+    // -순환 참조-
+    meetup.place = room; //meetup객체가 room객체를 참고하고있다
+    room.occupideBy = meetup;//room객체가 meetup객체를 참고하고있다
+
+    // 순환 참조의 경우 Json으로 변환 못함
+    // console.log(JSON.stringify(meetup));
+
+
+
+    // 객체에서 원하는 property 만 JSON으로 직렬화(serialized)하기
+    room = {
+      number : 25
+    };
+    meetup = {
+      title : "Conference",
+      participant : [{name:'global'},{name:'it'}],
+      place:room
+    };
+    room.occupiedBy =meetup;
+
+    //meetup 객체의 title과 participant만 골라서 직렬화(Json화) property 지정하면 순환객체도 가능
+    console.log(JSON.stringify(meetup,['title','participant'] ));
+
+    console.log(JSON.stringify(meetup,['title','participant','place','name','number'] ))
+
+
+
+    console.log(JSON.stringify(meetup, function replacer(key,value){
+      console.log(`${key} - ${value}`);
+      return (key== 'occupiedBy')? undefined:value;
+    }));
+
+    /*
+     [object Object]
+ex08.html:103 title - Conference
+ex08.html:103 participant - [object Object],[object Object]
+ex08.html:103 0 - [object Object]
+ex08.html:103 name - global
+ex08.html:103 1 - [object Object]
+ex08.html:103 name - it
+ex08.html:103 place - [object Object]
+ex08.html:103 number - 25
+ex08.html:103 occupideBy - [object Object]
+{"title":"Conference","participant":[{"name":"global"},{"name":"it"}],"place":{"number":25}}
+    */
+    
+  </script>
+</body>
+</html>

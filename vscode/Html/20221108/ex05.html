@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    fruits = ['peach','mango','banana','fig','grape','pear']
+      //for..in 반복문  배열에 사용하면 index를 반환함
+      for(let idx in fruits){
+      console.log(`${+idx + 1}번째 과일 : ${fruits[idx]}`);
+    }
+  //for .. of 반복문 배열에 사용하면 요소를 반환함
+
+  for(let fruit of fruits){
+    console.log(`${fruit}`);
+  }
+
+  //배열의 length 속성 : 배열의 요소의 개수 
+  //                      가장 큰 index 번호 +1
+
+  fruits = [];
+  fruits[200] = 'apple';
+  console.log(fruits); //(201) [empty × 200, 'apple']
+  console.log(fruits.length);
+
+  // length 속성 증가, 감소 싴키기
+  let numbers = [1,2,3,4,5,6,7,8,9,10];
+  console.log(numbers.length);
+  numbers.length = 20;
+  console.log(numbers.length);
+  console.log(numbers);
+
+  numbers.length = 5;
+  console.log(numbers.length);
+  console.log(numbers);
+  
+  numbers.length = 10;
+  console.log(numbers.length);
+  console.log(numbers);
+  </script>
+  
+</body>
+</html>

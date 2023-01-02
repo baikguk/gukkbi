@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div{
+      width: 150px; height: 150px;
+      border: 5px solid black;
+      margin-bottom: 50px;
+
+    }/*-> overflow :부모요소보다 자식요소가 더 큰경우 지정하는 속성 */
+    
+    /*visible ~ 자손이 넘어간 부분을 보여줌 : 기본값*/
+    #box1{overflow: visible;}
+
+    /* 넘어간 부분을 안보줌*/
+    #box2{overflow: hidden;}
+
+    /*scroll 넘어가 부분을 scrollbar로 처리 -자손이 부모보다 작아도 scrollbar가 생김*/ 
+    #box3{overflow: scroll;}
+
+    /*scroll 넘어가 부분을 scrollbar로 처리 -자손이 부모으면 작아도 scrollbar가 안생김*/
+    #box4{overflow: auto;}
+
+    /*세로 scroll bar만 생ㅇ김*/
+    #box5{overflow-x: hidden;}
+    /*가로 scroll bar만 생ㅇ김*/
+    #box6{overflow-y: hidden;}
+
+  </style>
+</head>
+<body>
+  <div id = "box1">
+    <img src = "image/cat.jpg" width="200" height="200" alt = "냥냥펀치">
+  </div>
+  <div id = "box2">
+    <img src = "image/cat.jpg" width="200" height="200" alt = "냥냥펀치">
+  </div>
+  <div id = "box3">
+    <img src = "image/cat.jpg" width="200" height="200" alt = "냥냥펀치">
+  </div>
+  <div id = "box4">
+    <img src = "image/cat.jpg" width="100" height="200" alt = "냥냥펀치">
+  </div>
+  <div id = "box5">
+    <img src = "image/cat.jpg" width="200" height="200" alt = "냥냥펀치">
+  </div>
+  <div id = "box6">
+    <img src = "image/cat.jpg" width="200" height="200" alt = "냥냥펀치">
+  </div>
+
+</body>
+</html>

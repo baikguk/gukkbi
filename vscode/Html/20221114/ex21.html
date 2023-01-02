@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="alert" id="div">
+    <strong>주의하세요!!</strong> 중요한 메세지입니다
+  </div>
+  <script>
+    /*
+      cloneNode() : 복제하기
+      cloneNode(true) : deep copy(깊은 복사 : 속성 전부와 자손 요소 전북 복사됨)
+      cloneNode(false) : shallow copy(얕은 복사 : 자신만 복사되고 후손 요소 복사 안함)
+    */
+   let divCopy = div.cloneNode(true);
+   divCopy.querySelector('strong').innerHTML = ',잘 읽어보세요';
+
+   div.after(divCopy);
+  </script>
+</body>
+</html>

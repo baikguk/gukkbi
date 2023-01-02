@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <ol id="element">
+    <li>Hello</li>
+    <li>javaScript</li>
+  </ol>
+  <script>
+    // id 가 element 인 element 의 
+    // 하위 element 들을 삭제하는 clear(element) 함수를
+    // 작성하세요
+    // 1) remove() 사용하기 : firstChild 가 없을 때가지 firstChild 를 삭제함
+    // 2) innerHTML 사용하기 : innerHTML 을 빈문자열로 만듬
+    function clear(element){
+      // 여기에 내용을 작성하세요
+      while(element.firstChild){
+        element.firstChild.remove();
+      }
+      // element.innerHTML = '';
+    }
+    // clear() 함수 호출하기
+    clear(element);
+  </script>
+</body>
+</html>

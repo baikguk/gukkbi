@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    /*
+      Date 객체 : new Date()로 생성함
+                  시스템의 현재 날짜 정보가 저장된 Date 객체를 반환함
+    */
+   let today = new Date();
+   console.log('today : ' + today);
+
+   //new Date(milliseconds); milliseconds(1/1000초)
+   // ㄴ 기준(시작일)- 1970/01/01/ 00:00:00 초
+   let date1 = new Date(1000);
+   console.log('date : '+date1);
+
+   date1 = new Date(-3600*1000*24);
+   console.log('date : '+date1);
+
+   date1 = new Date('2022-11-09');
+   console.log('date : '+date1);
+
+   // new Date(year,month,date,hours,minutes, seconds,ms)
+   //year는 4자리만됨
+   //month는 0(1)~11(12)
+   // date는 일을 의미하면 값을 지정하지 않으면 1일로 처리됨
+   //hours,minutes, seconds,ms값을 지정하지 않으면 0으로 처리됨
+
+    console.log(new Date(2022,0,1,0,0,0,0));
+
+    console.log(new Date(2022,0,1));
+
+    console.log(new Date(2022,0));
+
+    today = new Date();
+    console.log(today.getFullYear());
+    console.log(today.getMonth()+1);
+    console.log(today.getDate());
+    console.log(today.getHours());
+    console.log(today.getMinutes());
+    console.log(today.getSeconds());
+    console.log(today.getMilliseconds());
+
+    //getDay() -요일을 의미 : 일요일(0) ~ 토요일 (6)
+    console.log(today.getDay());
+    //현지 시간 기준 시
+    console.log(today.getHours());
+
+    //Gmt(UTc+0)
+    console.log(today.getUTCHours());
+    
+    //1970/01/01 0시부터현재 시각을 milliseconds로 반환함
+    console.log(today.getTime());
+    
+    //-540 : 기준시간인 그리니치 시간과의 분 차이 (9시간 = 540분)
+    console.log(today.getTimezoneOffset());
+
+    today.setHours(0,0,0,0);
+    console.log(today);
+
+    let date2 = new Date(2022,0,32); //해당 달의 일수 초과시 다음 달로 넘어감
+    console.log(date2);
+
+    console.log(today.setSeconds(today.getSeconds()+80));
+
+    let date3 = new Date(2022,0,2);
+    console.log(date3);
+    date3.setDate(1);
+    console.log(date3);
+
+    //Date type을 number type으로변환해서
+    //시간차이알아보기
+    today = new Date();
+    console.log(today);
+    console.log(+today);
+
+    console.log(today.getTime());
+
+    let start = new Date();
+    for(let i = 0; i<1000000000;i++){
+      let resultNumber = i*i;
+    }
+    let end = new Date();
+    let result = end- start;
+    console.log(result);
+
+    //Date.now()
+    // Date 객체를 생성하지 않고
+    // new Date().getTime() 과 같은 값을 반환함
+    // new Date().getTime() 보다 시간이 덜 걸림
+
+   start1 = Date.now();
+    for(let i = 0; i<1000000000;i++){
+      let resultNumber = i*i;
+    }
+    end1 = Date.now();
+    let result2 = end1- start1;
+    console.log(result2);
+
+    // 문자열에서 날짜 읽어오기
+    // Date.parse() 메소드 호출
+    // 'YYYY-MM-DDTHH:mm:ss.sssZ'
+    // YYYY-MM-DD 연월일
+    // T 구분자
+    // HH:mm:ss 시분초
+    // Z- 시간대를 포현함(Z 하나의 경우 UTC+0을 의미함)
+
+    let date4 = Date.parse('2022-11-09T16:20:40.512');
+    console.log(date4);
+    let date5 = Date.parse('2022-11-09T16:20:40.512-07:00');
+    console.log(date5);
+
+    let date6 = new Date(Date.parse('2022-11-09T16:20:40.512'))
+  </script>
+</body>
+</html>

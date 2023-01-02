@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input>
+  <script>
+    let input = document.querySelector('input');
+
+    input.setAttribute('value','globalit');
+    console.log(input.value);
+    // value 속서의 속성ㅇ값을 변경
+    input.value = '닝겐Resources';
+    //변경  후 value 속성에 할당된 값 확인
+    console.log(input.value);//자바메모리에서 input value 확인
+
+    //변경 ㄴ전 value 속성에 할당된 값 확인 -->value의 경우 이리됨
+    //중간에 값이 변경되어도 변경전의 값으로
+    //다시 복구하는 경우에 사용함
+    console.log(input.getAttribute('value'));// html body에서 바꿈
+    
+  </script>
+</body>
+</html>

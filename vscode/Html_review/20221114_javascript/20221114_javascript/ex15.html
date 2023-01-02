@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <ol id="ol">
+    <li>0</li>
+    <li>1</li>
+    <li>2</li>
+  </ol>
+  <script>
+    /*
+      node.append(node 나 문자열)   -  node 나 문자열을 node 끝에 삽입함
+      node.prepend(node 나 문자열)  -  node 나 문자열을 node 맨 앞에 삽입함
+      node.before(node 나 문자열)   -  node 나 문자열을 node 이전에 삽입함
+      node.after(node 나 문자열)    -  node 나 문자열을 node 다음에 삽입함
+      node.replaceWith(node 나 문자열)  -  node 를 새로운 node 나 문자열로 변경함
+    */
+   ol.before('before');
+   ol.after('after');
+
+   let firstLi = document.createElement('li');
+   firstLi.innerHTML = 'prepend';
+   ol.prepend(firstLi);
+
+   let lastLi = document.createElement('li');
+   lastLi.innerHTML = 'append';
+   ol.append(lastLi);
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //true : <body>의 부모 node는 <html>
+    console.log(document.body.parentNode===document.documentElement)
+
+    //<head> 의 다음 형제 node는 text node
+      console.log(document.head.nextSibling);
+      //<head> 의 다음 다음 형제 node는 text node
+      console.log(document.head.nextSibling.nextSibling);
+
+      //<body>의 바로 이전 형제 node는 textnode
+        console.log(document.body.previousSibling);
+        //<body>의 바로 이전 이전 형제 node는 <head>
+      console.log(document.body.previousSibling.previousSibling);
+  </script>
+</body>
+</html>

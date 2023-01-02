@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #position{
+      border: 6px solid;
+      height: 200px; width: 200px;
+      top: 50%; left: 50%;
+      margin: 0 auto;
+      padding: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div id="position"></div>
+  <script>
+    /*
+      elementFromPoint(x, y)
+        ㄴ 이 메소드를 호출하면 창 기준 좌표(x, y) 에서 
+           가장 가까운 중첩 요소를 반환함
+    */
+   let centerX = document.documentElement.clientWidth / 2;
+   let centerY = document.documentElement.clientHeight / 2;
+   console.log('centerX : ' + centerX);
+   console.log('centerY : ' + centerY);
+
+   let element = document.elementFromPoint(centerX, centerY);
+   element.style.color = "coral";
+
+  </script>
+</body>
+</html>

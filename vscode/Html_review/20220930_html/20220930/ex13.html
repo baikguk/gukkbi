@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /*
+      background-image :  배경이미지 설정 속성
+      url : CSS 외부에서 파일을 불러오는 함수
+    */
+    div{
+      background-image: url(images/flower.jpg);
+      background-repeat: no-repeat;
+      width: 500px; height: 170px;
+      margin-bottom: 20px;
+      border: 5px solid black;
+    }    
+
+    /*
+       background-size : 배경이미지 크기 속성
+    */
+
+    #box01{ background-size: 100px 100px; }
+    #box02{ background-size: 100px; }
+    #box03{ background-size: 100% 100%; }
+    #box04{ 
+      background-size: calc(100% - 20px) calc(100% - 20px) ; 
+      background-position: center;
+    }
+
+    /* cover : 빈 공간이 발생하지 않도록 함 - 이미지가 잘릴 수 있음 */
+    /* contain : 이미지가 전부 보이게 함 - 빈 공간이 발생할 수 있음 */
+    #box05{ background-size: cover; }
+    #box06{ background-size: contain; }  
+
+
+  </style>
+</head>
+<body>
+  <div id="box01"></div>
+  <div id="box02"></div>
+  <div id="box03"></div>
+  <div id="box04"></div>
+  <div id="box05"></div>
+  <div id="box06"></div>
+</body>
+</html>

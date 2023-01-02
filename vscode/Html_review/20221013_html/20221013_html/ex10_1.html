@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{ padding: 0; margin: 0;}
+    p{
+      margin: 50px;
+      width: 200px; height: 60px;
+      background-color: rgb(244, 180, 96);
+      /* 
+        height 와 line-height 가 같으면 
+        한 줄 text 는 세로 영역의 가운데에 위치함
+      */ 
+      line-height: 30px;  
+      /* chrome box 설정으로 변경함 */    
+      display: -webkit-box;
+      /* ... 를 처리할 줄 수 */
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      
+    }
+  </style>
+</head>
+<body>
+  <p>
+    남미 파나마에서는 “코코넛오일 한 컵이면 모든 병이 
+    낫는다”라고 이야기할 정도로 그 효능이 뛰어나다.
+  </p>  
+</body>
+</html>

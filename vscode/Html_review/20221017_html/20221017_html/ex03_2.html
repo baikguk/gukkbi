@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* nth-child : 전체에서 몇 번째 + type 확인 */
+    /* nth-of-type : 먼저 type 확인 + 그 type 중에서 몇 번째*/
+    p:nth-of-type(2) {color:red}
+    /* 두 번째 tag는 span tag 이지, p tag 가 아니어서 적용 안 됨 */
+    p:nth-child(2) {color:blue}
+    p:nth-child(4) {color:green}
+    span:nth-child(1){color: orange;}
+    span:nth-of-type(1){color: rgb(121, 89, 8);}
+  </style
+</head>
+<body>
+  <div>
+    <p>여기는 텍스트입니다 - 1</p>
+    <span>여기는 텍스트입니다 - 2</span>
+    <p>여기는 텍스트입니다 - 3</p>
+    <p>여기는 텍스트입니다 - 4</p>
+    <span>여기는 텍스트입니다 - 5</span>
+  </div>  
+</body>
+</html>

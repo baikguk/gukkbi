@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    /*
+    Map : key가 있는 data를 저장한
+         Key에 여러지 data type을 허용함
+    new Map() //Map을 생성함
+    mae.set(key,value) - key를 사용해서 value를 저장함
+    map.get(key) - key에 해당ㅇ하는 value를 반환함 없으면 undefined
+    map.has(key) - key가 있으면 true 없으면 false
+    map.delete(key) - key에 해당하난 value삭제
+    map.clear() - map안에잇는 모든 요소삭제
+    map.size - map 안에잇는 요소의 개수 반환
+    */
+   let map = new Map();
+   map.set('1','javascript');
+   map.set(1,'java');
+   map.set(true,'oracle');
+
+   // 객체는 key를 문자형으로 변환하나
+   //Map은 key의 type이 변환되지 않고 그대로 유지됨
+   console.log(map.get('1'));
+   console.log(map.get(1));
+   console.log(map.get(true));
+
+   console.log(map.size);
+   
+   //일반 객체는 property의 key로 문자열을 사용함
+   // property 의 key로 객체를 사용할 수 없음
+   // Map은 property의 key로 객체도 사용할 수 있음
+
+   let student = { name:'global', age:23};
+
+   let map1 = new Map();
+   map1.set(student,1111);
+
+   // student 객체 가 key로 사용되어서
+   // 1111: value가 반환됨
+   console.log(map1.get(student));
+   
+   // 일반 객체 (test1)에
+   // 객체를 key로 해서 객체에 value(2222) 저장하기
+   let test1 = {};
+   test1[student]  = 2222;
+
+   console.log(test1[student]);
+   console.log(test1["[object object"]);
+
+   //map에서 set()메소드를 호출하면
+   //map이 반환됨
+
+
+   //chaining: 메소드를 호출한 반환값이 객체인 겨웅
+              //연속해서 메소드를 호출하는 것
+   map.set('2','hmtl').set(2,'css').set(false,'boolean2');
+   console.log(map['2']);
+
+   //map.keys() : key들을 요소로 하는 iterable 객체를 반환함
+   //map.values() : value들을 요소로 하는 iterable 객체를 반환함
+   //map.entries() ; [key,value] 한 쌍을 요소로 하는 iterable 객체를 반환함
+
+   console.log(map.keys());
+   console.log(map.values());
+   console.log(map.entries());
+
+   let vegetables = new Map([
+    ['cucumber',700],
+    ['tomatoes',400],
+    ['onion',200]
+  ]);
+
+  for(let name of vegetables.keys()){
+    console.log(name);
+  }
+
+  for(let price of vegetables.values()){
+    console.log(price);
+  }
+
+  for(let item of vegetables.entries()){
+    console.log(item)
+  }
+
+  //forEach()
+  vegetables.forEach((value,key,vegetables)=> {
+    console.log(`${key} - ${value}`);
+  });
+    
+  </script>
+  
+</body>
+</html>

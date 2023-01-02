@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+
+    /*of-type() : 같은 태그 중에서 순번으로 선택함*/
+    div > *:nth-of-type(1){color: orange;}
+    div > h2:nth-of-type(2){color: red;}
+    div > *:nth-of-type(3){color: green;}
+  </style>
+</head>
+<body>
+  <div>
+    <h1>제목태그1</h1>
+    <h2>제목태그2</h2>
+    <h3>제목태그3</h3>
+    <hr>
+    <h1>제목태그1</h1>
+    <h2>제목태그2</h2>
+    <h3>제목태그3</h3>
+    <hr>
+    <h1>제목태그1</h1>
+    <h2>제목태그2</h2>
+    <h3>제목태그3</h3>
+
+  </div>
+  
+</body>
+</html>

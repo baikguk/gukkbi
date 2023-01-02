@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <select id="select1" multiple>
+    <option value="apple" selected>Apple</option>
+    <option value="pear" selected>Pear</option>
+    <option value="banana" >Banana</option>
+  </select>
+  <script>
+    // 선택한 값 전체를 배열로 생성함
+    let selected = Array.from(select1.options)
+                          .filter(option => option.selected)
+                          .map(option => option.value);
+
+    // selected : apple,pear
+    console.log('selected : ' + selected);                        
+  </script>
+</body>
+</html>

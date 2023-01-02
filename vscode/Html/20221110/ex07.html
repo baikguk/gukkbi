@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //getter/setter
+    let student = {
+      firstName: '글로벌',
+      lastName : '아이티',
+      // 아래와 같이 get과 set키워드를 사용해서
+      //getter/setter 를 작성하면
+      //fullName이라는 가상의 property가 생성됨
+
+      //get: parameter가 없는 함수(메소드)로, property를 참조할(읽을) 때호출됨
+      get getFullName(){
+        return `${this.firstName} ${this.lastName}`;
+      },
+
+      // set : parameter 가 없는 함수(메소드)로, proprety에 값을 할당할(쓸)때 호출됨
+      set setFullName(name){
+        [this.firstName,this.lastName] = name.split(' ');
+      }
+    };
+    console.log('student.firstname : '+student.firstName);
+    console.log('student.lastName : '+student.lastName);
+    // 가상의 propert fullname에 접근함
+    console.log('student.fullName : '+student.getFullName);
+
+    // 가상의 propert fullname에 할당함
+    student.setFullName = 'Tom Cruise';
+    
+    console.log('student.firstname : '+student.firstName);
+    console.log('student.lastName : '+student.lastName);
+    console.log('student.fullName : '+student.getFullName);
+  </script>
+</body>
+</html>

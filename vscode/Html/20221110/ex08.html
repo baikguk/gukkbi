@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let student = {
+      get name(){
+        return this._name;
+        //          ㄴ 가상의 property에 접근할때는 ._ 으로 접근함
+      },
+      set name(value){
+        if(value.length < 5){
+          console.log('5글자 이상만 입력해주세요');
+          return;
+        }
+        this._name = value;
+      }
+    };
+    student.name = 'global';
+    console.log(student.name);
+
+   
+
+    function Person(name, birthdate){
+      this.name = name;
+      // this.age = age;
+      this.birthdate = birthdate;
+
+      Object.defineProperty(this, 'age',{
+        get(){
+          let todayYear = new Date().getFullYear();
+          return todayYear - this.birthdate.getFullYear();
+        }
+      });
+    }
+
+    // paul = new Person("Paul",23);
+    // console.log('paul.age : ' + paul.age);
+    
+    paul = new Person("Paul", new Date(2002,11,10));
+    console.log(paul.name);
+    console.log(paul.birthdate);
+    console.log(paul.age);
+
+
+
+    let programmer = {
+      firstName : '글로벌',
+      lastName : '아이티',
+    };
+    Object.defineProperty(programmer, 'fullName',{
+      get(){
+        return `${this.firstName}, ${this.lastName}`; 
+      },
+      set(name){
+        [this.firstName, this.lastName] =name.split(' ');
+      }
+    })
+
+    console.log(programmer.firstName);
+    console.log(programmer.lastName);
+    console.log(programmer.fullName);
+    programmer.fullName = '인재 개발원';
+    console.log(programmer.fullName);
+
+    function Programmer(firstName, lastName){
+      this.firstName = firstName;
+      this.lastName = lastName;
+      Object.defineProperty(this, 'fullName',{
+      get(){
+        return `${this.firstName}, ${this.lastName}`; 
+      },
+      set(name){
+        [this.firstName, this.lastName] =name.split(' ');
+      }
+    })
+    };
+
+    let p2 = new Programmer('글로벌','아이티');
+    console.log(p2.firstName);
+    console.log(p2.lastName);
+    console.log(p2.fullName);
+    p2.fullName = '인재 개발원';
+    console.log(p2.fullName);
+    
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <ol id="list">
+    <li>0</li>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+  </ol>
+  <script>
+    // parentElement.appendChild(node)
+    // parentElement 의 마지막 자식으로 node 를 추가함
+    let newLi = document.createElement('li');
+    newLi.innerHTML = 'Hello, JavaScript';
+    list.appendChild(newLi);
+
+    // parentElement.insertBefore(node, nextSibling)
+    // node  를 parentElement 안의 nextSibling 앞에 추가함
+    let newLi2 = document.createElement('li');
+    newLi2.innerHTML = 'Hello, JAVA !!!';
+    //  list  <-- <ol id="list">
+    list.insertBefore(newLi2, list.children[1]);
+
+    // newLi3 를 첫 번째 li 로 추가하기
+    let newLi3 = document.createElement('li');
+    newLi3.innerHTML = 'Hello, HTML !!!';
+    // list.insertBefore(newLi3, list.children[0]);
+    list.insertBefore(newLi3, list.firstChild);
+
+    // 자식 node 삭제하기
+    // parentElement.removeChild(node);
+    // node 가 parentElement 의 자식인 경우,
+    //  parentElement 에서 node 를 삭제함
+    // 34 행에서 맨 앞에 추가된 'Hello, HTML !!!' 이 삭제됨
+    let li = list.firstElementChild;
+    list.removeChild(li);
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let str1 = 'Hello\nJavaScript';
+    console.log(str1);
+    let str2 = `Hello
+JavaScript`;
+    console.log(str2);
+    console.log(str2.length);
+
+    // 줄바꿈 문자는 length 에 포함되지 않음
+    console.log(`Hello\nJavaScript`.length);
+
+    let str3 = `Hello`;
+
+    console.log(str3[0]);
+    console.log(str3[1]);
+    console.log(str3[2]);
+    console.log(str3[3]);
+    console.log(str3[4]);
+
+    console.log(str3.charAt(0));
+    console.log(str3.charAt(1));
+    console.log(str3.charAt(2));
+    console.log(str3.charAt(3));
+    console.log(str3.charAt(4));
+
+    // 지정한 index 에 문자열이 없으면 undefined 반환
+    console.log(str3[5]);
+    // 지정한 index 에 문자열이 없으면 빈문자열 반환
+    console.log(str3.charAt(5));
+
+    // string type = immutable type
+    let str4 = 'javascript';
+
+    // 's' --> 't'
+    console.log(str4[4]);
+    // 오류는 발생하지 않으나 동작하지 않음
+    str4[4] = 't';
+    console.log(str4[4]);
+
+    // javascript --> javatcript
+    // 0123456789
+    console.log(str4.slice(0,4));
+    console.log(str4.slice(5, str4.length));
+    console.log(str4.slice(0,4) + 't' + str4.slice(5, str4.length));
+
+    // 소 --> 대 : toUpperCase()
+    console.log(str4);
+    console.log(str4.toUpperCase());
+
+    // 대 --> 소 : toLowerCase()
+    let str5 = str4.toUpperCase();
+    console.log(str5);
+    console.log(str5.toLowerCase());
+    console.log(str5);
+    // S -- > s
+    console.log(str5[4].toLowerCase());
+    console.log(str5);
+    // JAVASCRIPT --> JAVAsCRIPT
+    console.log(str5.slice(0,4) + 's' + str5.slice(5,str5.length));
+    console.log(str5.slice(0,4) + str5[4].toLowerCase() + str5.slice(5,str5.length));
+
+    // indexOf() : () 안에 지정한 문자열의 index 번호를 반환해 줌
+    // (찾는문자열) : 처음 나오는 해당 문자열의 index
+    // (찾는문자열, 1) : 처음 나오는 해당 문자열의 index
+    // (찾는문자열, 2) : 두 번째로 나오는 해당 문자열의 index
+    console.log('javascript'.indexOf('a'));
+    console.log('javascript'.indexOf('a', 1));
+    console.log('javascript'.indexOf('a', 2));
+    // 없는 문자열을 지정하면 -1 을 반환함
+    console.log('javascript'.indexOf('z'));
+
+    
+    
+
+  </script>
+</body>
+</html>

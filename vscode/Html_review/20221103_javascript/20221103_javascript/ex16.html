@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const NUMBER = 100;
+    // NUMBER = 200;
+
+    const student = {
+      name:'글로벌',
+      age:21,
+    }
+    // Uncaught TypeError: Assignment to constant variable.
+    // student = {};
+
+    // const student 에 재할당을 못하는 것이지
+    // student 의 property 에는 재할당을 할 수 있음
+    student.name = '아이티학원'
+    console.log(student.name);
+
+
+    let scores = {
+      global:98,
+      it:87,
+      human:92
+    };
+
+    // global, it, human 세 학생의 성적 총점을 출력하세요
+    // for...in 반복문을 사용하세요
+    let total = 0;
+    for(let score in scores){
+      total += scores[score];
+    }
+    console.log('총점 : ' + total + ' 점');
+
+    scores = {
+      global:98,
+      it:87,
+      human:92,
+      class:'1',
+    };
+
+    // global, it, human 세 학생의 성적을 
+    // 두 배로 증가시키는 함수를 작성하고 실행하세요
+    scores.global * 2;
+    scores.it * 2;
+    scores.human * 2;
+
+    function doubleScore(object){
+      for(let score in object){
+        // scores 객체의 property 중에 type 이 
+        // number 인 것만 두 배로 증가시킴
+        if(typeof object[score] == 'number'){
+          object[score] *= 2;
+        }
+      }
+    }
+    console.log('scores.global : ' + scores.global)
+    console.log('scores.it     : ' + scores.it)
+    console.log('scores.human  : ' + scores.human)
+    
+    doubleScore(scores);
+
+    console.log('scores.global : ' + scores.global)
+    console.log('scores.it     : ' + scores.it)
+    console.log('scores.human  : ' + scores.human)
+
+
+
+  </script>
+</body>
+</html>

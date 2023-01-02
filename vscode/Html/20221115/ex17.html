@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form name="f1">
+    <input name="one" value="1">
+    <input name="two" value="2"><br>
+    <input type="radio" name="age" value="10">10
+    <input type="radio" name="age" value="20">20
+  </form>
+  <script>
+    // name이 f1인 form element 가져오기
+    let form = document.forms.f1
+
+    // name이 one인 form element 가져오기
+    let element = form.elements.one;
+
+    console.log(element.value);
+
+    form = document.forms[0];
+    let ageElements = form.elements.age;
+
+    console.log(ageElements[0]);
+    console.log(ageElements[1]);
+  </script>
+</body>
+</html>

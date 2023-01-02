@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //함수의 prototype property
+    let animal = {
+      eats : true
+    };
+    function Rabbit(name){
+      this.name = name;
+    }
+    // new Rabbit()을 호출해서 
+    // 생성한 객체의 [[Prototype]]을 animal로 설정함
+    Rabbit.prototype = animal;
+
+    let rabbit = new Rabbit('귀여운 토끼');
+    console.log(rabbit.eats);
+
+    // 모든 함수에는 기본적으로 prototype 이라는 property가 있음
+    //                   ㄴ default propery
+
+
+    // prototype이라는 property 는 
+    // constructor라는 property 하나만 있는 객체를 의미함
+    //<-- prototype이라는 property(속성)는 객체인데
+    //    consturctor이라는 property(속성) 하나만 있는 객체라는 의미
+
+    function Rabbit2(){}
+    // 함수를 작성만 해도 default property인 
+    // prototype이라는 property가 자동으로 생성됨
+    // Rabbit2.prototype = {constructor:Rabbit}
+    
+    //true
+    console.log(Rabbit2.prototype.constructor == Rabbit2);
+
+    let rabbit2 = new Rabbit2();
+
+    //true
+    console.log(rabbit2.constructor == Rabbit2);
+
+    function Rabbit3(name){
+      this.name = name;
+      console.log(`name : ' + this.name`);
+    }
+
+    let rabbit3_1 = new Rabbit3('귀여운 톢이');
+    console.log(rabbit3_1.constructor == Rabbit3);
+    console.log(rabbit3_1.constructor);
+    let rabbit3_2 = new rabbit3_1.constructor('이쁜 토끼');
+
+    function Rabbit4(){
+
+    }
+    console.log('Rabbit4.prototype : \n' + Rabbit4.prototype);
+    console.log('Rabbit4.prototype.constructor : \n' + Rabbit4.prototype.constructor)
+
+    Rabbit4.prototype = {constructor:Rabbit4};
+
+    let r4 = new Rabbit4();
+    console.log(r4.constructor===Rabbit4);
+    Rabbit4.prototype = {jumps:true};
+    console.log(r4.constructor===Rabbit4);
+
+    console.log('========');
+    function Rabbit5(){}
+    Rabbit5.prototype =  {jumps:true};
+    let r5 = new Rabbit5();
+    console.log(r5.constructor===Rabbit5)
+  </script>
+</body>
+</html>

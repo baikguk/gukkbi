@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // include(문자열) :  지정한 문자열이 있는지 없는지 알려줌
+    let str1 ='javascript is a good programming language';
+    console.log(str1.includes('good'));
+    console.log(str1.includes('best'));
+
+    //includes(문자열, index 번호) 
+    //  ㄴ 지정한 문자열이 index 번호 이후에 있는지 없는지 알려줌
+    console.log(str1.includes('good',0));
+    console.log(str1.includes('good',30));
+
+    console.log(str1.startsWith('java'));
+    console.log(str1.startsWith('javascript'));
+
+    console.log(str1.endsWith('javascript'));
+    console.log(str1.endsWith('language'));
+
+    str1 ='javascript is a good programming language.';
+
+    // slice(start,end) java의 substring과 동일
+    console.log(str1.slice(21));
+
+
+    console.log(str1.slice(11,20));
+
+    //index : 왼 -> 오  0번부터 시작
+    //        오 -> 왼  -1번붙 시작
+    console.log(str1.slice(-9,str1.length));
+    console.log(str1.slice(-9,41));
+
+    //substring(start,end) start~end-1까지 범위에있는 문자열
+    //substring(end,start)
+    let str2 = 'javascript'
+//              0123456789
+    //ascr
+    console.log(str2.slice(3,7));
+    //start와 end의자리를 바뀌면 빈문자열 반환
+    console.log(str2.slice(7,3));
+
+    console.log(str2.substring(7,3));
+    console.log(str2.substring(3,7));
+
+    //substr(start, length)
+    //  ㄴstart부터 lenght개의 문자열을 반환
+    console.log(str2.substr(2,3));
+
+    //문자열 비교 : ASCII Code
+    console.log('a'> 'M');
+
+    //codePointAt(index 번호)
+    //  ㄴ 지정한 index번호에 해당하는 문자의 ASCII code 반환
+    let str3 = 'frontendjavascript'
+    //          012345678901234567
+    console.log(str3.codePointAt(3));
+    console.log(str3.codePointAt(9));
+
+    //fromCodePoint(ASCII code)
+    // ㄴ 지정한 ASCII code에 해당하는 문자열을 반환함
+    console.log(String.fromCodePoint(97));
+    console.log(String.fromCodePoint(92));
+    console.log(String.fromCodePoint(112));
+    console.log(String.fromCodePoint(90));
+
+    // 90의 16진수 --> 5A
+    // unicode \u005a
+    console.log('\u005a');
+
+    let str4 = '';
+    for(let i = 65; i<=90; i++){
+      str4 += String.fromCodePoint(i);
+    }
+    console.log(str4);
+
+    //문자열1.localCompare.문자열2
+    //문자열1 < 문자열2 : 음수반환
+    //문자열2 > 문자열2 : 양수반환
+    //문자열 = 문자열2 : 0 반환
+    console.log('a'.localeCompare('b'));
+    console.log('A'.localeCompare('b'));
+    console.log('c'.localeCompare('b'));
+    console.log('s'.localeCompare('s'));
+    console.log('java'.localeCompare('javascript'));
+    console.log('javas'.localeCompare('java'));
+  </script>
+  
+</body>
+</html>

@@ -1,0 +1,39 @@
+@charset "utf-8";
+
+*{ padding: 0; margin: 0; } /* 태그별로 다른 여백을 없애고 시작 */
+
+.region{
+    width: 880px; margin: 30px;
+    border-spacing: 0; /* 셀간의 여백 제거 */
+    border-collapse: collapse; /* 선겹침 허용 */
+}
+.region caption{
+    font-size: 24px; font-weight: bold;
+    text-align: left; /* 가운데가 기본값이어서 변경 */
+
+    background-image: url(images/title_icon.gif);
+    background-repeat: no-repeat; /* 반복안함 */
+    background-position: 3px center; /* x축위치 y축위치 */
+    padding-left: 30px; /* 자손과의 간격 조정 */
+    margin-bottom: 10px; /* 동위선택자와의 간격 조정 */
+}
+.region th, .region td{
+    border: 1px solid #ccc;
+    padding: 10px; /* 테두리 안쪽 여백 */
+    text-align: center;
+}
+.region th{
+    background-color: #f5f5f5;
+}
+.region thead{
+    border-top: 2px solid #333;
+}
+.region thead th{
+    border-bottom: 1px solid #666;
+}
+.region tbody{
+    border-bottom: 2px solid #ccc;
+}
+.region tbody th{
+    font-weight: normal; /* 굵지 않게 처리 */
+}

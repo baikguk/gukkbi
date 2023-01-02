@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /*
+    
+    */
+    *{ padding: 0; margin: 0;}
+    body{ height: 3000px;}
+    div#wrap{position: relative;}
+    div.abs{      
+      width: 100px; height: 100px;
+      border: 4px solid blue;      
+    }
+    #box1{
+      position: absolute;
+      background-color: pink;
+      right: 10px; top: 10px;
+    }
+    #box2{
+      position: fixed;
+      background-color: skyblue;
+      right: 10px; top: 150px;
+    }
+    #box3{
+      background-color: coral;      
+    }
+    #box4{
+      background-color: lightgreen;      
+    }
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <div class="abs" id="box1"></div>
+    <div class="abs" id="box2"></div>
+    <div class="abs" id="box3"></div>
+    <div class="abs" id="box4"></div>
+  </div>
+  <hr>
+  * position : 위치를 이동시키는 속성
+		1. static : 기본값, 위치가 자신의 원래의 위치에 고정되어 있음
+		2. relative : static(원래)위치에서 상대적 이동
+		3. absolute : body의 위치에서 절대적 이동 - 스크롤시 위치고정
+		4. fixed : body의 위치에서 절대적 이동 - 스크롤시 따라다님
+		
+		* 위치이동속성
+		1. x축이동 - left 혹은 right 중 한 개만 선택해서 수치 작성
+		2. y축이동 - top 혹은 bottom 중 한 개만 선택해서 수치 작성
+		
+		* z-index : position값을 받은 요소들끼리 겹칠 때 깊이 조절 가능
+		            숫자가 높을 수록 화면 앞쪽에 보임
+
+</body>
+</html>

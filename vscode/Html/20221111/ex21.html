@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    a{
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <a href ="https://global.com/it.hwp">global_it_hwp</a>
+  <a href ="https://global.com/it.doc">global_it_doc</a>
+  <a href ="https://global.com/it.ppt">global_it_ppt</a>
+  <a href ="https://global.com/it.zip">global_it_zip</a>
+  <script>
+    for(let element of document.body.children){
+      if(element.matches('a[href$="hwp"]')) // $ -> 맨끝을 의미함
+      console.log('확장자가 hwp인 파일 : '+element.href);
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>회원가입</title>
+  <link rel="stylesheet" href="ex09.css">
+</head>
+
+<body>
+  <div class="joinbox">
+    <h2>회원가입</h2>
+    <h3>개인정보입력</h3>
+    <p><span class="star">*</span> 표시는 필수입력 정보입니다</p>
+    <form action="#">
+      <table>
+        <!--웹 접근성을 고려할때 표의 제목을 작성하는 것을 권장함-->
+        <caption>회원가입양식</caption>
+        <tr>
+          <th>
+            <label for="joinid">아이디</label>
+            <span class="star">*</span>
+          </th>
+          <td colspan="3">
+            <input type="text" id="joinid" class="box01">
+            <button type="button">중복검사</button>
+            * 6~12 글자 사이로 입력해 주세요
+          </td>
+        </tr>
+        <tr>
+          <th>
+            <label for="joinpass">비밀번호</label>
+            <span class="star">*</span>
+          </th>
+          <td colspan="3">
+            <input type="password" id="joinpass" class="box01">
+            * 6~12 글자 사이로 입력해 주세요
+          </td>
+        </tr>
+        <tr>
+          <th>
+            <label for="joinpasschk">비밀번호 확인</label>
+            <span class="star">*</span>
+          </th>
+          <td colspan="3">
+            <input type="password" id="joinpasschk" class="box01">
+            * 6~12 글자 사이로 입력해 주세요
+          </td>
+        </tr>
+        <tr>
+          <th>
+            <label for="joinname">이름</label>
+            <span class="star">*</span>
+          </th>
+          <td class="middletd">
+            <input type="text" id="joinname" class="box01">
+          </td>
+          <th>
+            성별
+            <span class="star">*</span>
+          </th>
+          <td>
+            <input type="radio" id="female" name="gender" checked>
+            <label for="female" class="spacing">여자</label>
+            <input type="radio" id="male" name="gender">
+            <label for="female">남자</label>
+          </td>
+        </tr>
+        <tr>
+          <th>
+            <label for="joinengname">영문이름</label>
+            <span class="star">*</span>
+          <td colspan="3">
+            <input type="text" id="joinengname" class="box01">
+            ex) JoongGeon Ahn
+          </td>
+          </th>
+        </tr>
+        <tr>
+          <th>
+            생년월일
+            <span class="star">*</span>
+          </th>
+          <td colspoan="3">
+            <select id="joinyear" class="box02">
+              <option>2022</option>
+              <option>2021</option>
+            </select>
+            <label for="joinyear" class="spacing02">년</label>
+
+            <select id="joinmonth" class="box02">
+              <option>1</option>
+              <option>2</option>
+            </select>
+            <label for="joinmonth" class="spacing02">월</label>
+
+            <select id="joindate" class="box02">
+              <option>1</option>
+              <option>2</option>
+            </select>
+            <label for="joindate" class="spacing02">일</label>
+
+            <input type="radio" id="solar" name="calender" checked>
+            <label for="solar" class="spacing">양력</label>
+
+            <input type="radio" id="lunar" name="calender">
+            <label for="lunar">음력</label>
+          </td>
+        </tr>
+        <tr>
+          <th>
+            주소
+            <span class="star">*</span>
+          </th>
+          <td colspan="3">
+            <input type = "text" id = "joinpost" placeholder="우편번호" class = "box01">
+            <label for = "joinpost" class = "away">우편번호입력상자</label>
+            <button type = "button" class =  "margin01">우변번호검색</button>
+            <br>
+            <input type ="text" id = "joinaddress01"  class = "box01" disabled>
+            <label for = "joinaddress01" class = "margin01">주소입력상자1</label>
+            <input type ="text" id = "joinaddress02"  class = "box01" placeholder="나머지 주소를 입력하세요">
+            <label for = "joinaddress02" class = "margin01">주소입력상자2</label>
+          </td>
+        </tr>
+        <tr>
+          <th>전화번호 <span class="star">*</span></th>
+          <td colspan="3">
+            <select id ="phone01" class="box02">
+              <option>02</option>
+              <option>031</option>
+            </select>
+            <label for = "phone01" class="away">전화번호 첫째자리 입력상자</label>
+            -
+            <input type="text" id="phone02" class = "box02" maxlength="4">
+            <label for="phone02" class = "away">전화번호 둘째 자리 입력상자</label>
+            -
+            <input type="text" id="phone03" class = "box03" maxlength="4">
+            <label for="phone03" class = "away">전화번호 셋째 자리 입력상자</label>
+          </td>
+        </tr>
+        <tr>
+          <th>
+            핸드폰
+            <span class="star">*</span>
+          </th>
+          <td colspan="3">
+            <select id = "sphone01" class = "box02">
+              <option>010</option>
+              <option>011</option>
+              <option>016</option>
+              <option>019</option>
+            </select>
+            <label for = "sphone01" class = "away">핸드폰 첫째자리 입력상자</label>
+            -
+            <input type ="text" id = "sphone02" class = "box02" maxlength="4">
+            <label for = "sphone02" class = "away">핸드폰 둘째자리 입력상자</label>
+            -
+            <input type ="text" id = "sphone03" class = "box02" maxlength="4">
+            <label for = "sphone03" class = "away">핸드폰 셋째자리 입력상자</label>
+          </td>
+        </tr>
+        <tr>
+          <th>
+            <label for = "joinmail">이메일</label>
+            <span class="star">*</span>
+          </th>
+          <td class = "middletd">
+            <input type ="text" id="joinmail" class="box01" placeholder="다양한 이벤트를 안내해드립니다">
+          </td>
+          <th>
+          이메일 수신
+          <span class="star">*</span>
+          </th>
+          <td>
+          <input type ="radio" id ="emailyes" name="emailchk" checked>
+          <label for = "emailyes" class="spacing">예</label>
+          
+          <input type ="radio" id ="emailno" name="emailchk">
+          <label for = "emailno">아니오</label>
+        </td>
+        </tr>
+      </table>
+      <div class="chkbox">
+        <input type ="checkbox" id = "allchk">
+        <label for="allchk">회원약과, 개인정보취급방칩에 모두 동의합니다</label>
+      </div>
+      <div class = "btnwrap">
+        <button type="submit">회원가입</button>
+        <button type="reset">입력취소</button>
+      </div>
+    </form> 
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //static property
+    class Article{
+      static publisher = 'global it';
+    }
+    console.log("Article.publisher : "+Article.publisher);
+    console.log('=================');
+
+    class Animal{
+      static planet = 'earth';
+      constructor(name,speed){
+        this.name = name;
+        this.speed = speed;
+      }
+      run(speed = 0 ){
+        this.speed += speed;
+        console.log(`${this.name} 이(가) ${this.speed}속도로 달립니다`);
+      }
+      static compare(ainmalA, animalB){
+        return ainmalA.speed = animalB.speed;
+      }
+    }
+
+    
+    class Rabbit extends Animal{
+      hide(){
+        console.log(`${this.name} 이(가)숨음`);
+      }
+    }
+    let rabbits = [
+      new Rabbit('토끼1',100),
+      new Rabbit('토끼2',79),
+      new Rabbit('토끼3',82),
+      new Rabbit('토끼4',53),
+    ];
+    rabbits.sort(Rabbit.compare);
+    for(let i =0; i < rabbits.length;i++){
+      console.log(rabbits[i]);
+    }
+    //javascript 에서는 static 멤버(propert+method)도 상속가능
+    console.log('Rabbit.planet : ' +Rabbit.planet);
+  </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // Object.entries(): 객체를 맵으로 변환함
+    let map1 = new Map([
+      ['1','str1'],
+      [1,'num1'],
+      [true,'boolena1']
+    ]);
+    console.log(map1.get('1'))
+
+    let obj1 = {
+      name : 'global',
+      age : 23
+    };
+    let map2 = new Map(Object.entries(obj1));
+    console.log(map2.get(name));
+    console.log(map2.get('name'));
+
+    //Object.fromEntries() : 맵을 객체로 변환함
+    let prices = Object.fromEntries([
+    ['1','str1'],
+      ['2','num1'],
+      [true,'boolena1']
+    ])
+    console.log(prices['1']);
+    console.log(prices.true);
+    //prices는 Map이 아니라 일반 객체라서
+    //get()메소드가 없음
+
+  </script>
+</body>
+</html>

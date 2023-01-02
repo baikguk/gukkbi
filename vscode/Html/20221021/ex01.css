@@ -1,0 +1,137 @@
+@charset "utf-8";
+
+*{padding:0; margin: 0;}
+
+/*1. 구성요소 layout*/
+header{
+  width:100%;
+  min-width: 1180px;
+  height: 115px;
+  border-bottom: 1px solid #ccc;
+}
+main{
+  width: 100%;
+  min-width: 1180px;
+  height: 545px;
+  position: relative;
+
+}
+.main_contents01{
+  width: 100%; min-width: 1180px;
+  height: 460px;
+  padding: 40px 0;
+  box-sizing: border-box ;
+  background-color: #f5fafe;
+}
+.main_contents02{
+  width: 100%; min-width: 1180px;
+  height: 290px;
+  margin:0 auto;
+  padding: 40px 0 90px;
+  box-sizing: border-box ;
+  background-color: #f5fafe;
+}
+
+footer{
+  width: 100%; min-width: 1180px; height:215px;
+}
+.chat{
+  position: fixed; bottom: 150px;
+  right: calc(50% - 680px);
+  width: 80px; height: 110px;
+  background-color: aquamarine;
+}
+/*2. 행간 layout*/
+.h_top{
+  width: 100%; height: 35px;
+  background-color: #014bb4;
+}
+.h_bottom{
+  width: 1180px; height: 80px;
+  margin: 0 auto;
+  background-color: pink;
+}
+.main_slider{
+  width : 100%; height: 100%;
+  background-color: lightblue;
+}
+.quick_menu{
+  /*main_slider 위에 곂침*/
+  position: absolute;
+  bottom:0; left:0; right:0; margin:0 auto;
+  width: 1180px; height: 110px;
+  background-color: #0e2f58;
+}
+.sitemap{
+  width: 100%; height: 50px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  box-sizing: border-box;
+}
+.f_top{
+  width: 100%; height: 50px;
+  border-bottom: 1px solid #ccc;
+  box-sizing: border-box;
+  background-color: #ededed;
+}
+
+.f_bottom{
+  width: 100%; height: 115px;
+  padding:15px 0 45px;
+  border-bottom: 1px solid #ccc;
+  box-sizing: border-box;
+  background-color: #ededed;
+}
+/*최종행간을 가운데 위치시키기*/
+.inner_wrap{
+  width:1180px; height: 100%;
+  margin: 0 auto;
+  background-color: beige;
+
+}
+
+/*열간 layout*/
+
+.loan, .drive{
+  /* 부모영역이 왼쪽으로 붙임*/
+  float:left;
+  width: 380px; height: 100%;
+  background-color: #fff;
+  box-shadow: 0 0 5px  rgba(0,0,0,0.2);
+  margin-right: 20px;
+}
+.i_slider01{
+  /* 부모영역의 오른쪽에 붙임*/
+  float: right;
+  width:380px; height: 180px;
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+
+.vision{
+  float: right;
+  width:380px; height: 180px;
+  
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+.main_contents02{
+  /*자손 요소들을 수평으로 나열함*/
+  display: flex;
+  /*첫 번째와 마지막을 양쪽 끝에 붙이고 균등 배분하기*/
+  justify-content: space-between;
+}
+
+.main_contents02 >section{
+  width: 380px; height: 100%;
+  background-color: coral;
+  position: relative;
+}
+
+.i_slider02::after, .notice::after{
+  /* 컨텐츠를 넣지 않더라도 반드시 작성해 줌*/ 
+  content : '';
+  width: 1px; height: 100%; background-color: #ededed;
+  position : absolute; top:0; right:-10px;
+}
+

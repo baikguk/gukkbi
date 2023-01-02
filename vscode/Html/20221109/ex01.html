@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //reduce()
+    let arrNums = [1,2,3,4,5];
+    let result =arrNums.reduce((num1, num2) => num1 + num2,0);
+                              // 0      1
+                              // 1      2
+                              // 3      3
+                              // 6      4
+                              // 10     5
+
+    result =arrNums.reduce((num1, num2) => num1 + num2);
+                              // 1      2
+                              // 3      3
+                              // 6      4
+                              // 10     5
+    console.log(result);
+
+
+    let arrNums2 = [];
+    let result2 =arrNums2.reduce((num1, num2) => num1 + num2,0);
+                              // 0      1
+                              // 1      2
+                              // 3      3
+                              // 6      4
+                              // 10     5
+
+    // 빈 배열에서 reduse메소드 진행시 값을 지정하지 않으면 오류가 남
+    // result =arrNums2.reduce((num1, num2) => num1 + num2);
+                              // 1      2
+                              // 3      3
+                              // 6      4
+                              // 10     5
+    console.log(result2);
+
+
+    //isArray() 배열인지 아닌지 반환함 - true / false
+    console.log(typeof {});
+    console.log(typeof [])
+
+    console.log(Array.isArray({}));
+    console.log(Array.isArray([]));
+    
+  </script>
+</body>
+</html>

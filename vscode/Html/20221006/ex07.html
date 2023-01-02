@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div{
+      width: 100px; height: 100px;
+      background-color: antiquewhite;
+      border: 3px solid black;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+
+    /*
+      box-sizing
+         영역으로 해서
+        outside 로 할지 inside로 할지 지정함
+    */
+    /* content-box : 기본값*/
+    /* 폭 = width + border*2 + padding*2 = 126*/
+    #box1{box-sizing: content-box;}
+
+    /*border-box : 테두리와 padding에 지정한 수치를
+                   부모 영역 안(inside)에서 처리함
+    */
+    /*폭 = width*/
+    #box2{box-sizing: border-box;}
+  </style>
+</head>
+<body>
+  <div id="box1">박스1</div>
+  <div id="box2">박스2</div>
+</body>
+</html>

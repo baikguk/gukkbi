@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    /*
+      Infinity 양의 무한대
+     -Infinity 음의 무한대
+      NaN : error 를 나타내는 값
+
+      isNaN() : () 안에 넣는 argument 를 number type 으로
+                형변환하고 숫자인지 아닌지 판단함  
+
+         NaN : 자기 자신을 포함하여 그 어떤 값과도 같지 않음       
+    */
+     console.log(isNaN(1234));
+     console.log(isNaN('1234'));
+     console.log(isNaN('hello'));
+     console.log(isNaN(NaN));
+
+     console.log(NaN == NaN);
+     console.log(NaN === NaN);
+
+
+     // isFinite(argument) : 
+     // argument 를 숫자로 변환하고 
+     // 변환한 숫자가 NaN/Infinity/-Infinity 가 아니고 
+     // 일반 숫자인 경우 true 를 반환함
+     //  ㄴ 문자열이 일반 숫자인지 아닌지 알아보는데 사용함
+     console.log(isFinite('10'));
+     console.log(isFinite('javascript'));
+     console.log(isFinite(Infinity));
+
+     let num = +prompt('숫자를 입력하세요', '');
+     console.log('num : ' + num);
+     console.log('isFinite(num) : ' + isFinite(num));
+
+  </script>
+</body>
+</html>

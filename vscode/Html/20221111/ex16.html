@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div> 시작</div>
+  <ul>
+    <li>항목</li>
+  </ul>
+  <div>끝</div> 
+  <hr>
+  <br>
+  <table id= "table" border="1">
+    <tr>
+      <td>일</td>
+      <td>이</td>
+    </tr>
+    <tr>
+      <td>삼</td>
+      <td>사</td>
+    </tr>
+  </table>
+  <script>
+    for(let element of document.body.children){
+      console.log(element);
+    }
+    console.log('-----------------------------');
+
+    let td =table.rows[0].cells[1];
+    td.style.backgroundColor = "orange";
+  </script>
+</body>
+</html>

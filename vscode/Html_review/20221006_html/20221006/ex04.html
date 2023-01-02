@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div{
+      width: 150px;  height: 150px;
+      border: 5px solid black;   
+      margin-bottom: 30px;   
+    }
+    /* overflow : 부모요소보다 자손요소가 더 큰 경우 지정하는 속성 */
+    /* visible - 자손이 넘어간 부분을 보여줌 : 기본값 */
+    #box1{ overflow: visible; }
+
+    /* hidden - 넘어간 부분을 안 보여줌 */
+    #box2{ overflow: hidden; }
+
+    /* scroll - 넘어간 부분을 scrollbar 로 처리함 
+              - 자손이 부모보다 작아도 scrollbar 가 생김 */
+    #box3{ overflow: scroll; }
+
+    /* auto - 넘어간 부분을 scrollbar 로 처리함  
+            - 자손이 부모보다 작으면 scrollbar 가 생기지 않음*/
+    #box4{ overflow: auto; }
+
+    /* 세로 scrollbar 만 생김 */
+    #box5{ overflow-x: hidden; }
+
+    /* 가로 scrollbar 만 생김 */
+    #box6{ overflow-y: hidden; }
+
+  </style>
+</head>
+<body>
+  <div id="box1">
+    <img src="images/cat.jpg" width="200" alt="">
+  </div>  
+  <div id="box2">
+    <img src="images/cat.jpg" width="200" alt="">
+  </div> 
+  <div id="box3">
+    <img src="images/cat.jpg" width="200" alt="">
+  </div> 
+  <div id="box4">
+    <img src="images/cat.jpg" width="200" alt="">
+  </div> 
+  <div id="box5">
+    <img src="images/cat.jpg" width="200" alt="">
+  </div> 
+  <div id="box6">
+    <img src="images/cat.jpg" width="200" alt="">
+  </div>
+</body>
+</html>

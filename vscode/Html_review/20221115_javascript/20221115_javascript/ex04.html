@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #div1{ /* 외부 div */
+      height: 250px; width: 250px; color: blue;
+      overflow: auto; background-color: rgb(253, 161, 127);
+    }
+    #content{ /* 내부 div */
+      margin: 500px; height: 800px; width: 2000px;
+      background-color: rgb(200, 253, 127);
+    }
+  </style>
+</head>
+<body>
+  <h1>The Element Object</h1>
+  <h2>The scrollIntoView() Method</h2>
+
+  <button onclick="topTrue()">topTrue</button><br><br>
+  <button onclick="topFalse()">topFalse</button>
+  <p>element 의 맨 위로 scroll 하려면 "topTrue" 버튼을 클릭하세요</p>
+  <p>element 의 맨 아래로 scroll 하려면 "topFalse" 버튼을 클릭하세요</p>
+
+  <div id="div1">
+    <div id="content">
+      <p>element 안에 있는 문장</p>
+      <p>element 안에 있는 문장</p>
+      <p>element 안에 있는 문장</p>      
+    </div>
+  </div>
+  <script>
+    function topTrue(){
+      const element = document.getElementById("content");
+      element.scrollIntoView();
+      // element.scrollIntoView(true);
+    }
+    function topFalse(){
+      const element = document.getElementById("content");
+      element.scrollIntoView(false);
+    }
+  </script>
+</body>
+</html>

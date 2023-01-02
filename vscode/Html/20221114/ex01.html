@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- 여기는 ㅈ주석입니다 -->
+  <script> 
+    /*
+    Element : DOM element를 위한 basic class
+    HTMLElement :HMTL element node의 base역할을 하는 클래스
+                  <html> element 관련 메소드와 getter, setter를 제공하는 클래스
+      HTMLInputElement : HTMLElement의 자식 클래스ㅡ
+                          <input> element에 대응하는 클래스
+      HTMLBodyElement : HTMLElement의 자식 클래스
+                          <body> element에 대응하는 클래스
+      HTMLAnchorElement : HTMLElement의 자식 클래스
+                          <a> element에 대응하는 클래스
+    Node : 공통 DOM node property 를 제공하는 클래스
+    EventTarget : Event 관련 기능을 제공하는 클래스
+    Object : hasOwnProperty 와 같은 일반 객체 메소드를 제공하는 클래스     
+    */
+   //body node 클래스 이름
+   console.log(document.body.constructor.name); //자바스크립트에서 정한 body이름 확인하기
+   console.log(document.body.toString());
+
+   //상속 관계 알아보기 : instanceof
+   console.log(document.body instanceof HTMLBodyElement);
+   console.log(document.body instanceof HTMLElement);
+   console.log(document.body instanceof Element);
+   console.log(document.body instanceof Node);
+   console.log(document.body instanceof EventTarget);
+
+   //nodeType property
+   //DOM node 의 type 확인
+  //  elem.nodeType == 1 : eleemnet node;
+
+  let elem = document.body;
+
+  console.log(elem.nodeType); //elemnet node ==1
+  console.log(elem.firstChild.nodeType); // textnode ==3
+  console.log(document.nodeType); //document object
+
+  //nodeName. tagName으로 tag name확인
+  //nodeName : 모든 node에서 확인 간으
+  /// tagName : element node에서만 확인 가능
+  console.log(document.body.nodeName);
+  console.log(document.body.tagName);
+
+  //text
+  // text는 
+  // element node에서만 확인 가능함
+  console.log(document.body.firstChild.nodeName);
+  
+    // text node에서는 불가함 -->undefined
+console.log(document.body.firstChild.tagName);
+  </script>
+  
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    /*
+      prototype(원형)
+    */
+   function Person(name,gender){
+    this.name = name;
+    this.gender = gender;
+    this.sayHello = function(){
+      console.log('Hello, '+this.name+ ' !!!');
+    }
+   }
+   let p1 = new Person('글로벌1','male');
+   p1.sayHello(); // 자바스크립트는 객체를 생성할때마다
+                  // 메소드도 새로운 메모리에 할당된다 비효 (자바와는 다르게)
+   let p2 = new Person('글로벌2','male');
+   p2.sayHello();
+
+
+
+   function Person2(name,gender){
+    this.name = name;
+    this.gender = gender;
+   }
+   Person2.prototype.sayHello = function(){ // 자바처럼 메소드 메모리 쓰기
+    console.log('Hello, '+ this.name + ' !!!'); // prototype은 자바의 static과 비슷하게 동작핝다
+   }
+   let person1 = new Person2('아이티1', 'female');
+   person1.sayHello();
+   let person2 = new Person2('아이티2', 'female');
+   person2.sayHello();
+   let person3 = new Person2('아이티3', 'female');
+   person3.sayHello();
+  </script>
+</body>
+</html>

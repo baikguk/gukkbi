@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // "use strict";
+
+    let student = {
+      name : '글로벌',
+      age : 21
+    };
+    student.height = 197;
+    for(let key in student){
+      console.log(`${key} - ${student[key]}`);
+    }
+    // student 객체에 메소드 추가하기
+    student.study = function(){
+      console.log('학생이 공부합니다');
+    }
+    // student 객체의 study 메소드 호출하기
+    student.study();
+
+    function studyHard(){
+      console.log('학생이 열심히 공부합니다');
+    }
+    student.study2 = studyHard;
+    student.study2();
+
+    // 객체 리터럴 방식으로 객체를 생성하면서
+    // 메소드 작성하기
+    let student2 = {
+      study : function(){
+        console.log('학생이 공부합니다');
+      }
+    };
+    // student2 의 study() 메소드 호출하기
+    student2.study();
+
+    let student3 = {
+      studyHard(){
+        console.log('학생이 열심히 공부합니다');
+      }
+    };
+    // student3 의 studyHard() 메소드 호출하기
+    student3.studyHard();
+
+    let student4 = {
+      name : '글로벌',
+      age : 21,
+      height : 187,
+      studyHard(){
+        console.log(`${this.name} 학생이 열심히 공부합니다 `);
+      },
+      printAge(){
+        console.log(`${this.name} 학생은 ${this.age} 살입니다`);
+      },
+      printHeight(){
+        console.log(`${student4.name} 학생은 키가 ${student4.height} 입니다`);
+      }      
+    };
+    student4.studyHard();
+    student4.printAge();
+    student4.printHeight();
+
+    let student5 = student4;
+    student4 = null;
+
+    // Uncaught TypeError: Cannot read properties of null (reading 'name')
+    // student5.printHeight();
+
+
+    // 자바스트립트에서는 모든 함수에서 this 를 사용할 수 있음
+    // 전역 함수
+    function printName(){
+      console.log(this.name);
+    }
+
+    let student6 = {
+      name : '자바'
+    }
+    let student7 = {
+      name : '자바스크립트'
+    }
+
+    student6.displayName = printName;
+    student7.displayName = printName;
+
+    student6.displayName();
+    student7.displayName();
+
+    student6['displayName']();
+    student7['displayName']();
+  
+    // 객체와 연결되지 않은 상태에서 호출하면
+    // this.name 을 출력하지 못함
+    // 엄격모드('use strict') 로 설정하지 않으면
+    // this 는 window 라는 전역객체를 참조하나
+    //  ㄴ 현재 아무 값도 출려되지 않음
+    // 엄격모드('use strict') 로 설정하면
+    // this 는 undefined 가 됨
+    //  ㄴ undefined 인 객체의 property 를 읽을 수 없어서
+    //    오류가 발생함
+    // <- 전역함수 안에서 this 를 사용하는 경우에는
+    //    반드시 객체와 연결한 상태에서 호출해야 함
+    //  전역함수에 this 를 사용하면
+    //  여러 객체에서 이 함수를 사용할 수 있음
+    printName();
+
+    // 화살표 메소드
+    let student9 = {
+      name : '글로벌2',
+      study(){
+        let test1 = () => console.log(`${this.name} 가 공부합니다`);
+        test1()
+      }
+    };
+    student9.study();
+
+
+  </script>
+</body>
+</html>

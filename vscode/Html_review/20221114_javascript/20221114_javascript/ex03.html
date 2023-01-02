@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input>
+  <script>
+    let input = document.querySelector('input');
+
+    // property 추가 (property 갱신)
+    // input element 에 id 라는 속성 추가하고
+    // 속성값을 id1234 로 할당하기
+    input.setAttribute('id', 'id1234');
+    // input element 의  id 속성에 할당된 값 확인하기
+    // id1234
+    console.log(input.id);
+
+    // property(속성)값 변경 (property 갱신)
+    input.id = 'newId';
+    // input element 의  id 속성에 할당된 값 확인하기
+    // newId
+    console.log(input.getAttribute('id'));    
+    // newId
+    console.log(input.id);
+   
+
+
+  </script>  
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 전체 창 너비(스크롤바가 차지하는 영역 포함)
+        console.log(window.innerWidth);
+        // 전체 창 높이 (스크롤바가 차지하는 영역 포함)
+        console.log(window.innerHeight);
+
+        //주로 실제로 사용하는 값
+        // 스크롤바가 차지하는 영역을 제외한 너비
+        console.log(document.documentElement.clientWidth);
+        // 스크롤바가 차지하는 영역을 제외한 높이
+        console.log(document.documentElement.clientHeight);
+
+        // document 의 정확한 높이는 아랫 값들의 최댓값이 됨
+        console.log(document.body.scrollHeight);
+        console.log(document.body.offsetHeight);
+        console.log(document.body.clientHeight);
+        console.log(document.documentElement.scrollHeight);
+        console.log(document.documentElement.offsetHeight);
+        console.log(document.documentElement.clientHeight);
+
+        let scrollHeight = Math.max(
+            document.body.scrollHeight, document.documentElement.scrollHeight,
+            document.body.offsetHeight,document.documentElement.offsetHeight,
+            document.body.clientHeight,document.documentElement.clientHeight
+        );
+
+        // window.pageYOffset, window.pageXOffset : 이속성들은 읽기만가능함
+        console.log('scroll 에 의해서 가려진 부분을 포함한 전체 문서 높이 ' + scrollHeight);
+        console.log('세로 scroll 에 의해서 가려진 위쪽 영역 높이' +window.pageYOffset);
+        console.log('가로 scroll 에 의해서 가려진 왼쪽 영역 높이' +window.pageXOffset);
+
+        // scrollTo, scrollBy - scroll 상태 변경하기
+        // scrollTo(x(left 에서 right), y(top 에서 bottom)) : 절대 위치
+        // scrollBy(x(left 에서 right), y(top 에서 bottom)) : 현재 위치에서 상대 위치
+        
+        // scrollIntoView(top) : 전체 페이지를 움직여서 해당 element 가  보이는 상태로 변경됨
+        //                          ㄴ top 이 true 인 경우  :해당 element 가 창 제일 위쪽에 보이도록 scroll 상태가 변경됨
+        //                                       default 값         해당 element 의 위쪽모서리가 창의 위쪽 모서리와 일치됨
+        //                          ㄴ top 이 false 인 경우 :해당 element 가 창 제일 아래쪽에 보이도록 scroll 상태가 변경됨
+        //                                                                해당 element 의 아래쪽모서리가 창의 아래쪽 모서리와 일치됨
+
+        document.body.style.overflow = 'hidden'
+        //     ㄴ page 의 scroll bar 가 고정됨
+        // 중요한 메세지를 화면에 크게 띄우고
+        // scroll 을 움직여서 다른 content 를 보지 못하게 한 상태에서
+        // 메세지를 읽게 하는 경우에 사용함
+        document.body.style.overflow = ''
+        //      ㄴ 빈문자열을 할당하면 scroll 고정이 해제됨
+        
+</script>
+</body>
+</html>

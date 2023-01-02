@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+ <h2>라디오버튼/ 체크박스</h2> 
+  <form name = "fphone" id = "fphone" action = "phone.jsp" method="post">
+    <label for = "fname"> 이름 :  </label>
+    <input type = "text" id = "fname" name = "fname" placeholder="이름을 입력하세요"><br>
+    <label for = "fphone"> 전화 :  </label>
+    <input type = "text" id = "fphone" name = "fphone" placeholder="전화번호를 입력하세요"><br>
+
+    <h3>성별</h3>
+    <input type = "radio" id = "male" name = "gender" value="male"> <!--삼자 택일-->
+    <label for = "male">남성</label>
+    <input type = "radio" id = "female" name = "gender" value="female">
+    <label for = "female">여성</label>
+    <input type = "radio" id = "other" name = "gender" value="other">
+    <label for = "other">Other</label>
+
+    <h3>좋아하는 목록</h3>
+    <input type="checkbox" id = "vehicle1" name ="vehicle1" value="bike"> <!--복수선택가능-->
+    <label for = "vehicle1">오토바이</label>
+    <input type="checkbox" id = "vehicle2" name ="vehicle2" value="car">
+    <label for = "vehicle2">자동차</label>
+    <input type="checkbox" id = "vehicle3" name ="vehicle3" value="boat">
+    <label for = "vehicle3">보트</label>
+
+    <input type = "submit" value = "전 송">
+    <input type = "reset" value = "취 소">
+
+  </form>
+  </body>
+</html>

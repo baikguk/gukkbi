@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form id="f1">
+    <fieldset name ="userFields">
+      <legend>info<legend>
+      <input name="login" type ="text">
+    </fieldset>
+  </form>
+  <script>
+    console.log(f1.elements.login);
+
+    let fieldset = f1.elements.userFields;
+    console.log(fieldset);
+
+    //true - name 속성값을 사용해서 form과 fieldset 모두에서
+    // input element를 가져올 수 있음
+    console.log(fieldset.elements.login == f1.elements.login);
+  </script>
+</body>
+</html>

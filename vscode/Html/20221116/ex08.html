@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .error{
+      background-color: red;
+    }
+    #input2{
+      width: 220px; 
+    }
+  </style>
+</head>
+<body>
+  <form>
+    이메일 : <input type ="email" id="input1">
+    <input id="input2" type ="text" placeholder="이메일 형식에 어긋나게 입력하고 여기에 focus주기"><br>
+    <input type ='submit' value = '전송'>
+  </form>
+  <script>
+    input1.onblur = function(){
+      if(!this.value.includes('@')){
+        //  error 출력하기
+        this.classList.add('error');
+        //input1 element에 focus 되도록 하기
+        input1.focus();
+      }else{
+        //이메일 형식에 맞게(@가 포함되면)
+        //동적으로 추가되는 class 속성값 error를 삭제함
+        this.classList.remove('error');
+      }
+    }
+  </script>
+</body>
+</html>

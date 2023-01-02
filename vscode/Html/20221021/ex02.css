@@ -1,0 +1,151 @@
+@charset "utf-8";
+*{padding:0; margin: 0;}
+li{list-style: none;}
+
+/*1. 구성요소 layout*/
+header{
+  /*scroll 시 따라다님*/
+  position:fixed;
+  top:0; left: 0; z-index:5000;
+  width:100%;
+  min-width: 1180px;
+  height: 110px;
+  border-bottom: 1px solid #fff;
+  box-shadow: 2px 2px 2px rgba(0,0,0,0.3);
+}
+main{
+  width: 100%;
+  min-width: 1180px;
+  height: 600px;
+  /* header 가 fixed 되어서 header 높이만큼 padding 처리함*/
+  padding-top:110px;
+  background-color: lightblue;
+}
+.product{
+  width:100%; min-width: 1180px; height: 400px;
+  padding: 40px 0;
+  /*padding 수치를 높이 안으로 inside처리*/
+  box-sizing: border-box;
+}
+.case{
+  width: 100%; min-width:  1180px; height: 735px;
+  padding: 40px 0;
+  box-sizing: border-box;
+}
+.materials{
+  width: 100%; min-width: 1180px; height: 620px;
+  padding: 40px 0; box-sizing: border-box;
+  background-color: #ededed;
+}
+.inquiry{
+  width: 1180px; height: 520px;
+  padding: 40px 0; box-sizing: border-box;
+  /* block 요소가 부모영역 가운데 위치시킴*/
+  margin: 0 auto;
+}
+.store{
+  width: 100%; min-width: 1180px; height: 150px;
+  padding: 40px 0; box-sizing: border-box;
+  background-color:  #4c8bd1;
+}
+.board{
+  width:1180px;height: 310px;
+  padding:40px 0; box-sizing: border-box;
+  margin :0 auto;
+}
+footer{
+  width: 100%; min-width: 1180px; height:200px;
+  padding:60px 0; box-sizing: border-box;
+  background-color: #bbbcbc;
+}
+.scroll_btn{
+  position: fixed;
+  bottom: 210px;
+  right: calc(50%-650px);
+  width: 50px; height: 50px;
+  border-radius:5px;
+  background-color: #666;
+}
+
+/*2. 행간 layout */
+.h_top{
+  width:  1180px; height:45px;
+  margin: 0 auto;
+  /* 완성 후 이 부분 주석 처리함 */
+  background-color: aquamarine;
+}
+.h_bottom{
+  width: 1180px; height: 65px;
+  margin: 0 auto;
+  background-color: pink;
+}
+.inner_wrap{
+  width:1180px; height: 100%;
+  margin : 0 auto;
+  background-color: beige;
+}
+/*3. 열간 layout*/
+.board{
+  display: flex;
+  justify-content: space-between;
+}
+.board  > section{
+  width : 380px; height: 100%;
+  background-color: #ededed;
+}
+
+/*title*/
+h2{
+  width: 100%; height: 40px;
+  margin-bottom: 20px;
+  text-align: center;
+  background-color: pink;
+}
+
+/*product*/
+.product ul{
+  display: flex;
+  justify-content: space-between;
+  width:100%; height: 260px;
+}
+.product li{
+  width:580px; height: 100%;
+  border : 1px solid #ccc;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+
+/*case*/
+.case_slider{
+  width: 100%;height: 595px;
+  background: aquamarine;
+}
+/*materials*/
+.materials ul{
+  width: 100%; height: 480px;
+  /* 자손 요소들을 수평으로 나열하기*/
+  display: flex;
+  /* 줄바꿈 허용*/
+  flex-wrap: wrap;
+}
+.materials li{
+  width: 580px; height: 230px;
+  border: 1px solid #ccc;
+  box-sizing: border-box; 
+  background-color: #fff;
+}
+.materials li:nth-child(odd){margin-right: 20px;}
+/* li:nth-child(-n+2) : 1, 2번째 선택*/
+.materials li:nth-child(-n+2){
+  margin-bottom: 20px;
+}
+
+/* inquiry*/
+.review{
+float:left; width: 580px ;height: 380px;
+background-color: aquamarine;
+}
+.consult{
+  float:right; width: 580px ;height: 380px;
+  background-color: aquamarine;
+}

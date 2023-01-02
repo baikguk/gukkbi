@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    {
+      let message = 'hello javascript';
+      console.log(message);
+    }
+    //undefined : 메모리에 올라 갔지만 값이 정해지지않음
+
+    //중첩 함수 : nested function
+    function outer(firstname, lastname) {
+      //내부함수에서는 외부함수의 지역벼눗에
+      //지역변수에 접근할 수잇음
+      function inner(){
+        return firstname + " " + lastname;
+      }
+      console.log('Hello '+ inner())
+      //외부함수에서 내부함수 호출하기
+    }
+    outer('Tom','Cruise');
+
+
+      
+    function test1(){
+      let num1 = 11;
+      let num2 = 22;
+      console.log(num1+num2);
+      return; //함수가 return할때 (함수가 종료될때) 해당 함수의 메모리는 삭제됨(지역변수 메모리,console 실행 등등) 
+    }
+    test1();
+    
+
+    let count = 0;
+    function outer2(){
+      let inner2 =function inner2(){
+        return ++count;
+      }
+      return inner2;
+    }
+
+    //outer2가  inner2의 주소를 반환 이후 ()->argument 붙여주면 내부함수 실행
+    console.log(outer2());
+    console.log(outer2()());
+    console.log(outer2()());
+
+
+
+    function outer3(){
+      let num1 = 10;
+      let num2 = 20;
+      let num3 = 30;
+      function inner3(number1, number2){
+        return num1+num2 +100 + number1 +number2;
+      }
+      return inner3;
+    }
+    // 내부함수인 inner3를 호출하는 방법은 외부함수에만 가능함
+    console.log(outer3()(1,2));
+    // 실행순서 : 외부함수(outer) 정보 메모리에 생성 
+              // -> 외부함수 호출 
+              // -> 실행메모리에서 변수 생성 및 실행
+              // -> 내부함수 주소 return, 외부함수 종료
+              // -> 실행메모리의 변수 및 실행 메모리 제거
+              //    (closure 메모리 영역에 내부함수가 사용하는 
+              //    외부함수의 멤버변수를 삭제하지않고 저장해놓음)
+              // -> 내부함수 호출됨
+              // -> 삭제된 외부함수의 변수를 참고해야함으로 
+          
+
+    /*
+      외부함수에서 내부함수를 return하는 경우
+      내부함수에서 외부함수의 지역변수를 사용할 때
+      외부하는 이미 return 되었음으로
+      (외부함수의)실행영역이 메모리에서 삭제됨
+      이후에 내부함수를 실행하려면 외부함수의 지역변수를 참조해야함
+      이를 위해서 내부함수에서 참조하는 외부함수의 지역변수는
+      메모리에 남겨둬야함 -> 이 메모리 영역을 closure이라고 함
+      이런 경우의 내부함수를 클로저함수라고 함
+    */
+  
+  </script>
+</body>
+</html>

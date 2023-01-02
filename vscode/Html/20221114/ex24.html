@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <ol id="list">
+    <li>0</li>
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+  </ol>
+  <script>
+    //.appendChild 보무요소의 마지막 자식ㅇ,ㅡ로 node추가
+    let newLi = document.createElement('li');
+    newLi.innerHTML = 'hello1';
+    list.appendChild(newLi);
+
+    // .insertBefore(node, nextSibling)
+    //.insertBefore node를 부모요소 안의  nextSibling앞에 추가함
+    let newLi2 = document.createElement('li');
+    newLi2.innerHTML= 'hello2'
+
+    list.insertBefore(newLi2,list.children[1]);
+
+    //newLi3 를 첫번째 li로 추가하기
+    let newLi3 = document.createElement('li');
+    newLi3.innerHTML ='Hello HTML !!';
+    list.insertBefore(newLi3, list.firstChild);
+
+    //자식 node삭제하기
+
+    let li = list.firstElementChild;
+    list.removeChild(li); //31행 사라짐
+
+
+  </script>>
+</body>
+</html>

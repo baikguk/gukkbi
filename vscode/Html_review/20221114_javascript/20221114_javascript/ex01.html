@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body> <!-- 여기는 주석입니다 -->
+  <script>
+    /*
+      Element : DOM element 를 위한 basic class
+      HTMLElement : HTML element node 의 base 역할을 하는 클래스
+                    <html> element 관련 메소드와 getter, setter 를 제공하는 클래스
+        HTMLInputElement : HTMLElement 의 자식 클래스
+                           <input> element 에 대응하는 클래스
+        HTMLBodyElement  : HTMLElement 의 자식 클래스
+                           <body> element 에 대응하는 클래스
+        HTMLAnchorElement : HTMLElement 의 자식 클래스
+                            <a> element 에 대응하는 클래스
+      Node : 공통 DOM node property 를 제공하는 클래스
+      EventTarget : Event 관련 기능을 제공하는 클래스
+      Object : hasOwnProperty 와 같은 일반 객체 메소드를 제공하는 클래스      
+    */
+   // body node 클래스 이름 : HTMLBodyElement
+   console.log(document.body.constructor.name);
+   // [object HTMLBodyElement]
+   console.log(document.body.toString());
+
+   // 상속 관계 알아보기 : instanceof
+   console.log(document.body instanceof HTMLBodyElement);
+   console.log(document.body instanceof HTMLElement);
+   console.log(document.body instanceof Element);
+   console.log(document.body instanceof Node);
+   console.log(document.body instanceof EventTarget);
+
+   // nodeType property
+   // DOM node 의 type 확인
+   // elem <-- document.body (43행)
+   // elem.nodeType == 1  : element node
+   // elem.nodeType == 3  : text node
+   // elem.nodeType == 9  : document Object
+
+   let elem = document.body;
+
+   console.log(elem.nodeType);
+   console.log(elem.firstChild.nodeType);
+   console.log(document.nodeType);
+
+   // nodeName, tagName 으로 tag name 확인
+   // nodeName : 모든 node 에서 확인 가능
+   // tagName  : element node 에서만 확인 가능
+   console.log(document.body.nodeName);
+   console.log(document.body.tagName);
+
+   // #text
+   console.log(document.body.firstChild.nodeName);
+   // undefined <-- element node 에서만 확인 가능함
+   //               text node 에서는 불가함 --> undefined
+   console.log(document.body.firstChild.tagName);
+
+
+
+  </script>
+</body>
+</html>

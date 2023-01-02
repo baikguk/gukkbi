@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    class Animal{
+    constructor(name){
+      this.speed = 0;
+      this.name = name;
+    }
+    run(speed){
+      this.speed = speed;
+      console.log(`${this.name}은 ${this.speed} 속도로 달린다`);
+    }
+
+    stop(){
+      this.speed = 0;
+      console.log(`${this.name}이(가) 멈춤`);
+    }
+  }
+  class Rabbit extends Animal{
+    hide(){
+      console.log(`${this.name}이(가)숨음`);
+    }
+    stop(){
+      // Animal 에서부토 상속받은 stop()을 사용하게됨
+      //stop()을 Rabbit 에서작성하면
+      // rabbit.stop() 이라고 호출하면
+      // Rabbit에있는 stop()을 사용하게됨
+      super.stop();
+      this.hide();
+    }
+  }
+  let rabbit = new Rabbit("귀여운 토끼");
+  rabbit.run(57);
+  rabbit.stop();
+
+  class Rabbit2 extends Animal{
+    stop(){
+      setTimeout(()=> super.stop(),1000);
+    }
+  }
+  let rabbit2 = new Rabbit2('rabbit2');
+  rabbit2.stop();
+
+  class Rabbit3 extends Animal{
+    stop(){
+      //일ㄹ반 함수에서는 super을 인식하지못함
+      //super' keyword unexpected here
+      // setTimeout(function(){super.stop();},1000);
+    }
+  }
+  let rabbit3 = new Rabbit3('rabbit3');
+  rabbit3.stop();
+
+
+  </script>
+</body>
+</html>

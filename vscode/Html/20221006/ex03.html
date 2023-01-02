@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div{
+      width: 200px;
+      height: 100px;
+      background-color: rgb(221, 198, 156);
+    }
+    /*
+    display: none 요소가 안보이게 됨 실제로 영역 또한 차지하지 않는다.
+    */
+    #box1{display: none;}
+
+     /*
+    visibility: hidden 요소가 안보이지만 실제로 영역을 차지한다.
+    */
+    #box2{visibility: hidden;}
+
+    /*
+    opacity 투명도 0(투명) ~ 1
+    */
+    #box3{opacity: 0.2; }
+  </style>
+</head>
+<body>
+  <p>문단테그</p>
+  <div id = "box1">box1</div>
+  <p>문단테그</p>
+  <hr>
+
+  <p>문단테그</p>
+  <div id = "box2">box2</div>
+  <p>문단테그</p>
+  <hr>
+
+  <p>문단테그</p>
+  <div id = "box3">box3</div>
+  <p>문단테그</p>
+  
+</body>
+</html>

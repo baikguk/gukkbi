@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //getter / setter 는 자동으로 Person.prototype에 정의됨
+    class Person{
+      constructor(name){
+        //setter를 호출함
+        this.name = name;
+      }
+      get name(){
+        return this._name;
+      }
+      set name(value){
+        if(value.length < 5){
+          console.log('이름은 5 글자 이상으로 해주세요');
+          return;
+        }
+        this._name = value;
+      }
+    }
+    let person = new Person('글로벌아이티');
+    console.log(person.name);
+    person = new Person('it');
+
+    // computed method name : 계산된 메소드 이름 - []를 사용함
+    class User1{
+      ['say'+'Hello'](){
+        console.log('안녕');
+      }
+    }
+    new User1().sayHello();
+
+    class Person2{
+      name = '글로벌';
+      sayHello(){
+        console.log(`${this.name} 님, 안녕하세요`);
+      }
+    }
+    new Person2().sayHello();
+
+    class Person3{
+      name = '글로벌';
+    }
+    let person3 = new Person3();
+    console.log(person3.name);
+    // console.log(person3.prototype.name); //Uncaught TypeError: Cannot read properties of undefined (reading 'name')
+    console.log(Person3 === Person3.prototype.constructor)
+
+    
+  </script>
+</body>
+</html>

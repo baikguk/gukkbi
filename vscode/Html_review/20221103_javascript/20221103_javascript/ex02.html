@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    
+    console.log('add1() 함수를 정의하기 전에 호출하기 : ' + add1(1, 2));
+
+    // 함수 정의부(definition) <- 선언부 + 구현부
+    // function add(n1, n2) <- 선언부 : declaration(signature)
+    // { return n1 + n2; }  <- 구현부 : 몸통 : body
+    // 함수 선언문 : 함수 호출부가 선언문보다 먼저 나와도 호출이 가능함
+    function add1(n1, n2){ return n1 + n2; }
+    console.log('add1() 함수를 정의하고 나서 호출하기 : ' + add1(1, 2));
+
+    // Uncaught ReferenceError: Cannot access 'add2' before initialization
+    // console.log(add2(1, 2));
+    // 함수 표현식 : 함수 호출부가 함수 표현식보다 나중에 나와야 호출이 가능함
+    let add2 = function(n1, n2) { return n1 + n2 }
+    console.log('add2() 함수 표현식을 작성하고 나서만 호출할 수 있음 : ' + add2(11, 22));
+    
+
+
+  </script>
+</body>
+</html>

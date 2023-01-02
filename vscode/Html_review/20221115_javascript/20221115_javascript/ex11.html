@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button id="element">클릭 !!!</button>
+  <script>
+    class Menu{
+      handleEvent(event){
+        // mousedown -> onMousedown
+        // mouseup   -> onMouseup
+        let method = 'on' + event.type[0].toUpperCase() + event.type.slice(1);
+        this[method](event);
+      }
+      onMousedown(){
+        element.innerHTML = "마우스 버튼을 누름. ";
+      }
+      onMouseup(){
+        element.innerHTML += " 그리고, 마우스 버튼을 뗌";
+      }
+    }
+    let menu = new Menu();
+    element.addEventListener('mousedown', menu);
+    element.addEventListener('mouseup', menu);
+  </script>
+</body>
+</html>

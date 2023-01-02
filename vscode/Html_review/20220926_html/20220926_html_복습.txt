@@ -1,0 +1,32 @@
+hyper text 클릭시 링크 이동
+----------------------------
+<!DOCTYPE html> -> document type을 명시함 -> html로 작성된 코드
+<html lang="en" - >기본 언어 영어
+<head> 
+	<title>어쩌구</title> -> 왼쪽상단(웹사이트 이름) 에 입력되는 텍스트
+	<style>  -> 스타일 변경
+	 스타일위치(ex: h1, p ,blockquote){
+	  font -size: 16px;
+	  line-height : 25px; ->줄사이간격
+	 background-color
+	 color
+	 }
+ </head>
+<body>
+	<h1> 어쩌구 </h1> -> 가장 큰 제목
+	<img src = "images/first.jpg> -> 이미지를 해당 주소에서 불러옴 끝에 "/>"를 사용안함을 주의 
+	<p></p> -> 문단 표현, 줄 바꿈
+	<br> -> 줄바꿈
+	<hr> -> 수평선
+	<blockquote>어쩌구<blockquote> -> 블록안에 글이 입력
+	<pre></pre> -> 글 그대로 출력 
+	<q></q> 쌍따옴표 출력
+	<mark></mark> 하이라이트
+  	<span style = "color : red;"></span> -> 특정 영역의 글을 원하는 색의 글씨로 표현
+	<div></div> - >블록화
+	<ruby>대한민국<rt>大韓民國</rt></ruby  -> 20220926 ex05 확인
+	<!----> ->주석
+	
+
+</body>
+</html>

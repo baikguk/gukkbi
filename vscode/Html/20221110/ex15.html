@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    class Person4{
+      name = prompt(`이름을 입력해 주세요`,'글로벌');
+    }
+    let person4 = new Person4();
+    console.log('person4.name : '+person4.name);
+
+    class Button{
+      constructor(message){
+        this.message = message;
+      }
+      click = () =>{
+        console.log(this.message);
+      }
+    }
+    let button = new Button(`안녕하세요우~`);
+    // 2초 후에 실행
+    // button 객체의 click 프로퍼티에 화살표 함수를 할당해애ㅑ핳ㅁ
+    // click(){} 으로 하면 객체에서 this를 찾지 못해 undefined가 나옴
+    setTimeout(button.click,2000); //setTimeout 호출할때 메소드가 아니라 이름을 넣어줘야한ㄷ
+  </script>
+</body>
+</html>

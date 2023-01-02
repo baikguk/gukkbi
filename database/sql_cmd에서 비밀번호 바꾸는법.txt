@@ -1,0 +1,13 @@
+C:\Windows\system32>sqlplus /nolog
+
+SQL*Plus: Release 11.2.0.2.0 Production on 금 11월 4 10:05:56 2022
+
+Copyright (c) 1982, 2014, Oracle.  All rights reserved.
+
+SQL> conn /as sysdba
+Connected.
+SQL> ALTER USER system IDENTIFIED BY 1111;
+
+User altered.
+
+SQL>

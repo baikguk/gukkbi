@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    /*
+      
+      Symbol : 유일한 식별자를 만들 때 사용함
+               unique identifier
+
+    */
+    let id = Symbol();
+
+    // symbol
+    console.log('typeof id : ' + typeof id);
+
+    // Symbol 이름 붙이기
+    let id1 = Symbol("identifier");
+    let id2 = Symbol("identifier");
+
+    // false
+    console.log(id1 == id2);
+
+    // Uncaught TypeError: 
+    // Cannot convert a Symbol value to a string
+    // alert(id1);
+    // alert(id1.toString());
+  
+    console.log(id1);
+    console.log(id1.toString());
+
+    // Symbol 이름만 출력하기
+    // alert(id1.description);
+    console.log(id1.description);
+    
+
+
+  </script>
+</body>
+</html>

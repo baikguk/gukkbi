@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form id="f1">
+    <input name="login">
+  </form>
+  <script>
+    // id 속성값.elements 으로 접근하는 경우 : f1.elements.login
+    // id 속성값으로 바로 접근하는 경우 : f1.login
+    // true
+    console.log(f1.elements.login == f1.login);
+
+    //  [object HTMLInputElement] : <input name="login">
+    console.log('f1.elements.login : ' + f1.elements.login);   
+    //  [object HTMLInputElement] : <input name="login"> 
+    console.log('f1.login : ' + f1.login);  
+    // login
+    console.log('f1.login.name : ' + f1.login.name);
+
+    // input element 의 name 속성값 변경하기
+    f1.login.name = 'global';
+    // global
+    console.log('f1.login.name : ' + f1.login.name);
+
+    // id 속성값.elements 으로 접근하는 경우 
+    // undefined : 이전 name 속성값은 인식하지 못함
+    console.log('f1.elements.login : ' + f1.elements.login);
+    //  [object HTMLInputElement] : <input name="global">
+    console.log('f1.elements.login : ' + f1.elements.global);
+
+    // id 속성값으로 바로 접근하는 경우 
+    // 이전 name 속성값이나, 변경된 name 속성값이나 모두 인식함
+    // [object HTMLInputElement] : <input name="global">
+    console.log('f1.global : ' + f1.global);
+    // [object HTMLInputElement] : <input name="global">
+    console.log('f1.login : ' + f1.login);
+
+  </script>
+</body>
+</html>

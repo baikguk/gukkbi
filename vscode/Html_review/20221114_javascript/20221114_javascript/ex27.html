@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #table{
+      border: 6px solid skyblue;
+    }
+  </style>
+</head>
+<body>  
+  <table id="table_test">
+    JavaScript
+    <tr><td>Test</td></tr>
+  </table>
+  <script>
+    console.log(table_test);
+    table_test.remove();
+    /*
+      table.remove(); 을 실행했는데
+      javaScript 가 남아 있는 이유
+      <table> element 안에서는 <table> 과 <tr> 사이에
+      문자열을 작성하면 안 됨  <-- html5 표준 문법  
+      작성하면 이 text 는 <table> element
+         앞에 있는 것으로 인식함
+    */
+  </script>
+</body>
+</html>

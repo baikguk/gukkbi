@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // forEach() 메소드
+    let numbers = [1, 2, 3, 4, 5];
+    function test1(arr){
+      console.log(arr);
+    }
+    numbers.forEach(number => console.log(number));
+    console.log('=======================');
+
+    // 1, 2, 3, 4, 5
+    numbers.forEach(test1);
+
+    test1(numbers);
+    console.log(numbers);
+
+    function test2(arr){
+      for(let i = 0; i < arr.length; i++){
+        console.log(arr[i]);
+      }  
+    }
+    test2(numbers);
+
+    // numbers.forEach(alert);
+
+
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div{
+      width: 500px;
+      height: 300px;
+      border-radius: 10px;
+      margin: 10px;
+    }
+    /*
+    linear-gradient (<각도> to <방향>, start-color, finish-color)
+
+    */
+    .gra1{
+      
+      color:white;
+      background: linear-gradient(to left top,blue,white);
+    }
+    .gra2{
+      background: linear-gradient(45deg, red,white);
+    }
+    .gra3{
+      background: linear-gradient(to bottom, blue,white,50%,blue);
+    }
+  </style>
+</head>
+<body>
+  <div  class="gra1"> 글로벌</div>
+  <div  class="gra2"> 글로벌</div>
+  <div  class="gra3"> 글로벌</div>
+</body>
+</html>

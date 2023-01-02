@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function ask(question, yes, no){
+      if(confirm(question)){ yes() }       
+      else { no() }     
+    }    
+    
+    ask('동의하시나요?', 
+        function (){console.log('동의합니다');}, 
+        function (){console.log('취소합니다');});
+  </script>
+</body>
+</html>

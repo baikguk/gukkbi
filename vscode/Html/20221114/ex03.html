@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input>
+  <script>
+    let input = document.querySelector('input');//input객체를 가져옴
+
+    //propery 추가,변경, 갱신
+    //input element에 id라는 속성 추가
+    // id 값을 id1234로 할당
+    input.setAttribute('id','id1234')
+    console.log(input.id);
+
+    //propery 추가,변경, 갱신
+    input.id = 'newId';
+    console.log(input.id);
+
+    console.log(input.getAttribute('id'));// html body에서 바꿈
+    
+    input.id2= 'newId2';
+    console.log(input.id2); //자바메모리에서 input id 확인
+
+
+  </script>
+</body>
+</html>

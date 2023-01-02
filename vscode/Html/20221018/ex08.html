@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div{
+      width: 150px; height: 150px;
+      border-radius: 100px;
+      background-color: coral;
+      margin-bottom: 50px;
+      text-align: center; line-height: 150px;
+    }
+    /*
+      -Animation 종류-
+      1) frame by frame 방식
+          한 장면 한 장면 모두 그려서 빠르게 보요줌
+      2) Keyframe(tween) 방식
+          key가 되는 장면을 그려서 
+          장면 사이를 자연스럽게 연결하는 방식
+          CSS 에서는 2) 방식을 사용함
+    */
+
+    /*움직임을 만드는 부분*/
+    /*움직임을 받는 요구가 많은 경우도 있어서 따로 작성함*/
+    @keyframes move01{/*animation 이름*/
+      /*좌우 이동 처리 - 장면이 2개인 경우*/
+      from{/*시작 장면*/
+        left:0;
+        transform: rotate(0deg);
+      }
+      to{ /* 끝 장면*/
+        left : 500px;
+        transform: rotate(360deg);
+      }
+    }
+    
+      #box1{
+        /*
+        위치 이동되는 모든 요소는 position이 변경되어야 하는데
+        position 기본값은 static이라서 relative로 설정함
+        */
+        position:relative;
+
+        animation-name: move01;
+        animation-duration: 1s;
+        /* animation 발생횟수*/
+        animation-iteration-count : infinite;
+        /* animation 진행 방향 : 정방향, 역방향, 왕복, 역왕복*/
+        animation-direction: alternate;
+        animation-timing-function: cubic-bezier(.215,.610,.355,1);
+        animation-delay: 1s;
+      }
+    #box1:hover{
+      animation-play-state: paused;
+    }
+
+    @keyframes move02{/*animation 이름*/
+      /*좌우 이동 처리 - 장면이 2개인 경우*/
+      from{left:0; top:0;}
+      25%{left:500px;top:0px;}
+      50%{left:500px;top:500px;}
+      75%{left:0;top:500px;}
+      to{left:0px;top:0px;}
+    }
+    #box2{
+      position: relative;
+      animation: move02 4s ease-in-out 1s infinite;
+    }
+    #box2:hover{
+      animation-play-state: paused;
+    }
+  </style>
+</head>
+<body>
+  <div id = "box1">좌우이동</div>
+  <div id = "box2">사각형이동</div>
+</body>
+</html>

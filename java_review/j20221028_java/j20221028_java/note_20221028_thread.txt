@@ -1,0 +1,64 @@
+
+
+Thread 클래스의 메소드
+
+static void sleep(long millis) / static void sleep(long millis, int nanos)
+  지정된 시간 동안 Thread 를 일시정지시킴
+
+void interrupt()
+  (interrupted 상태가 true 가 됨)
+  sleep() 이나 join() 에 의해서 일시정지상태인 Thread 를
+  실행대기상태로 만들어줌
+   ㄴ 해당 Thread 는 InterruptedException 이 발생하면
+      일시정지상태를 벗어나게됨
+
+boolean isInterrupted()
+  Thread 의 interrupted 상태를 반환함
+
+static boolean interrupted()
+  현재 Thread 의 interrupted 상태를 알려주고
+  false 로 초기화함
+
+
+  Thread 가 sleep(), wait(), join() 등에 의해서 일시 정지상태(WAITING) 에 있을 때
+  해당 Thread 에 대해서 interrupt() 를 호출하면 sleep(), wait(), join() 에서
+  InterruptException 이 발생하고 Thread 는 실행대기상태(RUNNABLE) 가 됨
+    <-- 멈춰있던 Thread 를 실행가능한 상태로 만듬
+
+
+void join() / void join(long millis) / void join(long millis, int nanos)
+  지정된 시간 동안 Thread 가 실행되도록 함
+  지정된 시간이 지나거나 작업이 종료되면 join() 메소드를 호출한
+  Thread 로 다시 돌아와서 실행을 계속함
+
+void stop()
+  Thread 를 즉시 종료시킴
+  교착상태(dead-lock)에 들어가시 쉬워서 deprecated 됨
+
+void suspend()
+  Thread 를 일시정지시킴
+  resume() 을 호출하면 다시 실행상태가 됨
+  교착상태(dead-lock)에 들어가시 쉬워서 deprecated 됨
+
+void resume()
+  suspend() 에 의해서 일시정시상태에 있는 Thread 를
+  실행대기상태로 만듬
+  교착상태(dead-lock)에 들어가시 쉬워서 deprecated 됨
+
+static void yield()
+  실행 중에 다른 Thread 에게 양보하고
+  실행대기상태가 됨
+
+
+  Thread 상태
+
+  NEW      : Thread 가 생성되고 아직 start()메소드가 호출되지 않은 상태
+  RUNNABLE : 실행 중이거나 실행 가능한 상태
+  BLOCKED  : 동기화블럭에 의해서 일시정지된 상태
+              ㄴ lock 이 풀릴 때까지 잠시 기다리는 상태
+  WAITING  : Thread의 작업이 종료되지는 않았으나 실행 가능하지 않은
+             일시정지상태  (unrunnable) - sleep(), wait(), join()
+  TIMED_WAITING :  일시정지 시간이 지정된 경우
+  TERMINATED    :  Thread의 작업이 종료된 상태
+
+

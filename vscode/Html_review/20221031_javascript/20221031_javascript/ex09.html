@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // alert() 함수 : 알림창
+    // 확인 버튼을 누를 때까지 다른 기능이 작동하지 않음
+    alert("Global IT");
+
+    // prompt() 함수 :  프롬프트창    
+    // 입력한 문자열과 입력란, 확인, 취소 버튼이 있는 
+    // modal 창을 띄워줌
+    // 확인 버튼을 누르면 사용자가 입력한 값이 변수에 할당됨
+    // 확인 버튼을 누를 때까지 다른 기능이 작동하지 않음
+    let age = prompt('나이를 입력하세요', 20);
+    alert(`당신은 ${age} 살입니다`)
+
+    // confirm() 함수 : 
+    // () 안에 입력한 문자열이 나타나고
+    // 확인 버튼과 취소 버튼이 있는 modal 창을 띄움 
+    // 확인  버튼을 누르면 변수에 true 가 할당되고
+    // 취소  버튼을 누르면 변수에 false 가 할당되고
+    // 확인 버튼을 누를 때까지 다른 기능이 작동하지 않음
+    let isStudent = confirm("당신은 학생이신가요?");
+    alert(isStudent);
+
+
+    
+  </script>
+</body>
+</html>

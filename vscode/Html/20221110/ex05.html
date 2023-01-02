@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //setInterval() 2초 ㅁ마다 주기적으로 실행됨
+    let interval2sec = setInterval(()=>alert('2초마다 출력됨'),2000);
+    
+
+    //7초후에 반복을 정지함
+    setTimeout(()=>{
+      clearInterval(interval2sec);
+      alert('9초후 정지~~');
+    },9000);
+  </script>
+</body>
+</html>

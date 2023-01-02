@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Orange Sprite</title>
+  <style>
+    #orange{
+      width: 200px; height: 200px;
+      background-image: url(images/orange_sprite.png);
+      background-repeat: no-repeat;
+      background-position: 0 0 ;
+
+      animation: move 1s infinite alternate steps(5);
+    }
+
+    @keyframes move{
+      from{background-position: 0 0;}
+      to{background-position: -1000px 0;}
+    }
+
+  </style>
+</head>
+<body>
+  <div id="orange"></div>
+</body>
+</html>

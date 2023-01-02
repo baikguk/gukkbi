@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 객체에 property 가 하나도 없는지
+    // 하나 이상 있는지 확인하는 함수 작성하기
+    // 객체를 parameter 로 받아서 
+    // if 문에서 in 연산자를 사용하여 값이 있는지 없는지 확인함
+    
+    // property 가 하나도 없는 student 객체
+    let student = {};
+
+    // parameter 로 전달받은 객체에
+    // property 가 하나라도 있으면 false 를 반환하고
+    // 하나도 없으면 true 를 반환하는 함수
+    function isEmpty(object){
+      for(let key in object){
+        return false;
+      }
+      return true;
+    }
+    console.log('isEmpty(student) : ' + isEmpty(student));
+
+    student['max score'] = 100;
+
+    console.log('isEmpty(student) : ' + isEmpty(student));
+
+  </script>
+</body>
+</html>

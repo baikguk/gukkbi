@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <select id="select1">
+    <option value="apple">Apple</option>
+    <option value="pear" selected>Pear</option>
+    <option value="banana">Banana</option>
+  </select>
+  <script>
+    /*
+      <select> element 의 property 를 javascript 에서  인식하는 형식
+        1) select1.options - options(컬렉션)으로 인식함
+        2) select1.value   - 현재 선택된 <option> element의 value 값
+        3) select1.selectedIndex  - 현재 선택된 <option> element의 index 번호
+    */
+    // html 의 option element 를 
+    // javascript 에서는 options(컬렉션)으로 인식함
+    console.log('select1.options[0].selected : \n' + select1.options[0].selected);
+    console.log('select1.options[1].selected : \n' + select1.options[1].selected);
+    console.log('select1.options[2].selected : \n' + select1.options[2].selected);
+
+    select1.options[1].selected = false;    
+    select1.options[2].selected = true;
+    console.log('select1.options[0].selected : \n' + select1.options[0].selected);
+    console.log('select1.options[1].selected : \n' + select1.options[1].selected);
+    console.log('select1.options[2].selected : \n' + select1.options[2].selected);
+
+    // 2) select1.value   - 현재 선택된 <option> element의 value 값
+    // select1.value : banana
+    console.log('select1.value : ' + select1.value);
+
+    // 3) select1.selectedIndex  - 현재 선택된 <option> element의 index 번호
+    // select1.selectedIndex : 2
+    console.log('select1.selectedIndex : ' + select1.selectedIndex);  
+
+  </script>
+</body>
+</html>

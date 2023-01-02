@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id = "element" about = "elephant">id가 element인 inner을 넣은 text부분입니다</div>
+  <script>
+    /*
+      element.getAttribute(name) : 속성값 반환
+      element.getAttributes : 여러 속성을 collection에 반환
+      element.hasAttribute(name) : 속성 여부 반환
+      element.setAttribute(name, value) : 속성값 변경
+      element.removeAttribut : 속성값 삭제
+      
+    */
+    console.log(element.getAttribute('about'));
+    console.log(element.hasAttribute('about'));
+
+    // id가 element인 div element에 test라는 속성을 추가하면서
+    // 값을 지정함
+    element.setAttribute('test',1234567); // 속성에 할당한 값은 문자열로 변환됨
+    console.log(element.getAttribute('test'));
+    console.log(element.hasAttribute('test'));
+    
+
+    //id가 element인 속성들 확인
+    console.log(element.outerHTML);
+    // test노드에 적혀잇는거 반환?
+    console.log(element.innerHTML);
+                  //    ┌ element에 있는 모든 속성을 collection 으로 반환
+    for(let attr of element.attributes){
+      console.log(`${attr.name} : ${attr.value}`);
+    }
+
+    
+  </script>
+</body>
+</html>

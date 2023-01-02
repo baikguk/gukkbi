@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form name="search-person">
+    Search the visitors:
+    <table id="age-table">
+      <tr>
+        <td>Age:</td>
+        <td id="age-list">
+          <label>
+            <input type="radio" name="age" value="young">less than 18</label>
+          <label>
+            <input type="radio" name="age" value="mature">18-50</label>
+          <label>
+            <input type="radio" name="age" value="senior">more than 50</label>
+        </td>
+      </tr>
+
+      <tr>
+        <td>Additionally:</td>
+        <td>
+          <input type="text" name="info[0]">
+          <input type="text" name="info[1]">
+          <input type="text" name="info[2]">
+        </td>
+      </tr>
+
+    </table>
+
+    <input type="submit" value="Search!">
+  </form>
+
+
+  <script>
+    //id가 age-table인 테이블 가져오기
+    let ageTable = document.getElementById('age-table');
+    document.querySelectorAll('#age-table') //querySelectorAll는 id가 오는지 클래스가 오는지 모름으로 # , . 을 표시해야함
+
+    //table속에 있는 label모두 가져오기
+    let label = ageTable.getElementsByTagName('label');
+    label = document.querySelectorAll('#age-table')
+    
+    //table속에서 첫번째 td(13행(Age:))가져고익
+    let firstTD= ageTable.rows[0].cells[0];
+    console.log(firstTD.innerHTML);
+  </script>
+</body>
+</html>

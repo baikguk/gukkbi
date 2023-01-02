@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    section{
+      width: 700px; padding: 10px;
+      border: 4px solid blue;
+      /* 자손요소의 display 속성을 flex 로 지정함 */
+      display: flex;
+    }
+    div{
+      /* block 요소 : 기본이 수직으로 나열됨 */
+      width: 100px; height: 100px;
+      background-color: orange;
+    }
+    /*
+      justify-content
+        flexbox 들을 요소의 가로로 정렬함
+        flext-start (기본값) : flexbox 의 가로 시작 위치로 정렬함
+        flext-end : flexbox 의 가로 마지막 위치로 정렬함
+        center : 가운데로 정렬함
+        space-around : flexbox 좌우 여백을 동일하게 균등 배분함
+        space-between : 처음 flexbox 와 마지막 flexbox 를 좌우에 붙이고 균등 배분함
+        space-evenly : flexbox 사이 공백을 완전히 균등하게 처리함
+    */
+    .box1{ justify-content: flex-start; }
+    .box2{ justify-content: center; }
+    .box3{ justify-content: flex-end; }
+
+    .box4, .box5, .box6{ padding: 10px 0; }
+    .box4{ justify-content: space-around; }
+    .box5{ justify-content: space-between; }
+    .box6{ justify-content: space-evenly; }
+
+  </style>
+</head>
+<body>
+  <section class="box1">
+    <div>박스1</div>
+    <div>박스2</div>
+    <div>박스3</div>
+    <div>박스4</div>
+    <div>박스5</div>
+  </section>
+  <hr>  
+  <section class="box2">
+    <div>박스1</div>
+    <div>박스2</div>
+    <div>박스3</div>
+    <div>박스4</div>
+    <div>박스5</div>
+  </section>
+  <hr>  
+  <section class="box3">
+    <div>박스1</div>
+    <div>박스2</div>
+    <div>박스3</div>
+    <div>박스4</div>
+    <div>박스5</div>
+  </section>
+  <hr> 
+  <section class="box4">
+    <div>박스1</div>
+    <div>박스2</div>
+    <div>박스3</div>
+    <div>박스4</div>
+    <div>박스5</div>
+  </section>
+  <hr>  
+  <section class="box5">
+    <div>박스1</div>
+    <div>박스2</div>
+    <div>박스3</div>
+    <div>박스4</div>
+    <div>박스5</div>
+  </section>
+  <hr> 
+  <section class="box6">
+    <div>박스1</div>
+    <div>박스2</div>
+    <div>박스3</div>
+    <div>박스4</div>
+    <div>박스5</div>
+  </section>    
+</body>
+</html>

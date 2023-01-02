@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // let timer1 = setInterval(()=>console.log('2초마다 실행'),2000);
+
+    //재귀함수로  한번 실행되는 setTimeout함수를 주기적으로 실행 구현하기
+    let timer2 = setTimeout(function ticktock(){
+      console.log('2초 마다 실행');
+      timer2 = setTimeout(ticktock, 2000);
+    },2000);
+    clearTimeout(timer2);
+  </script>
+</body>
+</html>

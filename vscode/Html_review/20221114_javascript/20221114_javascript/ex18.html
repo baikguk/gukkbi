@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .alert{
+      padding: 15px;
+      border: 6px solid #d6e9c6;
+      border-radius: 4px;
+      color: #3c763d;
+      background-color: #dff0d8;
+    }
+  </style>
+</head>
+<body>
+  <p>재미는 있으나, 연습을 많이 해야 합니다.</p>
+  <script>
+    /*
+      insertAdjacentHTML(where, html)
+        ㄴ where : element 를 기준으로 하는 상대 위치
+                   1) beforebegin  : element 바로 앞에 html 삽입
+                   2) afterbegin   : element 의 첫 번째 자식 요소 바로 앞에 html 삽입
+                   3) beforeend    : element 의 마지막 자식 요소 바로 다음에 html 삽입
+                   4) afterend     : element 바로 다음에 html 삽입
+    */    
+    document.body.insertAdjacentHTML("afterbegin", '<div class="alert"><strong>안녕하세요</strong> javascritp 재밌네요!!!</div>');
+  </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <ul>
+    <li>
+    <label>점유률 0.8</label>
+    <!--전체 크기 1을 기준으로 0.8만큼 차지함-->
+    <meter value="0.8"></meter>
+    </li>
+    <li>
+    <label>사용량 64%</label>
+    <!--전체 크기 100을 기준으로 64만큼 차지함-->
+    <meter min = 0 max = 100  value="64"></meter>
+    </li>
+    <li>
+      <label>트래픽 초과</label>
+      <!--전체 크기 1024~10240,현재 값은 9216, 높다고 설정한 값은 8192-->
+      <meter min = "1024" max = "10240" low = "2048" high="8192" value="2000"></meter>
+    </li>
+    <li>
+        <label>적절한 트래픽</label>
+        <!--전체 크기 1을 중에서 현재 0.5를 차지하며 적정도는 0.8로 설정함-->
+        <meter value="0.5" optimum="0.8"></meter>
+    </li> 
+  </ul>
+
+  
+</body>
+</html>

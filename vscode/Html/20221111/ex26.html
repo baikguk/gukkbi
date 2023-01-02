@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div> 첫 번째 </div>
+  <script>
+    //querySelectorAll()는 element가 뒤에 추가되면 인식하자ㅣ 못함
+    let divs = document.querySelectorAll('div'); 
+    console.log('divs.length : ' + divs.length);
+  </script>
+
+  <div> 두 번째</div>
+  <script>
+    divs = document.querySelectorAll('div'); 
+    console.log('divs.length : ' + divs.length);
+  </script>
+
+   <div> 3번째</div>
+   <script>
+    // divs = document.querySelectorAll('div'); 
+     console.log('divs.length : ' + divs.length);
+   </script>
+</html>

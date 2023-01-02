@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <table id ="table">
+    <thead>
+      <tr>
+        <th>Name</th><th>Surname</th><th>Age</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>John</td><td>Smith</td><td>10</td>
+      </tr>
+      <tr>
+        <td>Pete</td><td>Brown</td><td>15</td>
+      </tr>
+      <tr>
+        <td>Ann</td><td>Lee</td><td>5</td>
+      </tr>
+      <tr>
+        <td>Global</td><td>IT</td><td>23</td>
+      </tr>
+    </tbody>
+    </table>
+  <script>
+    //name을 기준으로 오름차순 정렬하기
+    // tbody에서 모든 tr가져오기
+    // name 필드에 해당하는 첫 번째 <td> 내용을 기준으로 정렬
+    // javascript에서 <table> 태그를 table로 <tbody> tBodies  
+    let sortedRows = Array.from(table.tBodies[0].rows).sort((row1,row2)=> row1.cells[0].innerHTML.localeCompare(row2.cells[0].innerHTML))
+    table.tBodies[0].append(...sortedRows)
+  </script>
+</body>
+</html>

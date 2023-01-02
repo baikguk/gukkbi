@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      width: 5000px;
+      height: 5000px;
+    }
+  </style>
+</head>
+<body>
+  <h1>The Window Object</h1>
+  <h2>The scrollBy() Method</h2>
+
+  <p>click to scroll the document.</p>
+
+  <button onclick="scrollWin()" style="position:fixed">x축 방향 100 씩 이동 (상대좌표)</button><br><br>
+  <button onclick="scrollWin2()" style="position:fixed">x축 방향 -100 씩 이동 (상대좌표)</button><br><br>
+  <button onclick="scrollWin3()" style="position:fixed">y축 방향 100 씩 이동 (상대좌표)</button><br><br>
+  <button onclick="scrollWin4()" style="position:fixed">y축 방향 -100 씩 이동 (상대좌표)</button><br><br>
+
+  <script>
+    function scrollWin(){
+      window.scrollBy(100, 0);
+    }
+    function scrollWin2(){
+      window.scrollBy(-100, 0);
+    }
+    function scrollWin3(){
+      window.scrollBy(0, 100);
+    }
+    function scrollWin4(){
+      window.scrollBy(0, -100);
+    }
+  </script>
+
+
+</body>
+</html>

@@ -1,0 +1,181 @@
+@charset "utf-8";
+
+/* browser 초기화 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap');
+
+*{
+  padding: 0; margin: 0;
+  font-family: 'Noto Sans KR', '맑은 고딕', 'Malgun Gothic', sans-serif;
+  font-size: 14px;
+  color: #444;
+}
+li{ list-style: none; }
+a{ text-decoration: none; }
+
+/* layout */
+header{
+  width: 100%; min-width: 1180px; height: 115px;
+  border-bottom: 1px solid #ccc;
+}
+footer{
+  width: 100%; min-width: 1180px; height: 215px; 
+  border-top: 1px solid #ccc;
+}
+.htop{
+  width: 100%; min-width: 1180px; height: 35px;
+  background-color: #014bb4;
+}
+.hbottom{
+  width: 1180px; height: 80px;
+  margin: 0 auto;
+}
+.sitemap{
+  width: 1180px; height: 50px;
+  border-right: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+.ftop{
+  width: 100%; min-width: 1180px; height: 50px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  box-sizing: border-box;
+  background-color: #ededed;
+}
+.fbottom{
+  width: 100%; min-width: 1180px; height: 115px;
+  padding-top: 20px; box-sizing: border-box;
+  background-color: #ededed;
+}
+.wrap{
+  width: 1180px; height: 100%;
+  margin: 0 auto;
+}
+/* left_nav */
+.left_nav{
+  float: left;
+}
+.left_nav li{
+  float: left; height: 35px; padding: 0 10px;
+  /* 한 줄 text 인 경우 height 와 line-height 를 똑같이 하면 세로 가운데 위치함 */
+  line-height: 35px;
+}
+.left_nav .first{ background-color: #fff; }
+.left_nav a{ color: #fff; }
+.left_nav .first a{ color: #444; }
+
+/* right_nav */
+.right_nav{
+  float: right;
+}
+.right_nav li{
+  float: left;
+  margin:  0 10px;
+  height: 35px; line-height: 35px;
+}
+.right_nav a{ color: rgba(255, 255, 255, 0.7); }
+.right_nav a:hover{ color: rgba(255, 255, 255, 1); }
+.right_nav .last a{
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  padding: 2px 10px;
+}
+.right_nav .last a:hover{
+  border: 1px solid rgba(255, 255, 255, 1);
+  background-color: #013696;
+}
+.right_nav .direct a{
+  border: 1px solid #54e1ff;
+  color: #54e1ff; padding: 2px 10px;
+}
+.right_nav .direct a:hover{
+ background-color: #013696;
+}
+
+/* logo - hbottom*/
+.hbottom h1{
+  float: left; width: 160px; height: 80px;
+  padding-top: 27px; box-sizing: border-box;
+}
+
+/* gnb */
+.gnb{
+  float: left; width: 860px; height: 80px;
+}
+.gnb li{
+  float: left; height: 80px; line-height: 80px;
+  margin: 0 26px;
+}
+.gnb a{ color: #000; font-size: 20px; font-weight: 500;}
+.gnb a:hover{color: #1e78ce;}
+
+/* icon_nav */
+.icon_nav{
+  float: right; width: 160px; height: 80px;
+  text-align: right;
+}
+.icon_nav li{
+  display: inline-block; height: 80px;
+  padding-top: 22px; box-sizing: border-box;
+  margin-left: 10px;
+}
+
+/* sitemap */
+.sitemap li{
+  float: left; width: 20%; height: 50px;
+  border-right: 1px solid #ccc;
+  box-sizing: border-box;
+}
+.sitemap li:last-child{ border-right: none; }
+.sitemap a{
+  display: block; width: 100%; height: 100%;
+  padding: 0 10px; box-sizing: border-box;
+  line-height: 50px;
+
+  background-image: url(../ex01_images/footer_more.png);
+  background-repeat: no-repeat;
+  background-position:  calc(100% - 10px) center;
+}
+
+/* fnav */
+.fnav{
+  float: left; height: 48px; line-height: 48px;
+}
+.fnav li{
+  float: left; margin: 0 10px;
+}
+.fnav li:first-child{  margin-left: 0; }
+.fnav li:after{
+  content: '|';
+  font-size: 8px; color: #ccc;
+  position: relative; top: -3px; left: 10px;
+}
+.fnav li:last-child:after{
+  content: '';
+}
+.fnav li:last-child a{
+  color: #333; font-weight: 700;
+}
+
+/* award */
+.award{
+  float: right; height: 48px;
+}
+.award li{ float: left; margin-top: 10px; }
+
+/* fbottom */
+.fbottom li{
+  float: left; line-height: 37px;  margin: 0 10px;
+  font-size: 13px; color: #666;
+}
+.fbottom li:nth-child(1), .fbottom li:nth-child(5){
+  margin-left: 0; clear: both;
+}
+.fbottom li:after{
+  content: '|';
+  font-size: 8px; color: #ccc;
+  position: relative; top:  -2px; left: 10px;
+}
+.fbottom li:nth-child(4):after, .fbottom li:nth-child(9):after{
+  display: none;
+}

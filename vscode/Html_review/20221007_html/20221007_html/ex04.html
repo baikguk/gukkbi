@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* position 속성 : static / relative / absolute / fixed */
+    /* 
+     relative : 이전 요소에 자연스럽게 연결해서 배치함
+                위치를 지정할 수 있음    
+                고정되어 있지 않고 다른 요소에 의해서 위치가 바뀔 수 있음
+                left나 top속성을 사용해서 위치를 옮길 수 있음
+                static(기본값)이었을 때의 위치를 기준으로
+                left, top 에 지정한 위치만큼 이동함
+    */
+    #box1{
+      float: left;  width: 100px;
+      background-color: rgb(243, 226, 72);
+      padding: 20px; margin-right: 10px;
+    }
+    #box2{
+      /*  */
+      position: relative; left: -50px; top: 30px;
+      background-color: rgb(95, 95, 203);
+      width: 300px; float: left; padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div id="box1"></div>
+  <div id="box2"></div>
+  <div id="box3"></div>
+  <div id="box4"></div>
+</body>
+</html>

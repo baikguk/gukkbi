@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    /*
+      Set : element의 중복을 허용하지 않는 Collection
+
+      new Set(iterable) - 셋을 생성함
+                        - iterable을 argument로 넣으면
+                          해당 iterable 안의 요소들을 복사해서
+                          Set을 생성함
+      set.add(value) - value를 추가하고 Set을 반환함
+      set.delete(value) - value를 삭제함, 삭제 성공하면 true, 실패하면 false반환
+      set.has(value) - Set에 해당 value가 있으면 true,없으면 false를 반환함
+      set.clear() - Set을 비움
+    */
+   let set1 = new Set();
+
+   let student1 = {name: '글로벌1'};
+   let student2 = {name: '글로벌2'};
+   let student3 = {name: '글로벌3'};
+
+   set1.add(student1);
+   set1.add(student2);
+   set1.add(student3);
+   set1.add(student2);
+   set1.add(student1);
+   set1.add(student3);
+
+   //중복 저장을 해도
+   console.log('set1.size : '+set1.size);
+   console.log(set1);
+   for(let std of set1){
+    console.log(std.name);
+   }
+
+   let fruits = new Set(['orange','apple','strawberry']);
+   for(let fruit of fruits) console.log(fruit);
+
+   fruits.forEach((value)=>console.log(value))
+   fruits.forEach((value, fruits)=>console.log(value))
+   //Map과의 호환성을 위해서 parameter을 3개 사용하기도함
+   fruits.forEach((value, valueAgain, fruits)=>console.log(value))
+
+   /*
+    set.keys() -Set 내부에 잇는 모든 value를 요소로하는 iterable 객체를 반환함
+    set.values() -Set 내부에 잇는 모든 value를 요소로하는 iterable 객체를 반환함
+    set.entries() -Set 내부에 잇는 모든 value를 요소로하는 iterable 객체를 반환함
+   */
+  </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- 
+    data-widget-name 속성은 
+    javascript 에서 dataset.widgetName 으로 인식함
+  -->
+  <div data-widget-name="menu">Choose the genre</div>
+  <script>
+    // data-widget-name 속성이 있는 element
+    let element = document.querySelector('[data-widget-name]');
+
+    // data-widget-name 속성에 할당된 값
+    // menu
+    console.log('element.dataset.widgetName : ' + element.dataset.widgetName);
+    // menu
+    console.log('element.getAttribute("data-widget-name") : ' + element.getAttribute("data-widget-name"));
+  </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            width: 5000px;
+            height: 5000px;
+        }
+    </style>
+</head>
+<body>
+    <h1>The Window Object</h1>
+    <h2>The scrollTo() Method</h2>
+
+    <p> click to scroll the document.</p>
+
+    <button onclick="scrollwin()" style="position: fixed;">x 축 방향 200 이동</button><br><br>
+    <button onclick="scrollwin2()" style="position: fixed;">y 축 방향 400 이동</button><br><br>
+    <button onclick="scrollwin3()" style="position: fixed;">x 축 방향 -200 이동</button><br><br>
+    <button onclick="scrollwin4()" style="position: fixed;">y 축 방향 -400 이동</button><br><br>
+
+    <script>
+        function scrollwin(){
+            window.scrollTo(200, 0);
+        }
+        function scrollwin2(){
+            window.scrollTo(0, 400);
+        }
+        function scrollwin3(){
+            window.scrollTo(-200, 0);
+        }
+        function scrollwin2(){
+            window.scrollTo(0, -400);
+        }
+
+   
+    </script>
+</body>
+</html>

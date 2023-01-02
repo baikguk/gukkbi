@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //static method / static property
+    // 정적 메소드 / 정적 프로퍼티
+    class Person{
+    static staticMethod(){
+      console.log(this == Person);
+    }
+    }
+    Person.staticMethod();
+
+    class Person2{}
+    Person2.staticMethod2  = function(){
+      console.log(this == Person2);
+    }
+    Person2.staticMethod2();
+
+    console.log('===============');
+
+    class Article{
+      constructor(title, date){
+        this.title = title;
+        this.date = date;
+      }
+      static compare(articleA, articleB){
+        return articleA.date - articleB.date;
+      }
+    }
+    let articles = [
+      new Article('Html', new Date(2020,3,1)),
+      new Article('CSS', new Date(2020,1,1)),
+      new Article('JavaScript', new Date(2020,2,1))
+    ];
+    articles.sort(Article.compare);
+    console.log(articles[0].title);
+    console.log('=====================')
+    for(let i = 0; i< articles.length;i++){
+      console.log(articles[i].title);
+    }
+
+    console.log('===========================')
+    
+    class Article2 {
+      constructor(title, date){
+        this.title = title;
+        this.date = date;
+      }
+      static createTodays(){
+        //아래의 this 는 Article2임
+        return new this("Today's digest",new Date());
+      }
+    }
+    let article2 =Article2.createTodays();
+    console.log(article2.title);
+
+    
+  </script>
+</body>
+</html>

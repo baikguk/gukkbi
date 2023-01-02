@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    ul.accept{
+      list-style: none;
+
+    }
+  </style>
+</head>
+
+<body>
+  <form class="signup_form" action="signup.jsp" method="post">
+    <ul>
+      <!--아이디-->
+      <li>
+        <div>
+          <label for="signupId">아이디<i>*</i></label>
+          <div class="fixedclear signupIdWrap">
+            <!-- 클래스명에 공백이 있으면 클래스 2개로 됨-->
+            <div class="signupId_wrap">
+              <input type="text" name="signupId" id="signupId" value="" placeholder="아이디">
+            </div>
+            <div class="signupId_checkBtn_wrap">
+              <button data-role="none" class="signupId_checkBtn">중복확인</button>
+            </div>
+          </div>
+        </div>
+      </li>
+      <!-- 비밀번호-->
+      <li>
+        <div>
+          <label for="signupPw">비밀번호<i>*</i></label>
+          <div>
+            <input type="password" name="signupPw" id="signupPw" value="" placeholder="비밀번호">
+          </div>
+        </div>
+      </li>
+      <!-- 비밀번호확인-->
+      <li>
+        <div>
+          <label for="signupPw2">비밀번호확인<i>*</i></label>
+          <div>
+            <input type="password" name="signupPw2" id="signupPw2" value="" placeholder="비밀번호 확인">
+          </div>
+        </div>
+      </li>
+      <!-- 이름-->
+      <li>
+        <div>
+          <label for="signupName">이름<i>*</i></label>
+          <div>
+            <input type="text" name="signupName" id="signupName" value="" placeholder="이름 입력">
+          </div>
+        </div>
+      </li>
+
+      <!-- 이메일-->
+      <li>
+        <div>
+          <label for="signupEmail">이메일<i>*</i></label>
+          <div>
+            <input type="email" name="signupEmail" id="signupEmail" value="" placeholder="Email 입력">
+          </div>
+        </div>
+      </li>
+
+      <!-- 휴대폰-->
+      <li>
+        <div>
+          <label for="signupPhone">휴대폰<i>*</i></label>
+          <div>
+            <input type="text" name="signupPhone" id="signupPhone" value="" placeholder="휴대폰 번호 입력(숫자만)">
+          </div>
+        </div>
+      </li>
+
+      <!-- 주소-->
+      <li>
+        <div>
+          <label for="signupAd">주소<i>*</i></label>
+          <div>
+            <input type="text" name="signupAd" id="signupAd" value="" placeholder="주소 입력">
+          </div>
+        </div>
+      </li>
+
+      <!-- 생년월일-->
+      <li>
+        <div>
+          <label>생년월일<i>*</i></label>
+          <div>
+            <ul class="fixedclear birthWrap" tabindex="0">
+              <!--연도-->
+              <li>
+                <div>
+                  <input type="number" min="1900" max="2100" name="signupBirth_year" id="signupBirth_year" value="2022"
+                    placeholder="YYYY">
+                </div>
+              </li>
+              <!--월-->
+              <li>
+                <div>
+                  <input type="number" min="1" max="12" name="signupBirth_month" id="signupBirth_month" value="09"
+                    placeholder="MM">
+                </div>
+              </li>
+              <!--일-->
+              <li>
+                <div>
+                  <input type="number" min="1" max="31" name="signupBirth_day" id="signupBirth_day" value="28"
+                    placeholder="DD">
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </li>
+
+      <!--성별-->
+      <li>
+        <div>
+          <h2>성별</h2>
+          <div class="gender">
+            <p>
+              <input type="radio" name="gender_check" id="male" class="gender_check" value="남성">
+              <label for="male">남자</label>
+            </p>
+
+            <p>
+              <input type="radio" name="gender_check" id="female" class="gender_check" value="여성">
+              <label for="female">여자</label>
+            </p>
+
+            <p>
+              <input type="radio" name="gender_check" id="unselect" class="gender_check" value="선택안함">
+              <label for="unselect">선택안함</label>
+            </p>
+          </div>
+        </div>
+      </li>
+
+      <!--추가입력-->
+      <li>
+        <div>
+          <h2>추가입력사항</h2>
+          <h3>추천인 아이디와 참여 이벤트 중 하나만 선택하실 수 있습니다</h3>
+          <div class="gender">
+            <p>
+              <input type="radio" name="recom_check" id="reco_id" class="recom_check" value="추천인 아이디">
+              <label for="reco_id">추천인 아이디</label>
+            </p>
+            <p>
+              <input type="radio" name="recom_check" id="part_event" class="recom_check" value="이벤트명">
+              <label for="part_event">참여 이벤트</label>
+            </p>
+
+          </div>
+        </div>
+      </li>
+    </ul>
+
+    <div class="bar">
+      <ul class="accept">
+        <li>
+          <div>
+            <h2>이용약관동의<i>*</i></h2>
+            <p>
+              <input type="checkbox" name="check_all" id="check_all" class="accept_chk" value="all">
+              <label for="check_all">전체 동의</label>
+            </p>
+            <h3>선택 항목에 동의하지 않은 경우도 회원가입 및 일반적인 서비스를 이용할 수 있습니다</h3>
+          </div>
+        </li>
+        <li>
+          <div>
+            <input type="checkbox" name="check_1" id="check_1" class="accept_chk" value="이용약관필수">
+            <label for="check_1">이용약관<span>필수</span></label>
+          </div>
+        </li>
+        <li>
+          <div>
+            <input type="checkbox" name="check_2" id="check_2" class="accept_chk" value="개인정보처리방침동의 필수">
+            <label for="check_2">개인정보처리방침동의<span>필수</span></label>
+          </div>
+        </li>
+        <li>
+          <div>
+            <input type="checkbox" name="check_3" id="check_3" class="accept_chk" value="개인정보처리방침동의 선택">
+            <label for="check_3">개인정보처리방침동의<span>선택</span></label>
+          </div>
+        </li>
+        <li>
+          <div>
+            <input type="checkbox" name="check_4" id="check_4" class="accept_chk" value="무료배송, 할인쿠폰 등 혜택/정보 수신 동의">
+            <label for="check_4">무료배송, 할인쿠폰 등 혜택/정보 수신 동의</label>
+          </div>
+        </li>
+        <li>
+          <div>
+            <ul class="snsEmail">
+              <li>
+                <div>
+                  <input type="checkbox" name="check_sns" id="check_sns" class="accept_chk" value="SNS">
+                  <label for="check_sns">SNS</label>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <input type="checkbox" name="check_email" id="check_email" class="accept_chk" value="Email">
+                  <label for="check_email">Email</label>
+                </div>
+              </li>
+            </ul>
+            <div class="svg_smsEmail">
+              <img src="join.svg" alt="동의시 한달 동안 [5% 적립] + [무료배송]">
+            </div>
+          </div>
+        </li>
+        <li>
+          <div>
+            <input type="checkbox" name="check_age14" id="check_age14" class="accept_chk" value="본인은 만 14세 이상입니다">
+            <label for="check_age14">본인은 만 14세 이상입니다</label>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="signupBtn_wrap">
+      <input type="submit" value="가입하기" class="signupBtn">
+    </div>
+
+
+
+
+  </form>
+</body>
+
+</html>

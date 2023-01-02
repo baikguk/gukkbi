@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // JavaScript Object Notation (JSON)
+    let student = {
+                    name:'global', 
+                    age:23
+                  };
+
+       
+    console.log("student['age']  : " + student['age']);
+    console.log("student['name'] : " + student['name']);
+    
+    student['age'] = 100;    
+    console.log("student['age']  : " + student['age']);
+    console.log("===================================");
+    
+
+    // let key = prompt('student 의 어떤 속성의 값을 조회하실건가요?', 'name');
+    let key = 'name';
+    console.log("student[key] : " + student[key]);
+
+    key = 'age';
+    console.log("student[key] : " + student[key]);
+
+    // undefined
+    // 변수 key 에 키값을 할당한 후
+    // . 연산자로 접근하면 undefined 를 반환함
+    // 실제 지정한 key 를 사용할 때는 [] 나 . 연산자 모두 사용 가능함
+    console.log("student.key : " + student.key);
+    console.log("student.name : " + student.name);
+    console.log("student.age : " + student.age);
+    console.log("student['name'] : " + student['name']);
+    console.log("student['age'] : " + student['age']);
+
+  </script>
+</body>
+</html>

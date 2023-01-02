@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /*
+      1) 앞 문자열 선택하기 : 태그[속성명^="속성값"]{}
+    */
+    img[src^="cat"]{width:200px; border:4px solid red;}
+    /*
+      2) 뒷 문자열 선택하기 : 태그[속성명$="속성값"]{}
+    */
+    img[src$="png"]{ border: 4px solid green;}
+    img[src$="jpg"]{ border: 4px solid orange;}
+    img[src$="gif"]{ border: 4px solid blue;}
+     /*
+      2) 중간 문자열 선택하기 : 태그[속성명*="속성값"]{}
+    */
+    img[src*="og"]{border-style: dashed; }
+    
+  </style>
+</head>
+<body>
+  <img src="cat.gif" alt="">
+  <img src="cat.jpg" alt="">
+  <img src="cat.png" alt="">
+  <img src="dog.png" alt="">
+</body>
+</html>

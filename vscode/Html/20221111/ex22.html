@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>목 차</h1>
+  <div class = "contents">
+    <ul class = "book">
+      <li class = "chapter">1장</li>
+      <li class = "chapter">2장</li>
+    </ul>
+  </div>
+  <script>
+    // querySelector()로 class 가 chapter인 element 가져오기 (querySeleector이라 앞에 하나만 가져욤)
+    let chapter = document.querySelector('.chapter');
+    console.log(chapter);
+
+    //closest() : 자기 자신을 포함해서 CSS 선택자와 일치하는
+    //            가장 가까운 조상 element를 찾음
+    console.log(chapter.closest('.book')) //ul
+
+    console.log(chapter.closest('.contents')); //div
+
+    // h1은 chpater의 조상이 아님
+    console.log(chapter.closest('h1')); // null
+  </script>
+</body>
+</html>

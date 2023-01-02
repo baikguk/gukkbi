@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <ul>
+    <li>1-1</li>
+    <li>1-2</li>
+  </ul>
+  <ul>
+    <li>2-1</li>
+    <li>2-2</li>
+  </ul>
+  <script>
+    //querySelectorAll() 사용하기
+    //querySelectorAll: 다 가져와서 사용함
+    let elements = document.querySelectorAll('ul > li:last-child');
+    
+    //element 와 element.innerHTML의 차이점
+    for(let element of elements){
+      console.log(element);
+    }
+
+    for(let element of elements){
+      console.log(element.innerHTML);
+    }
+
+    //querySelector : 여러 개중에서 맨 앞에 있는 하나만 가져옴
+    let element = document.querySelector('ul > li:last-child');
+    console.log(element);
+    console.log(element.innerHTML);
+  </script>
+</body>
+</html>

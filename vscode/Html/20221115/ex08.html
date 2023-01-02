@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+  <script>
+    /*
+      자주 사용하는 DOM event
+
+      click - element 위에서 마우스 왼쪽 버튼 눌렀을 때 발생
+      contextmenu - element 위에서 마우스 오른쪽 버튼 눌렀을 때 발생
+      mouseover - 마우스 커스를 element 위로 움직였을 때
+      mouseout - 마우스 커스를 element 밖로 움직였을 때
+      mousedown - element 위에서 마우스 왼쪽 버튼 누르고 있을 때
+      mouseup - element 위에서 마우스 왼쪽 버튼 뗄때
+
+      폼 요소 이벤트
+      submit - 이 버튼을 누르면<form> element를 지정한 page로 제출할 때 발생
+      focus - <input> element 에 focus할 때 발생
+
+      키보드 이벤트
+      keydown / keyup - 키보드 버튼을 누르거나 뗄 때 발생
+
+      문서 이벤트
+      DOMContentLoaded - HTML 이 모두 loading 되엇 DOM 생성이 완료되었을 때 발생
+
+      CSS 이벤트
+      trastioned - CSS 애니메이션이 종료되었을 때 발생
+
+      Event Handler
+        이벤트에 반응하려면 이벤트가 발생했을 때 호출되는 함수인 Handler를 할당해야 함
+    */
+   //Html의 on 속성 사용하기
+   function test1(){
+    for(let i = 0; i<4;i++){
+      console.log(i);
+    }
+
+    
+   }
+  </script>
+
+  
+<!-- // HTML 의 on<event>속성에 Handler 할당하기 -->
+  <!-- 아래 버튼을 클릭하면 onclick 코드가 실행됨 -->
+  <input value="클릭~!" onclick="alert('클릭!!!')" type="button"><br><br>
+
+  <!-- code가 긴 경우 별도의 함수를 작성함 -->
+  <input value="클릭버튼" onclick="test1()" type="button"><br><br>
+
+  <!-- Dom property 사용하기     -->
+  <!-- id 속성(property) 사용하기 -->
+  <input id="element" type="button" value="클릭해 주세요"><br><br>
+  <input id="element2" type="button" value="클릭해 주세요2"><br><br>
+  
+  <!-- this는 button이므로 this.innerHTML은 "버튼을 클릭하세요"가 됨 -->
+<button onclick ="alert(this.innerHTML)">버튼을 클릭하세요</button>
+
+
+<script>
+  //DOM property(id) 사용하기
+  element.onclick = function(){
+      alert('안녕하세요 javascript 입니다')
+    }
+  function sayHello(){
+    alert('반갑습니다 어서오세요');
+  }
+  //아래의 경우 함수뒤에 소괄호 붙이면 안됨
+  element2.onclick = sayHello;
+
+  //아래와 같이하면
+  // function(){alert('안녕');} 부분이 문자열이 되어서 실행되지 않음
+  document.body.setAttribute('onclick',function(){alert('안녕');});
+</script>
+</body>
+</html>

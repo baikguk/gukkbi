@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let animal = {
+      name : 'animal',
+      eat(){
+        console.log(`${this.name} 이(가) 먹이를 먹습니다`);
+      }
+    };
+    let rabbit = {
+      __proto__ : animal,
+      name : 'rabbit',
+      eat(){
+        //this는 rabbit이고
+        //rabbit의 __proto__가 animal이라서
+        // __proto__.eat()은 부모의 eat()에 있는
+        // this,즉 animal이 됨
+        this.__proto__.eat();
+
+        //this는 rabbit이고
+        //__proto__.eat에서 rabbit의 __proto(부모)의 eat이호출됨
+        // 하지만 call(this)로 인해 부모의 eat에 있는 this가 rabbit이됨
+        this.__proto__.eat.call(this);
+      }
+    };
+    rabbit.eat();
+  </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let test = {};
+    function A() {
+      //this = {};
+      //return this;
+      return test;
+    }
+    function B(){
+      return test;
+    };
+    let a = new A();
+    let b = new B();
+    console.log(a==b);
+
+    function Calc(){
+      // this = {};
+      this.inputNumber = function(){
+        this.num1 = +prompt('첫 번째 숫자를 입력하세요',0);
+        this.num2 = +prompt('두 번째 숫자를 입력하세요',0);
+      };
+
+      this.sum = function(){
+        return this.num1+this.num2;
+      };
+      
+      this.multi = function(){
+        return this.num1 *this.num2;
+      };
+
+      return this;
+    }
+
+    let c1 = new Calc();
+    console.log("더하기 : " + c1.sum());
+    console.log("더하기 : " + c1.multi());
+
+    
+
+
+
+  </script>
+</body>
+</html>

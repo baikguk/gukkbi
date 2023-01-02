@@ -1,0 +1,141 @@
+@charset "utf-8";
+
+*{ padding: 0; margin: 0; }
+
+/* 1) 구성요소 layout */
+header{
+  position: fixed; top: 0; left: 0; z-index: 5000;
+  width: 100%; min-width: 1000px; height: 145px;
+  background-color: #0d4633;
+}
+main{
+  width: 100%; min-width: 1000px; height: 455px;
+  /* header 를 가리는 만큼 padding 으로 처리하기 */
+  padding-top: 145px;
+  background-color: lightblue;
+}
+.main_contents{
+  width: 100%; min-width: 1000px; height: 1430px;
+  padding-top: 30px; box-sizing: border-box;
+  background-color: #f7f0da;
+}
+footer{
+  width: 100%; min-width: 1000px; height: 210px;
+  padding: 20px 0 30px; box-sizing: border-box;
+  background-color: #2e2f2e;
+}
+.scroll_btn{
+  position: fixed;
+  bottom: 40px; right: calc(50% - 580px);
+  width: 60px; height: 60px; 
+  background-color: #979797;
+}
+
+/* 2) 행간 layout */
+.h_top{
+  width: 100%; height: 100px;
+  border-bottom: 1ps solid #3a6959;
+  box-sizing: border-box;
+}
+.gnb{
+  width: 1000px; height: 45px;
+  margin: 0 auto;
+  background-color: pink;
+}
+.main_contents01{
+  width: 1000px; height: 590px;
+  margin: 0 auto 30px;
+  background-color: coral;
+}
+.main_contents02{
+  width: 1000px; height: 480px;
+  margin: 0 auto 30px;
+  background-color: coral;
+}
+.main_contents03{
+  width: 1000px; height: 130px;
+  margin: 0 auto 80px;
+  background-color: coral;
+}
+.relative_site{
+  width: 100%; height: 60px;
+  border-top: 1px solid #ccc; 
+  box-sizing: border-box;
+}
+.f_top{
+  width: 1000px; height: 30px;
+  margin: 0 auto 30px;
+  background-color: pink;
+}
+.company_info{
+  width: 1000px; height: 60px;
+  margin: 0 auto 20px;
+  background-color: pink;
+}
+.copyright{
+  width: 1000px; height: 20px;
+  margin: 0 auto;
+  background-color: pink;
+}
+.inner_wrap{
+  width: 1000px; height: 100%;
+  margin: 0 auto;
+  background-color: aquamarine;
+}
+
+/* 3) 열간 layout */
+.i_slider01{
+  float: left;
+  width: 395px; height: 405px;
+  margin-bottom: 10px;
+  background-color: aqua;
+}
+.good_bread{
+  float: right;
+  width: 595px; height: 175px;
+  margin-bottom: 10px;
+  background-color: aqua;
+}
+.product{
+  float: right;
+  width: 595px; height: 405px;  
+  background-color: #fff;
+}
+.delivery{
+  float: left;
+  width: 395px; height: 175px;
+  background-color: aqua;
+}
+.store{
+  float: left;
+  width: 595px; height: 265px;
+  margin-bottom: 10px;
+  background-color: aqua;
+}
+.sns{
+  float: right;
+  width: 395px; height: 480px;
+  background-color: aqua;
+}
+.discount{
+  float: left;
+  width: 595px; height: 210px;
+  background-color: aqua;
+}
+.franchise{
+  float: left;
+  width: 295px; height: 100%;
+  margin-right: 5px;
+  background-color: #9d5e3b;
+}
+.recruit{
+  float: left;
+  width: 295px; height: 100%;
+  margin-right: 10px;
+  background-color: #dccc9b;
+}
+news{
+  float: right;
+  width: 395px; height: 100%;  
+  background-color: #f6f4ee;
+}

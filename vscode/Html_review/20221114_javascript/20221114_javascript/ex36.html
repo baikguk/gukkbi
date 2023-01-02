@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #div2{
+      color: red;
+      margin: 40px;
+    }
+  </style>
+</head>
+<body>
+  <div id="div">DIV Tag</div>
+  <hr>
+  <div id="div2">DIV Tag2</div>
+  <hr>
+  <script>
+    // 동작하지 않음
+    // div.style.margin = 40;
+    div.style.margin = '40px';
+    div.style.color = 'lightgreen';
+
+    console.log(div.style.margin);
+    console.log(div.style.marginTop);
+    console.log(div.style.marginBottom);
+    console.log(div.style.marginLeft);
+    console.log(div.style.marginRight);
+    console.log(div.style.color);
+
+    // css 에서 설정된 값은 바로 확인이 안 됨
+    console.log('div2.style.color  : ' + div2.style.color);
+    console.log('div2.style.margin : ' + div2.style.margin);
+
+    // css 에서 설정된 값은 getComputedStyle 객체로 확인함
+    // 현재 chrome 에서는 확인되나, firefox 에서는 잘 안 됨
+    let divTwo = getComputedStyle(div2);
+    console.log('divTwo.color  : ' + divTwo.color);
+    console.log('divTwo.margin : ' + divTwo.margin);
+
+    
+  </script>
+</body>
+</html>

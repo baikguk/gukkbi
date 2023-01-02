@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let animal = {
+      eats : true
+    };
+    let rabbit = {
+      jumps : true
+    };
+
+    // animal 이 rabbit의  prototype이 되도록 설정하기
+    // 자바식 설명 : animal이 rabbit의 조상클래스
+    rabbit.__proto__ = animal;
+    console.log(rabbit.jumps);
+    console.log(rabbit.eats); //자바의 상속 느낌
+
+    // prototype chain
+    let animal2 = {
+      eats : true,
+      walk(){
+        console.log(`animal이 걷습니ㄷㅏ`);
+      }
+    }
+    let rabbit2 = {
+      jumps : true,
+      __proto__: animal2
+    }
+
+    rabbit2.walk();
+
+    let rabbit3 = {
+      earLength : 100,
+      __proto__: rabbit2
+    }
+    console.log('rabbit3.eats: '+rabbit3.eats);
+    console.log('rabbit3.jumps: '+rabbit3.jumps);
+    console.log('rabbit3.earLength : '+rabbit3.earLength);
+    rabbit3.walk();
+
+    let animal4 = {
+      eats : true,
+      walk(){
+
+      }
+    };
+
+    let rabbit4 = {
+      __proto__ : animal4
+    }
+    rabbit4.walk();
+
+    rabbit4.walk = function(){ // 오버라이딩과 비슷
+      console.log('rabbit4가 겉는다');
+    }
+    rabbit4.walk();
+
+    console.log('====================');
+
+    let person = {
+      firstName : '글로벌',
+      lastName : '아이티',
+      set fullName(name){
+        [this.firstName, this.lastName] = name.split(' ');
+      },
+      get fullName(){
+        return `${this.firstName} ${this.lastName}`;
+      }
+    };
+    let administrator = {
+      __proto__ : person,
+      isAdmin : true
+    }
+    administrator.fullName = 'Tom Cruise';
+    console.log(administrator.fullName);
+    console.log(person.fullName);
+  </script>
+</body>
+</html>

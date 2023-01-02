@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <ul id="ul"></ul>
+  <script>
+    /*
+      DocumentFragment 객체
+        ㄴ 여러 node로 구성된 그룹을 감싸서
+           다른 곳으로 전달해 줌
+           documnet에 있는 다른 node를
+           DocumentFragment에 추가할 수 있음
+    */
+   function getListContent(){
+    let result = [];
+    for(let i =1;i<=10; i++){
+      let li = document.createElement('li');
+      li.append(i);
+      result.push(li);
+    }
+    return result;
+   }
+   ul.append(...getListContent()); //...찍어줘야함 기억상 목록으로 바꿔주는거 같았는데
+  </script>
+</body>
+</html>

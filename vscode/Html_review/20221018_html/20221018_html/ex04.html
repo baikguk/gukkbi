@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div{
+      width: 100px; height: 100px;
+      background-color: orange;
+      margin-bottom: 20px;
+    }
+    #box1{
+      transition: 0.5s;
+    }
+    #box1:hover{width: 200px;}
+
+    #box2{
+      transition:width 1s, backgroun-color 0.3s;      
+    }
+    #box2:hover{
+      width: 500px;  background-color: rgb(127, 172, 172);
+    }
+
+    /*
+      https://cubic-bezier.com/#.215,.610,.355,1
+    */
+    #box3{
+      transition: 0.3s cubic-bezier(.215,.610,.355,1);
+    }
+    #box3:hover{ border-radius: 50px;}
+
+    #box4:hover{ border: 6px solid lightgreen; }
+
+    #box5:hover{ margin-top: 100px;}
+  </style>
+</head>
+<body>
+  
+</body>  
+  <!-- 부모 : 테두리 처리 -->
+  <div class="total">
+    <!-- 자손 : 영역 처리 -->
+    <div id="box1"></div>
+    <div id="box2"></div>
+    <div id="box3"></div>
+    <div id="box4"></div>
+    <div id="box5"></div>
+  </div> 
+</html>

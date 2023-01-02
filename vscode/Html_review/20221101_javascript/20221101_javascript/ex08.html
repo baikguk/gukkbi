@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 논리연산자 - &&(AND), ||(OR), !(NOT)
+
+    // 년도와 월을 입력해서  <-- prompt() 사용
+    // 해당 월이 며칠까지 있는지 출력하세요
+    // 윤년도 처리하세요
+    // (4로 나누어떨어지고 100으로 나누어떨어지지 않거나) 400 으로 나누어떨어지는 년도
+    // ((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0)
+
+    let year = Number(prompt('년도를 입력하세요'));
+    let month = Number(prompt('월을 입력하세요'));
+    let date;
+
+     if(month == 1 || month == 3 || month == 5 || month == 7 ||
+        month == 8 || month == 10 || month == 12){
+          date = 31;
+     }else if(month == 4 || month == 6 || month == 9 || month == 11){
+          date = 30;
+     }else if(month == 2){
+          if((year % 4 == 0) && (year % 100 != 0) || (year % 400 == 0)){
+            date = 29;
+          }else{
+            date = 28;
+          }
+     }else{
+      date = -1;
+     }
+
+     if(date != -1){
+       console.log(year + " 년 " + month + " 월은 " + date + " 일까지 있습니다" );
+     }else{
+      console.log('월을 정확하게 입력하세요');
+     }
+     
+
+
+
+
+  </script>
+</body>
+</html>

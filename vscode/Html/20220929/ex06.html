@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .subm{/*button style*/
+      display: block;
+      background-color: white;
+      border: 1px solid gray; 
+      cursor: pointer;
+      padding: 5px 10px 6px 7px; /*상우좌하*/
+    }
+    .subm img{
+      border : 0;
+      padding:0;
+      width: 10px;
+      height: 19px;
+    }
+    .subm:hover{ /*button 위로 mouse pointer를 올렸을 때*/
+      background-color: #e6efc2;
+      border: 1px solid #c6d880;
+      color: #529215
+    }
+
+  </style>
+</head>
+<body>
+  <form>
+    <button type = "submit" class="subm">
+      <img src = "/images/btn_check.png" alt = "">전송하기
+    </button>
+  </form>
+
+  <form oninput="result.value=parseInt(num1.value)+parseInt(num2.value)">
+    <input type = "number" name = "num1" value="0"> +
+    <input type = "number" name = "num2" value="0"> =
+    <output name="result" for="num"></output>
+  </form>
+</body>
+</html>

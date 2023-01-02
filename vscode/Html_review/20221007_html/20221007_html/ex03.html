@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* position 속성 : static / relative / absolute / fixed */
+    /* 
+      static : 문서의 흐름에 맞추어서 element(요소) 를 배치함 
+               기본값 / 자신의 위치가 고정되어 있음
+               다른 요소와 겹칠 수 없음 
+    
+    */
+    #box1{
+      float: left;  width: 100px; top: 300px; 
+      background-color: rgb(243, 226, 72);
+      padding: 20px; margin-right: 10px;
+    }
+    #box2{
+      background-color: rgb(93, 93, 189);
+      width: 300px; float: left; padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div id="box1"></div>
+  <div id="box2"></div>
+  <div id="box3"></div>
+  <div id="box4"></div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // Garbage Collector
+    // 사용되지 않는 객체를 메모리에서 자동으로 삭제함
+    let student = {
+      name : '글로벌',
+      age : 21
+    }
+    // Garbage Collector 의 수집 대상이 됨
+    student = null;
+
+    let student2 = {
+      name : '글로벌',
+      age : 21
+    }
+    // Garbage Collector 의 수집 대상이 안 됨
+    let student3 = student2;
+    student2 = null;
+
+
+  </script>
+
+</body>
+</html>

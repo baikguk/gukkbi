@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="div" class="main page"></div>
+  <script>
+    /*
+      classList.add/remove('클래스이름') : 클래스이름 을 추가하거나 삭제함
+      classList.toggle('클래스이름')     : 클래스이름이 이미 있으면 제거, 없으면 추가
+      classList.contains('클래스이름')   : 클래스이름이 있으면 true, 없으면 false 를 반환
+    */
+
+    // className
+    console.log('div.className : ' + div.className);
+
+    // classList
+    console.log('div.classList : ' + div.classList)
+    for(let name of div.classList){
+      console.log(name);
+    }
+
+    // class 추가하기
+    div.classList.add('article');
+    console.log('div.className : ' + div.className);
+
+    // class 변경하기
+    div.className = 'change';
+    console.log('div.className : ' + div.className);
+
+  </script>
+</body>
+</html>

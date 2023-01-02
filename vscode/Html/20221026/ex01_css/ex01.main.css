@@ -1,0 +1,269 @@
+@charset "utf-8";
+
+/* sub page에 적용되지 않은 main css*/
+
+/* layout*/
+main{
+  width: 100%; height: 545px;
+  min-width: 1180px;
+  /* quick menu의 기준을 main으로 설정함*/
+  position: relative;
+}
+
+.ctop{
+  width: 100%; min-width: 1180px;
+  height: 460px; padding: 40px 0;
+  box-sizing: border-box;
+  background-color: #f5fafe;
+}
+
+.cbottom{
+  width: 1180px; height: 16px;
+  margin: 40px auto 90px;
+}
+
+.quick_menu{
+  width:1180px; height: 110px;
+  margin:0 auto;
+  /* absolute의 기본 기준은 body가 됨*/
+  position: absolute;
+  left:0; right:0;
+  bottom:0;
+  background-color: #0e2f58;
+}
+.loan{
+  float: left;
+  width: 380px; height: 100%;
+  background-color: #fff;
+  margin-right: 20px;
+  box-shadow: 0 0 2px #ccc;
+  padding: 30px; box-sizing: border-box;
+  background-image: url(../ex01_images/main_bg01.gif);
+}
+.drive{
+  float:left;
+  width: 380px; height: 100%;
+  background-color: #fff;
+  margin-right: 20px;
+  box-shadow: 0 0 2p #ccc;
+  padding: 30px; box-sizing: border-box ;
+  background-image: url(../ex01_images/main_bg02.gif);
+}
+.c_slider{
+  float:right;
+  width: 380px; height: 180px;
+  background-color: #fff;
+  margin-bottom: 20px;
+  box-shadow: 0 0 2p #ccc;
+  padding: 30px; box-sizing: border-box ;
+  background-image: url(../ex01_images/main_bg03.gif);
+}
+.dianosis{
+  float:right;
+  width: 380px; height: 180px;
+  background-color: #fff;
+  margin-right: 20px;
+  box-shadow: 0 0 2p #ccc;
+  padding: 0 20px; box-sizing: border-box ;
+ 
+}
+
+.consult{
+  float:right;
+  width: 380px; height: 180px;
+  margin-right: 20px;
+  padding-right:20px; box-sizing: border-box;
+}
+
+.notice{
+  float:left;
+  width:380px; height: 100%;
+  margin-right: 20px;
+  padding-right: 0 20px; box-sizing: border-box;
+}
+
+.custom{
+  float: right;
+  width:380px; height: 100%;
+  padding-left:20px; box-sizing: border-box;
+}
+
+/* chat */
+.chat{
+  width:80px; height: 100px;
+  position: fixed; bottom :190px;
+  /* 현재의 화면(해상도)에서 50% 지나서 680px를 뺌*/
+ right: (50% - 680px);
+ text-align: center;
+}
+
+.chat a{
+  color:#297fd2; font-size: 16px;
+}
+
+.chat img{
+  position: relative;
+  z-index: 10;
+  margin-bottom: 5px;
+}
+
+.chat a:after{
+  /* 
+  " (빈문자열) 로 설정하면 그림자 처리를 위한 설정
+  */
+  content: '';
+  display :block;
+  /*이미지와 같은 size로 설정하기*/
+  width:80px; height: 80px;
+  border-radius: 40px;
+  position:absolute; top:0; left:0;
+  /* 이미지보다 그림자가 아래에 나오게 하기 (image의 z-index는 10임)*/
+  z-index: 5;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+
+/* main image : main_slider */
+.main_slider{
+  width:100%; min-width: 1180px; height: 100%;
+}
+.main_slider .slider_img{
+  width: 100%; height: 100%;
+}
+.main_slider .slider_img01{
+  width: 100%; height: 100%;
+  background-color: #f9d6e1;
+}
+
+.quick_menu h2{
+  width: 225px; height: 100%;
+  float: left;
+  border-right: 1px solid #214056;
+  box-sizing: border-box; padding:30px;
+  position: relative;
+}
+.quick_menu span{
+  display: block ;
+  line-height: 25px; color:#fff;
+}
+
+.quick_menu .kor{
+  font-size: 22px; 
+  /* 굵지 않게 설정함 */
+  font-weight: 400;
+}
+
+.quick_menu h2 a{
+  display: block;
+  width: 28px; height: 28px;
+  border-radius: 14px;
+  background-color: rgba(255,255,255,0.1);
+  text-align: center;
+  padding-top: 4px; box-sizing: border-box;
+  position: absolute;
+  right: 30px; bottom: 27px;
+}
+
+.quick_menu ul{
+  float: right;
+  width: 955px; height: 100%;
+  background-image: url(../ex01_images/bg_quickmenu.png);
+  background-repeat: no-repeat;
+  background-position: left 20px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.quick_menu li{
+  float: left;
+  /* 1/8 */
+  width: 12.5%;
+  /* 부모영역을 상속 - 패딩하고 테두리는 제외*/
+  height: 100%;
+  text-align: center;
+}
+
+.quick_menu li a{
+  display: block; width: 100%; height: 100%;
+  color:#fff; font-size: 13px;
+  padding-top: 50px; box-sizing: border-box;
+}
+
+/*text style*/
+.ctop h3, .cbottom h3{
+  width: 100%; height: 30px; margin-bottom: 10px;
+  font-size:20px; font-weight: 400;
+}
+.ctop p{
+  width: 100%; margin-bottom: 10px;
+  font-size:16px; line-height: 1.5em;
+}
+.consult{
+  position: relative;
+}
+
+.consult:after{
+  content:'';
+  display: block; width: 1px; height: 160px;
+  background-color: #ededed;
+  position:absolute; right: -10px; top: 0;
+}
+
+/* notice */
+.notice{
+  position: relative;
+}
+.notice:after{
+  content:'';
+  display: block; width: 1px; height: 160px;
+  background-color: #ededed;
+  position: absolute; right:-10px; top:0;
+}
+
+.notice .more{
+  position: absolute; top: 5px; right:20px;
+}
+.notice ul{
+  width:100%;height: 120px;
+}
+.notice li{
+  width: 100%; height: 25%;
+  line-height:25px;
+}
+
+.notice .alert{
+  float:left;
+  width:40px; height: 30px;
+  padding-top:4px; box-sizing: border-box;
+}
+
+.notice li a{
+  float: right;
+  width: 300px; height: 30px;
+  /*
+   nowrap : text가 부모영역을 넘어서 한 줄로 처리됨 
+   normal: text가 부모영역을 넘지 못하고 아래로 내려감
+  */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 16px;
+}
+
+/* custom*/
+.custom ul{
+  width:360px; height: 120px;
+}
+
+.custom li{
+  float: left;
+  width:175ps; height: 55px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.custom li:nth-child(odd){margin-right: 10px;}
+.custom li:nth-child(1), .custom li:nth-child(2){margin-bottom: 10px;}
+.custom a{
+  display: block; width:100%; height: 100%;
+  text-align: center; line-height: 53px;
+}

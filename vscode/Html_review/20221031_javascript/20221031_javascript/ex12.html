@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    /*
+      형변환 : type casting (type conversion)
+
+    */
+    let value = true;
+    console.log(typeof value);
+
+    // boolean type -> string type
+    // String() (O) / string() (X)
+    value = String(value);
+    console.log(typeof value);
+
+    // string type --> number type
+    // 자동 형변환
+    console.log('15' / '5');
+
+    let str1 = "1234";
+    console.log(typeof str1);
+
+    // 명시적 형변환 : string type --> number type 
+    // 숫자모양의 문자열만 number type 으로 형변환할 수 있음   
+    let number = Number(str1);
+    console.log(typeof number);
+
+    let age = '이십오';
+    // NaN : 숫자가 아님  - 형변환 실패
+    console.log(Number(age));
+
+    // 숫자형으로 형변환할 때
+    // undefined  -->  NaN
+    // null       -->  0
+    // true       --> 1
+    // false      --> 0
+    // string     --> 문자열의 처음과 끝에 공백이 있는 경우, 
+    //                자동으로 공백제거 후 형변환
+
+    console.log(Number(undefined));
+    console.log(Number(null));
+    console.log(Number(true));
+    console.log(Number(false));
+    console.log(Number(' 1234 '));
+
+
+  </script>
+  
+</body>
+</html>

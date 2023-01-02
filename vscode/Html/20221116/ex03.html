@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form id="f1">
+    <input id="input" type = "text" name="firstName" ><br>
+    <textarea id="textarea" name="example" rows="5" cols="60">
+    여기에 입력하세요...  
+    </textarea>
+    <br><br>
+    <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" checked> Bike
+    <input type="checkbox" id="vehicle2" name="vehicle2" value="Car"> Car
+    <input type="checkbox" id="vehicle3" name="vehicle3" value="Goat"> Goat
+  </form>
+  <script>
+    console.log(input.value);
+    console.log(textarea.value);
+
+    input.value = '글로벌 아이티'
+    console.log(input.value);
+    textarea.value = '안녕하세요 '
+
+    //javascript로 변경한 value는 인식하지 못하고
+    //html 소스에 작성된 내용으로 인식함
+    console.log('textarea.innerHTML : '+textarea.innerHTML)
+
+    console.log(vehicle1.checked);
+    console.log(vehicle2.checked);
+    console.log(vehicle3.checked);
+
+    vehicle1.checked = false;
+    vehicle2.checked = true;
+
+  </script>
+</body>
+</html>

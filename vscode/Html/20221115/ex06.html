@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #div1{
+            height: 250px; width: 250px; color: blue;
+            overflow: auto; background-color: coral;
+        }
+        #content{ /* 내부 div */
+            margin: 500px; height: 800px; width: 2000px;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <img src="test2.png">
+    <div id="div1">
+
+        </div>
+    <script>
+        /*
+            element.getBoundingClientRect() method
+                ㄴ element 를 감싸는 가장 작은 네모의 창 기준 좌표를 DOMRect 클래스의 객체 형태로 변환함
+                        DOMRect 의 주요 property
+                        x , y - element 를 감싸는 네모의 창 기준 x, y 좌표
+                        width, height - element 를 감싸는 네모의 창 기준 너비, 높이(음수일 수도 있음)
+                        top, bottom - element 를 감싸는 네모의 위쪽 모서리, 아래쪽 모서리 Y 좌표
+        */
+
+        let div1 =document.getElementById('div1');
+        let DOMRect = div1.getBoundingClientRect();
+
+       console.log('DOMRect.x : ' +DOMRect.x);
+       console.log('DOMRect.y : ' +DOMRect.y);
+       console.log('DOMRect.width : ' +DOMRect.width);
+       console.log('DOMRect.height : ' +DOMRect.height);
+       console.log('DOMRect.top : ' +DOMRect.top);
+       console.log('DOMRect.bottom : '+ DOMRect.bottom);
+       console.log('DOMRect.left : ' + DOMRect.left);
+       console.log('DOMRect.right : ' +DOMRect.right);
+
+       /*
+        left = x
+        top = y
+        right = x + width
+        bottom = y +height
+
+        page 가 scroll 되서 element 가 window 위로 밀려올라가면
+        element.getBoundingClientRect().top 은 음수가됨
+       */
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form id="f1">
+    <input name="login" type="text">    
+  </form>
+  <script>
+    // form element -> 하위 element
+    // f1 은 id 속성값이 f1 인 element
+    let login = f1.login;
+
+    // 하위 element -> form element
+    // login.form : 여기서 form 은 id 속성값이 아니고 tag 이름
+    console.log(login.form);
+    /*
+      <form id="f1">
+        <input name="login" type="text">    
+      </form>
+    */
+  </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // for...in 반복문 : Java의 향상된 for 문과 비슷함
+    let student = {
+      name:'글로벌',
+      age:25,
+      isMale:true,
+    };
+    for(let key in student){
+      console.log(`${key} - ${student[key]}`);
+    }   
+    console.log(`===============================`);
+
+    // 객체 속에 property 가 저장되는 순서
+    // key 가 정수인 경우(정수 프로퍼티:integer property)
+    //                      ㄴ immutable 
+    // 자동 정렬됨  
+    // 다른 type 이 key 인 경우, 객체에 추가한 순서대로 정렬됨
+    let codes = {
+      '49':'독일',
+      '41':'스위스',
+      '44':'영국',
+      '1':'미국'
+    };
+    for(let code in codes){
+      console.log(code);
+    }
+    console.log(`===============================`);
+
+    // Math.trunc(숫자) : 소수점 아래를 버리고 정수부분만 반환함
+    console.log(String(Math.trunc(Number('49'))));
+    console.log(String(Math.trunc(Number('+49'))));
+    console.log(String(Math.trunc(Number('1.6'))));
+    console.log(`===============================`);
+
+    
+    let person = {
+      firstName:'global',
+      lastName:'academy',
+    };
+    person.age = 23;
+
+    for(let prop in person){
+      console.log(`${prop} - ${person[prop]}`);
+    }
+
+
+
+
+
+  </script>  
+</body>
+</html>

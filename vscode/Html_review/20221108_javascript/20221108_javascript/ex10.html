@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let arr1 = [1, 0, true, 1, false];
+
+    console.log(arr1.indexOf(0));    
+    console.log(arr1.indexOf(1));
+    console.log(arr1.lastIndexOf(1));
+
+    // true/false 를 검색할 때, 숫자형으로 형변환하지 않음
+    // 요소를 검색할 때, === 연산을 함
+    // indexOf(true)  에서 == 연산으로 비교하면
+    // arr1 의 0 번째 요소인 1 과 비교할 때
+    // 숫자형으로 형변환하여 1이 되어 true 가 되서 1의 index 인 0 을 반환함
+    // 그러나, === 연산으로 비교하기 때문에 형변환하지 않고
+    // true === 1 의 연산이 되어 false 가 되고, arr1 의 요소 중 true 와 비교할 때 
+    // true === true 연산이 되어 true 를 반환해서 arr1 의 true 의 index 인 2 를 반환함
+    console.log(arr1.indexOf(true));
+    console.log(arr1.indexOf(false));
+
+    console.log(arr1.indexOf(null));
+    console.log(arr1.includes(true));
+
+    let arr2 = [NaN];
+    // NaN 의 index 인 0 이 안 나오고 -1 이 반환됨
+    // NaN === NaN 은 항상 false 이므로 -1 이 반환됨
+    console.log('arr2.indexOf(NaN) : ' + arr2.indexOf(NaN));
+
+    // includes(NaN)은 true 를 return함
+    console.log('arr2.includes(NaN) : ' + arr2.includes(NaN))
+
+
+
+  </script>
+</body>
+</html>

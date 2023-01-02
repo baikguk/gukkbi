@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+ <img src="pageX_pateY.png">
+ <p>pageY - 문서 기준 좌표는 문서 맨 위 부터 계산 되므로 스크롤 전, 후 값이 같음</p>
+ <p>clientY - 문서가 스크롤 되면서 해당 지점이 창 맨 윗 모서리와 가까워져서 창 기준 좌표가 변경됨</p>
+  <script>
+    /*
+      coordiantes(좌표)
+
+      1) 창 기준 - position:fixed 와 비슷하게 창(window) 맨 위 왼쪽 모서리를 기준으로 계산함
+                   clientX / clientY 로 표시
+                
+      2) 문서 기준 - 문서(document)의 맨 위(root)에서 position:absolute 와 비슷하게
+                     문서 맨 위 왼쪽 모서리를 기준으로 계산함
+                     pageX / pageY 로 표시
+
+         스크롤이 움직이기 전에는 창의 맨 위 왼쪽 모서리가 문서의 맨 위 왼쪽 모서리와 일치함
+         스크롤이 움직이면 문서 기준 좌표를 변경되지 않으나 창 내부의 요소는 움직임
+                                                                ㄴ 창 기준 좌표가 변경됨
+
+    */
+     
+  </script>
+</body>
+</html>

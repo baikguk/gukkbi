@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="div">div element</div>
+  <script>
+    /*
+      insertAdjacentHTML(where, html)
+        ㄴ where : element 를 기준으로 하는 상대 위치
+                   1) beforebegin  : element 바로 앞에 html 삽입
+                   2) afterbegin   : element 의 첫 번째 자식 요소 바로 앞에 html 삽입
+                   3) beforeend    : element 의 마지막 자식 요소 바로 다음에 html 삽입
+                   4) afterend     : element 바로 다음에 html 삽입
+    */
+   div.insertAdjacentHTML('beforebegin', '<p>hello javascript</p>');
+   div.insertAdjacentHTML('afterend', '<p>good-bye javascript</p>');
+  </script>
+</body>
+</html>

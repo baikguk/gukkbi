@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div show-info="name"></div>
+  <div show-info="age"></div>
+  <script>
+    /*
+      비표준 속성 (non-standard property)
+        html 에서 정한 것이 아니고
+        사용자가 직접 지정한 data 를 html 에서 javascript 로 넘기는 경우,
+        javascript 를 사용해서 조작할 html 의 element 를 표시할 때 사용함
+    */
+    let person = {
+      name : 'global',
+      age : 23
+    };
+    // document.querySelectorAll('[show-info]')
+    // show-info 라는 속성이 있는 element
+    for(let div of document.querySelectorAll('[show-info]')){
+      let field = div.getAttribute('show-info');
+      div.innerHTML = person[field];
+    }
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // bit operator - 비트 연산자
+
+    let number1 = 5;   // 0 1 0 1
+    let number2 = 10;  // 1 0 1 0
+    let result;
+    result = number1 & number2;
+    console.log('result : ' + result);
+
+    result = number1 | number2;
+    console.log('result : ' + result);
+
+    result = number1 ^ number2;
+    console.log('result : ' + result);
+
+    result = ~number1 & number2;
+    console.log('result : ' + result);
+
+    console.log('(number1 << 1) : ' + (number1 << 1));
+    console.log('(number1 >> 1) : ' + (number1 >> 1));
+
+
+    // 쉼표 연산자
+    let number5 = (2 + 3, 6 + 8);
+    console.log('number5 : ' + number5);    
+
+    console.log('===============================');    
+
+    console.log('' + 1 + 0);    
+    console.log('' - 1 + 0); 
+    console.log(true + false); 
+    console.log(6 / '3');     
+    console.log('2' * '3'); 
+    console.log(4 + 5 + 'px'); 
+    console.log('$' + 4 + 5); 
+    console.log('4' - 2); 
+    console.log('4px' - 2); 
+    console.log(7 / 0); 
+    console.log(' -9 ' + 5); 
+    console.log(' -9 ' - 5); 
+    // null  숫자형으로 변환되서 연산됨
+    // null 이 숫자형으로 변환되면 0 이 됨
+    console.log(null + 1); 
+    // undefined 가 숫자형으로 변환되면 NaN 이 됨
+    console.log(undefined + 1);
+    // 문자형이 숫자형으로 변환될 때 앞뒤 공백이 삭제됨
+    // 공백을 만드는 문자 (\t 와  \n) 는 숫자형으로 변환될 때
+    // 길이가 0 인 문자열로 인식되어서 숫자 0 이 됨
+    console.log(' \t \n' - 2); 
+
+
+
+  </script>
+</body>
+</html>

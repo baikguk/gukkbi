@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // new Array()
+    let fruits = new Array('apple', 'strawberry', 'peach');
+    console.log(fruits);
+    console.log('fruits.length : ' + fruits.length);
+
+    let arr1 = new Array(5);
+    // arr1.length : 5
+    console.log('arr1.length : ' + arr1.length);
+    // arr1[3] : undefined
+    console.log('arr1[3] : ' + arr1[3]);
+
+    // 이차원 배열 (다차원 배열)
+    let arr2 = [
+                 [1, 2, 3],
+                 [4, 5, 6],
+                 [7, 8, 9]
+               ]
+    console.log('arr2[1][1] : ' + arr2[1][1]);
+
+    let arr3 = [1, 2, 3, 4, 5];
+    console.log(arr3);
+    // 각 요소들을 쉼표로 구분한 문자열을 반환함
+    // '1,2,3,4,5'
+    console.log(String(arr3));
+    console.log(String(arr3) === '1,2,3,4,5');
+
+    // 아래에서는 배열이 문자열로 자동 형변환됨
+    console.log([] + 1);      // 1
+    console.log([1] + 1);     // 11
+    console.log([1, 2] + 1);  // 1,21 
+
+    console.log('' + 1);      // 1
+    console.log('1' + 1);     // 11
+    console.log('1, 2' + 1);  // 1,21 
+
+
+
+
+
+
+  </script>
+</body>
+</html>

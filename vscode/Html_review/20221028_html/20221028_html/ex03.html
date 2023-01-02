@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sprite Image</title>
+  <style>
+    /*
+      Sprite Image : 여러 장의 image 를 한 장의 image 에 담아서
+                     용량과 구현 속도를 줄이는 방식으로 표현하는 image
+    */
+    button{
+      width: 50px; height: 50px;
+      border: none; background-color: transparent;
+      border-radius: 0;
+
+      background-image:  url(images/image_sprite.png);
+    }
+    button:nth-child(1) { background-position: 0 0;}
+    button:nth-child(2) { background-position: -50px 0;}
+    button:nth-child(3) { background-position: -100px 0;}
+    button:nth-child(4) { background-position: -150px 0;}
+
+    
+  </style>
+</head>
+<body>
+  <button></button><br>  
+  <button></button><br>  
+  <button></button><br>  
+  <button></button><br> 
+</body>
+</html>

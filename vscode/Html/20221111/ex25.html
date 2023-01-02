@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div> 첫 번째 </div>
+  <script>
+    let divs = document.getElementsByTagName('div'); // 2,3번째에 안써도 divs가 이후에 작성한 div를 읽음
+    console.log('divs.length : ' + divs.length);
+  </script>
+
+  <div> 두 번째</div>
+  <script>
+    console.log('divs.length : ' + divs.length);
+  </script>
+
+   <div> 3번째</div>
+   <script>
+     console.log('divs.length : ' + divs.length);
+   </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+ > sqlplus
+
+Enter user-name: system
+Enter password: 비밀번호 (입력해도 안 보이는 것이 정상)
+
+Connected to:
+Oracle Database 11g Express Edition Release 11.2.0.2.0 - 64bit Production
+
+SQL> SELECT DBMS_XDB.GETHTTPPORT() FROM DUAL;
+
+DBMS_XDB.GETHTTPPORT()
+----------------------
+                  8080
+
+SQL> EXEC DBMS_XDB.SETHTTPPORT(9000)
+
+PL/SQL procedure successfully completed.
+
+SQL> SELECT DBMS_XDB.GETHTTPPORT() FROM DUAL;
+
+DBMS_XDB.GETHTTPPORT()
+----------------------
+                  9000
+
+SQL>

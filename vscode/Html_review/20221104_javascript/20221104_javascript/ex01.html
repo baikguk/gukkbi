@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+</head>
+<body>
+  <script>
+    // literal data (기본형) : data 자체가 복사됨
+    let message1 = 'Hello ~~~';
+
+    // 할당(assignment) : 복사 + 붙여넣기
+    let message2 = message1;
+
+    // 객체 복사(할당)하기 : 객체의 주소가 복사됨
+    let student1 = {
+      name:'글로벌'
+    }
+    // 할당(assignment) : 복사 + 붙여넣기
+    let student2 = student1;
+
+    console.log('student1.name : ' + student1.name);
+    console.log('student2.name : ' + student2.name);
+
+    student2.name = '아카데미';
+    console.log('student2.name : ' + student2.name);
+    console.log('student1.name : ' + student1.name);
+
+    let person1 = {};
+    let person2 = person1;
+
+    console.log(person1 == person2);
+    console.log(person1 === person2);
+
+    let test1 = {};
+    let test2 = {};
+
+    // 생성된 객체의 주소가 달라서 false 가 됨
+    console.log(test1 == test2);
+
+
+    // 객체를 하나 더 생성해서 값도 똑같게 하기
+    let user1 = {
+      name : '이순신',
+      age : 46
+    };
+    let user2 = {};
+
+    console.log('user1.name :' + user1.name);
+    console.log('user1.age  :' + user1.age);
+
+    user2.name = user1.name;
+    user2.age  = user1.age;
+
+    console.log('user2.name :' + user2.name);
+    console.log('user2.age  :' + user2.age);
+
+    user2.name = '윤봉길';
+    console.log('user2.name :' + user2.name);
+    console.log('user1.name :' + user1.name);
+
+    for(let key in user1){
+      user2[key] = user1[key]
+    }
+    console.log('user1.name :' + user1.name);
+    console.log('user1.age  :' + user1.age);
+    console.log('user2.name :' + user2.name);
+    console.log('user2.age  :' + user2.age);
+
+
+
+    let user3 = {name:'안중근'};
+
+    let permission1 = {canView : true};
+    let permission2 = {canEdit : true};
+
+    // permission1 과 permission2 의 property 를 user3 로 복사하기
+    // Object.assign() 메소드 사용
+    // permission1 과 permission2 객체를 병합해서 
+    // user3 에 property 추가하기
+    Object.assign(user3, permission1, permission2);
+
+    for(let key in user3){
+      console.log(`${key} : ${user3[key]}`);
+    }
+
+    Object.assign(user3, {age : 21})
+    for(let key in user3){
+      console.log(`${key} : ${user3[key]}`);
+    }
+
+    Object.assign(user3, {age : 21, height:187, name :'이재명'})
+    for(let key in user3){
+      console.log(`${key} : ${user3[key]}`);
+    }
+
+    let user4 = {
+      name:'양만춘',
+      age:30
+    }
+    let user5 = Object.assign({}, user4);
+    /*
+    let user5 = {}
+    for(let key in user4){
+      user5[key] = user4[key]
+    }
+    */
+    console.log(`-- user5 --`);
+    for(let key in user5){
+      console.log(`${key} - ${user5[key]}`);
+    }
+    
+    // nested Object (중첩 객체)
+    let user6 = {
+                  name:{
+                    firstName:'Steve',
+                    lastName:'McQueen'
+                  },
+                  age:43
+                }
+    console.log(user6.name.lastName);   
+    
+    // 얕은 복사 - user6 와 user7 는 다른 객체이나
+    //             내부에 있는 name 객체는 새로 복사해서 사용하지 않고
+    //             user6 에서 생성된 name 객체를 user7 에서도 같이 사용함
+    let user7 = Object.assign({}, user6);
+
+    console.log('user6 === user7 : ' + (user6 === user7));
+    console.log('user6.name === user7.name : ' + (user6.name === user7.name));
+
+    user6.name.firstName = 'Allen';
+    console.log('user6.name.firstName : ' + user6.name.firstName);
+    console.log('user7.name.firstName : ' + user7.name.firstName);
+   
+    // 깊은 복사
+    // lodash 라이브러리에 있는 cloneDeep() 함수 사용
+    let user8 = _.cloneDeep(user6);
+    console.log('user6.name.firstName : ' + user6.name.firstName);
+    console.log('user8.name.firstName : ' + user8.name.firstName);
+    
+    user6.name.firstName = 'Tom';
+    console.log('user6.name.firstName : ' + user6.name.firstName);
+    console.log('user8.name.firstName : ' + user8.name.firstName);
+    
+
+
+    
+  </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div>div 엘리먼트 숨기기</div>
+  <!-- //속성과 값이 같면 생략가능 원래는 hiddent = "hidden"임 -->
+  <div hidden>div 엘리먼트 숨기기</div>
+  <div id = "element"> JavaScript 의hidden 속성 사용하기</div>
+  <div id = "element2"> 여기는 깜빡이면서 나옵니다!!</div>
+  <script>
+    //hidden <-- style = "display:none" 설 한 것과 같이 동작함
+    element.hidden = false; //true하면 숨겨짐
+
+    setInterval(() =>element2.hidden = !element2.hidden, 500)
+  </script>
+</body>
+</html>

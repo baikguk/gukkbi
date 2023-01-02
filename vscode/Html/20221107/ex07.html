@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    /*
+      javascript 의 primitive type 7개
+      
+      string
+      number
+      bigint
+      boolean
+      symbol
+      null
+      undefined
+
+      객체(Object) 
+        ㄴ property 에 여러가지 type의 값들을 저장할 수 있음
+           javascript 함수도 객체의 일종임
+           함수를 객체의 property로 저장할 수 있음
+
+      wrapper object(class) : 래퍼 객체
+
+      string -> String
+      number -> Number
+      boolean -> Boolean
+      symbol -> Symbol
+
+      */
+      let str1 = "hello"; //boxing아님
+      console.log(str1.toUpperCase());//boxing됨
+
+    let number = 3.1415926535;
+    //소숫점 4째 자리까지만 출력(반올림 적용)
+    console.log(number.toFixed(4));
+
+    console.log(typeof 0);
+    console.log(typeof new Number(0));
+
+    let numberZero1 = 0;
+    let numberZero2 = new Number(0);
+    let numberZero3 = Number('0');
+
+    
+    if(numberZero1){
+      console.log("참입니다-1");
+    }
+    if(numberZero2){ //데이터가 있기 때문에 true
+      console.log("참입니다-2");
+    }
+    if(numberZero3){
+      console.log("참입니다-3");
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+컬렉션프레임웍(collections framework)
+
+
+컬렉션(collection)
+-여러 객체(데이터)를모아놓은것을의미
+
+
+
+컬렉션클래스(collection class)
+-다수의 데이터를 저장할 수 있는 클래스(ArrayList,HashSet)
+
+
+컬렉션 객체
+  객체를 보관해서 관리하는 객체
+
+변수 : 한 번에 값 하나만 저장할 수 있음
+
+배열 : 같은 type 만 저장할 수 있음
+        primitive type array
+        reference type array
+        한 번 생성하면 크기를 변형할 수 없음
+        new int[10]
+
+클래스 : 서로 다른 type 의 데이터들을 보관함
+
+Collection Class : 서로 다른 type 의 데이터들을 보관함
+                   Generics 이라는 문법을 사용해서 한 가지 type 만 저장하도록 할 수 있음
+                    
+
+List  :  ArrayList,   LinkedList,   Stack,   Vector
+         index 가 있음 : data 를 순서를 정해서 관리함
+                         data 의 중복을 허용함
+
+Set   :  HashSet, TreeSet
+         index 가 없음 : data 의 순서가 없음
+                         data 의 중복을 허용하지 않음
+
+Map   :  HashMap, TreeMap, HashTable, Properties
+         key - value 한 쌍으로 data 를 보관함
+         index 가 없음
+         value 를 key 로 구분함
+         value 가 중복되면 key 로 구분할 수 있음
+           ㄴ value 의 중복은 허용함
+         key 의 중복은 허용하지 않음
+
+
+
+
+
+
+
+
+
+
+
+

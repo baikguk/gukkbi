@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //Object --> primitive type (unboxing in java)
+    let str1 = '123';
+
+    let number1 =Number(str1);
+    let number2 = +str1;
+
+    let result = number1 + number2;
+    console.log('result : '+result);
+
+    let comp = number1>= number2;
+    console.log('comp : '+comp);
+
+
+    // valueOf() 내장함수 : 객체 자신을 반환함
+    let person = {
+      name : '글로벌',
+      age:24,
+      height:187
+    }
+
+    console.log(person);
+    console.log(person.valueOf()== person);
+
+    let student = {
+      name :' 글로벌',
+      money : 100,
+    
+    toString(){
+      return `{name : ${this.name}}`;
+    },
+    
+    valueOf(){
+      return this.money;
+    }
+  };
+  console.log(student);
+  // '+' 숫자형의 값만 보여줌
+  console.log(+student);
+  console.log(student+500);
+
+  let student1 = {
+    name : '이순신',
+    age : 46,
+    toString(){
+      return this.name
+    }
+  }
+  console.log(student1);
+  console.log(student1+500);
+
+
+  let   test = {
+    toString(){
+      return '2';
+    }
+  }
+  console.log('test : ' +test);
+
+  // * 연산자는 피연산자를 숫자형으로 자동 형변환함 ,객체를 곱셈연산 (unboxing)
+  console.log('test*3 : ' + (test *3));
+
+  // + 연산자는 피연사자를 문자형으로 형변환함
+  console.log(10 + '10');
+  console.log(test + '10');
+
+  </script>
+</body>
+</html>

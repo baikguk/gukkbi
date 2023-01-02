@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input id="global1" type="checkbox" checked>체크박스1<br>
+  <input id="global2" type="checkbox">체크박스2
+  <div id="global3" style="color:red;font-size:120%">Hello</div>
+  <a id="global4" href="#Hello"></a>
+
+  <script>
+
+    // DOM 의 property의 값은 일반적으로 문자열이나
+    // checkbox 에서의 property 는 boolean type 임 
+    // global1  <-- input element 의 id 값
+    console.log(global1.getAttribute('checked'));  
+    console.log(global1.checked);
+    // boolean
+    console.log(typeof global1.checked);
+
+    // div element 의 style properyt 값의 type 은 문자열    
+    // color:red;font-size:120%
+    // global3 <-- div element
+    console.log(global3.getAttribute('style'));
+    // string type
+    console.log(typeof (global3.getAttribute('style')));
+
+    // CSSStyleDelaration 객체
+    console.log(global3.style);
+    // object
+    console.log(typeof(global3.style));
+    // red
+    console.log(global3.style.color);
+    // string type
+    console.log(typeof (global3.style.color));
+    
+    //  global4  <-- a(anchor) element
+    // "#Hello"
+    console.log(global4.getAttribute('href'));
+    //  string type
+    console.log(typeof(global4.getAttribute('href')));
+
+    // http://127.0.0.1:5500/ex05.html#Hello
+    console.log(global4.href);
+    //  string type
+    console.log(typeof(global4.href));
+
+
+  </script>
+</body>
+</html>

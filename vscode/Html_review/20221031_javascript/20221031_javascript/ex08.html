@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    /*
+
+      객체(Object) : 복잡한 data 구조를 만들 때 사용
+      심볼(Symbol) : 객체의 고유 식별자를 만들 때 사용
+
+      primitive type
+       숫자형(정수, 실수) number
+       BigInt  bigint
+       문자형(string)
+       불린형(boolean-논리형) boolean
+       null
+       undefined
+
+       function type : 함수도 type 으로 인식함
+
+       typeof 연산자 : 자료형을 반환함
+
+    */
+     console.log(`typeof(100) : ${typeof(100)}`);
+     console.log(`typeof(100n) : ${typeof(100n)}`);
+     console.log(`typeof(3.14) : ${typeof(3.14)}`);
+     console.log(`typeof('100') : ${typeof('100')}`);
+     console.log(`typeof(true) : ${typeof(true)}`);
+     console.log(`typeof(undefined) : ${typeof(undefined)}`);
+
+     // object 라고 나와도 null 은 객체가 아님
+     console.log(`typeof(null) : ${typeof(null)}`);
+     console.log(`typeof(Math) : ${typeof(Math)}`);
+     console.log(`typeof(alert) : ${typeof(alert)}`);
+  </script>
+  
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //멤버 property인 waterAmount와 power은
+    // 접근제한자가 public임 (자바와는 다르게 디폴트가 public)
+    // property이름 앞에 _ 붙이면
+    // 접근제한자가 protected가됨
+    class CoffeeMachine{
+      waterAmount = 0;
+      constructor(power){
+        this.power = power;
+        console.log(`전력량이 ${this.power}인 커피머신입니다`);
+      }
+    }
+    //CoffeeMachine 생성하기
+    let coffeemachine = new CoffeeMachine(100);
+    coffeemachine.waterAmount = 111;
+    console.log(coffeemachine.waterAmount);
+    console.log('=======================');
+
+
+    class CoffeeMachine2{
+      _waterAmount = 0;
+      constructor(power){
+        this._power = power;
+        console.log(`전력량이 ${this._power}인 커피머신입니다`);
+      }
+    }
+    let coffeemachine2 = new CoffeeMachine2(200);
+    //protected property에 클래스 밖에서 값을 할당됨
+    coffeemachine2.waterAmount = 222;
+    console.log(coffeemachine2.waterAmount);
+    console.log('=======================');
+
+
+    class CoffeeMachine3{
+      _waterAmount = 0;
+      constructor(power){
+        this._power = power;
+        console.log(`전력량이 ${this._power}인 커피머신입니다`);
+      }
+      set waterAmount(water){
+        if (water <0 ){
+          console.log('물으리 양은 음수로 정할수 없음')
+          throw new Error('물으리 양은 음수로 정할수 없음')
+          
+        }else{
+        this._waterAmount =water;
+        }
+      }
+      get waterAmount(){
+        return this._waterAmount;
+      }
+    }
+    let coffeemachine3 = new CoffeeMachine3(300);
+    //getter / setter를 작성하면
+    //아래의 code는 자동으로 setter를 호출함
+    coffeemachine3.waterAmount = 333;
+    console.log(coffeemachine3.waterAmount);
+    coffeemachine3.waterAmount = -333;
+    console.log(coffeemachine3.waterAmount);
+  </script>
+</body>
+</html>

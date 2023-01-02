@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    /*
+    let for = 10;
+    let while = 20;
+    let let = 30;
+    */
+
+    // 일반 변수에는 key word 를 사용하면 안되지만
+    // 객체의 프로퍼티에서는 사용할 수 있음 : 권장하지 않음
+    let test1 = {
+      for:1,
+      while:2,
+      let:3
+    };
+    console.log(test1.for);
+    console.log(test1.while);
+    console.log(test1.let);
+
+    // 객체 리터럴의 key 값을 숫자로 지정하면
+    // 자동으로 문자형으로 형변환됨
+    let test2 = {
+      1:"test1",
+      2:"test2",
+      3:"test3",
+    };
+    console.log('test2[1] : ' + test2[1]);
+    console.log('test2["1"] : ' + test2["1"]);
+    console.log("test2['1'] : " + test2["1"]);
+    console.log("test2[\"1\"] : " + test2["1"]);
+
+    console.log('test2[2] : ' + test2[2]);
+    console.log('test2["2"] : ' + test2["2"]);
+
+    console.log('test2[3] : ' + test2[3]);
+    console.log('test2["3"] : ' + test2["3"]);
+
+
+
+  </script>
+</body>
+</html>
+

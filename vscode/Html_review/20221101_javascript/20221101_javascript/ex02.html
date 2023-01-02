@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 복합할당연산자
+    let num = 3;
+    num = num + 5;
+    console.log('num : ' + num);
+
+    num = num * 5;
+    console.log('num : ' + num);
+
+    num += 5;
+    console.log('num : ' + num);
+
+    num *= 2;
+    console.log('num : ' + num);
+
+    // 2 + 2 가 먼저 연산되고 *= 연산이 일어남
+    num *= 2 + 2;
+    console.log('num : ' + num);
+
+    // 증가/감소 연산자
+    // ++   --
+    let number = 2;
+    number++;
+    console.log('number : ' + number);
+    ++number;
+    console.log('number : ' + number);
+
+    number--;
+    console.log('number : ' + number);
+    --number;
+    console.log('number : ' + number);
+
+    // 후위연산자 / 전위연산자
+    let count1 = 10;
+    let count2 = ++count1;
+    console.log('count1 : ' + count1);
+    console.log('count2 : ' + count2);
+
+    count1 = 10;
+    count2 = count1++;
+    console.log('count1 : ' + count1);
+    console.log('count2 : ' + count2);
+
+    let count3 = 0;
+    console.log(count3++);
+    console.log(count3);
+
+    let count4 = 0;
+    console.log(++count4);
+    console.log(count4);
+
+    let number2 = 1;
+    console.log(2 * ++number2);
+
+    let number3 = 1;
+    console.log(2 * number3++);
+    console.log('number3 : ' + number3);
+
+
+  </script>
+  
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body { height: 2000px; }
+    #field {
+      width: 400px; height: 300px;
+      border: 10px solid blue;
+      background-color: #00ff00;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+    }
+    #ball{
+      position: absolute;
+      left: 0; top: 0;
+      width: 40px; height: 40px;
+      transition: all 1s;
+    }
+  </style>
+</head>
+<body>
+  <p>마우스를 클릭한 곳으로 공이 이동합니다</p>
+  
+  <div id="field">
+    <img src="ball.svg" id="ball">. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+  </div>
+
+  <script>
+    field.onclick = function (event){
+      // 창 기준 필드 좌표      
+      let fieldCoords = this.getBoundingClientRect();
+
+      // ball 의 좌표 : 절대좌표,  field 의 좌표 : 상대좌표
+      // ball 의 좌표는 field 내부의 위 왼쪽 모서리로 함
+      let ballCoords = {
+        top:  event.clientY - fieldCoords.top - field.clientTop - ball.clientHeight / 2,
+        left: event.clientX - fieldCoords.left - field.clientLeft - ball.clientWidth / 2,
+      };
+
+      // 상단(top)의 field 경계를 넘어가지 않도록 함
+      if(ballCoords.top < 0) { ballCoords.top = 0; }
+
+      // 왼쪽(left)의 field 경계를 넘어가지 않도록 함
+      if(ballCoords.left < 0) { ballCoords.left = 0; }
+
+      // 오른쪽(right)의 field 경계를 넘어가지 않도록 함
+      if(ballCoords.left + ball.clientWidth > field.clientWidth) { 
+        ballCoords.left = field.clientWidth - ball.clientWidth; 
+      }
+
+      // 하단(bottom)의 field 경계를 넘어가지 않도록 함
+      if(ballCoords.top + ball.clientHeight > field.clientHeight) { 
+        ballCoords.top = field.clientHeight - ball.clientHeight; 
+      }
+
+      ball.style.left = ballCoords.left + 'px';
+      ball.style.top = ballCoords.top + 'px';
+
+    }
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <a name ="list">the list</a>
+  <ul>
+    <li><a href="https://google.com">https://google.com</a></li>
+    <li><a href="/tutoria.">/tutoria.html</a></li>
+    <li><a href="local/path">local/path</a></li>
+    <li><a href="ftp://ftp.com/first.zip">ftp://ftp.com/first.zip</a></li>
+    <li><a href="https://nodejs.ord">https://nodejs.ord</a></li>
+    <li><a href="https://internal.com">https://internal.com</a></li>
+  </ul>
+  <script>
+    /*
+      href 속성값 color 변경하기
+        ㄴ 1) :// 가 포함되어야 함
+           2) https://internal.com으로 시작하지 않아야함
+    */
+
+
+    //조건 충족하는 anchor 선택하기
+    let selector = 'a[href*="://"]:not([href^="https://internal.com"])'; // ^= 시작을 의미함
+    let links = document.querySelectorAll(selector);
+    
+    links.forEach(link => link.style.color = 'orange');
+  </script>
+
+</body>
+</html>

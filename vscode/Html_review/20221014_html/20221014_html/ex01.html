@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{padding:0; margin:0;}
+    li{ list-style: none;}
+    .left{float: left;}
+    .right{float: right;}
+
+    /* 
+    자손 선택자 : 부모요소 > 자손요소 { } 
+                  부모 바로 아래 있는 element
+    */
+    .left > li{ color: blue;} /* 잘못된 선택 */
+    .left > ul > li{ color: blue;}
+    .left > ul { border: 4px solid red;}
+
+    /* 
+    후손 선택자 : 부모요소  후손요소 { } 
+                  부모 아래 있는 모든 element              
+    */
+    .right li{ color: red;}
+    .right ul{ border: 4px solid blue;}
+
+
+  </style>
+</head>
+<body>
+  <div class="left"> <!-- 기준 -->
+    <ul> <!-- 자손이자 후손 -->
+      <li>리스트</li> <!-- 후손 -->
+      <li>리스트</li>
+      <li>리스트</li>
+    </ul>
+  </div>
+  <div class="right">
+    <ul>
+      <li>리스트</li>
+      <li>리스트</li>
+      <li>리스트</li>
+    </ul>
+  </div>
+</body>
+</html>

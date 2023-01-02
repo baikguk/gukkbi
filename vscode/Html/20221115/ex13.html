@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {height: 2000px;}
+    #field{
+      width: 400px; height:300px;
+      border:10px solid blue;
+      background-color: #00ff00;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+    }
+    #ball{
+      position: absolute;
+      left:0;top:0;
+      width:40px; height: 40px;
+      transition: all 1s;
+    }
+  </style>
+</head>
+<body>
+  <p>마우스를 클릭한 곳으로 공이 이동합니다</p><br><br>
+
+  <div id="field">
+    <img src="ball.svg"id="ball">. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+    . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+     . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+  </div>
+  <script>
+    field.onclick = function(event){
+      // 창 기준 필드 좌표
+      let fieldCorrds = this.getBoundingClientRect();
+
+      //ball의 좌표 : 절대좌표, field의 좌표 : 상대 좌표
+      //ball의 좌표는 field 내부의 위 왼쪽 모소리로 함
+      let ballCorrds = {
+        top: event.clientY - fieldCorrds.top - field.clientTop - ball.clientHeight /2,
+        left : event.clientX - fieldCorrds.left - field.clientLeft - ball.clientWidth /2
+      };
+
+      //상단(top)의 field 경계를 넘어가지 않도록 함
+      if(ballCorrds.top<0){
+        ballCorrds.top = 0;
+      }
+      //왼쪽(left)의 field 경계를 넘어가지 않도록 함
+      if(ballCorrds.left<0){
+        ballCorrds.left = 0;
+      }
+
+       //하단(bottom)의 field 경계를 넘어가지 않도록 함
+       if(ballCorrds.top+ball.clientHeight>field.clientHeight){
+        ballCorrds.top = field.clientHeight-ball.cl;
+      }
+      //오른쪽(right)의 field 경계를 넘어가지 않도록 함
+      if(ballCorrds.left+ball.clientWidth>field.clientWidth){
+        ballCorrds.left = field.clientWidth-ball.clientWidth;
+      }
+
+      ball.style.left = ballCorrds.left + 'px';
+      ball.style.top = ballCorrds.top + 'px';
+    }
+  </script>
+</body>
+</html>

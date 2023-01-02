@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{padding:0; margin: 0;}
+    li{ list-style:none;}
+    .left{float : left;}
+    .right{float : right;}
+    /* 
+    자손 선택자 : 부모요소 > 자식요소 {}
+                  ">" 뜻 : 부모 바로 있는 element
+    */
+    /* 
+    후손 선택자 : 부모요소 자식요소 {}
+                 ">" 없으면 :부모 아래 있는 모든 element
+    */
+    .left >ul > li{color:blue}
+    .left ul{border : 4px solid red}
+    .right li{ color: red;}
+    .right ul li {border: 4px solid black}
+  </style>
+</head>
+<body>
+  <div class = "left">
+    <ul>
+      <li>리스트</li>
+      <li>리스트</li>
+      <li>리스트</li>
+    </ul>
+  </div>
+  <div class = "right">
+    <ul>
+      <li>리스트</li>
+      <li>리스트</li>
+      <li>리스트</li>
+    </ul>
+  </div>
+</body>
+</html>

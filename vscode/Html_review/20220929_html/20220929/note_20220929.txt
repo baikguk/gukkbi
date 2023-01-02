@@ -1,0 +1,13 @@
+- padding (margin) 순서  (ex06.html)
+
+상, 우, 하, 좌 모두 10px
+padding: 10px;  
+
+      (상=하) (좌=우)
+padding: 10px   10px;
+
+         상   (좌=우)  하 
+padding: 10px  10px    10px;
+
+          상    우    하    좌
+padding: 10px  10px  10px  10px;

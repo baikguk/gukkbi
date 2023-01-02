@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+  .hour{
+    color:red;
+  }
+  .min{
+    color:blue;
+  }
+  .sec{
+    color:green;
+  }
+  </style>
+</head>
+
+<body>
+  <div id ="clock">
+    <span class ="hour">hh</span>:<span class="min">min</span>:<span class = "sec">ss</span>
+  </div>
+  <script>
+    let timeId;
+
+    function update(){
+      let clock = document.getElementById('clock');
+      let date = new Date();
+
+      let hours = date.getHours();
+      if(hours<10){hours = '0' + hours;}
+      clock.children[0].innerHTML = hours;
+      
+      let minutes = date.getMinutes();
+      if(minutes<10){minutes = '0' + minutes;}
+      clock.children[1].innerHTML = minutes;
+      
+      let seconds = date.getSeconds();
+      if(seconds<10){seconds = '0' + seconds;}
+      clock.children[2].innerHTML = seconds;
+    }
+    function clockStart(){
+      timeId = setInterval(update, 1000);
+      //시계는 1초마다 한 번씩 갱신됨
+      // 시작할 때 , 1초 기다리지 않고 바로 시작하기
+      // 첫 번째 setInterval 이 실행되기 전까지 기다리지 않음
+      //update()를 호출하지 않으면 시작할 때 1초 지연됨
+      update();
+    }
+    function clockStop(){
+      clearInterval(timeId);
+    }
+
+
+    //아래의 주석code가 실행되면 시계는 무조건 시작됨
+  // clockStart();
+  </script>
+  <!-- 버튼 클릭시 시계 시작/종료하기 -->
+  <input type="button" onclick="clockStart()" value = "시작">
+  <input type="button" onclick="clockStop()" value = "종료">
+</body>
+</html>

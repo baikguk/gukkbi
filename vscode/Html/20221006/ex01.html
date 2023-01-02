@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body > div{ /* '>'의 의미는 body 하위에 있는 div만 적용됨 (child가 속한 div는 속하지 않음) */
+      margin-bottom:  20px;
+    }
+    #box1, #parent{
+      width: 200px;
+      height: 200px;
+      background-color: rgb(209, 147, 66);
+    }
+    #child{
+      width: 50%;
+      height: 50%;
+      background-color: rgb(64, 101, 221);
+    }
+    #box2{
+      width: 70%;
+      height: 200px;
+      background-color: pink;
+    }
+  </style>
+
+</head>
+<body>
+  <div id = "box1">box1</div> </div>
+  <div id = "parent">부모
+    <div id = "child">자손</div>
+  </div>
+  <div id = "box2">box2</div>
+</body>
+</html>

@@ -1,0 +1,91 @@
+ [I/O 프로그래밍]
+
+   (기준 : Java Application (자바 프로그램))
+   data를 읽는 Input 기능과
+   data를 내보내는 Output 기능을 활용함
+   API에서 여러가지 Input방식과 Output방식을 지원해줌
+
+   data 입력의 대상
+     keyboard, file, Network 등을 통해서 들어오는 data들이 대상이 됨
+   data 출력의 대상
+     monitor, file, 외부 Network 등으로 data를 내보냄
+
+   <입출력과 같이 외부 resource를 연계해서 작동시킬 때는
+    예외처리를 해 주어야 함>
+    : throws로 하지 말고, try-catch 구문으로 처리할 것을 권장함
+
+    Stream : data의 흐름을 시냇물에 비유해서 일컫는 말
+    (pipe, 빨대)
+
+    I/O 프로그램의 핵심 keyword
+
+      1) in - read : 입력과 관련됨
+         I/O 작업시에 in이나, read라는 단어가 있으면
+         읽어내는 기능을 의미함
+         Data Source(data 근원지)에서 빨아들이는 것
+         Java Application으로 빨아들임
+         <-- pipe나 빨대를 꽂는다는 느낌으로 받아들면 쉬움
+
+      2) out - write : 출력과 관련됨
+         I/O 작업시 out이나, write라는 단어가 있으면
+         쓰는(써내는) 기능을 의미함
+         Java Application 에 pipe(stream)을 꽂고
+         Data Destination 에 씀(써냄)
+
+            바이트기반스트림 / 문자기반스트림
+         +---------+-------------+--------------+
+         |         |  in - read  | out - write  |
+         +---------+-------------+--------------+
+         |   byte  | InputStream | OutputStream |
+         +---------+-------------+--------------+
+         |character|   Reader    |    Writer    |
+         +---------+-------------+--------------+
+
+
+         < I/O 프로그램의 절차 >
+
+         [1] data 읽기 : Input
+           1. 원하는 대상(data)을 정함 (Data Source)
+           2. 대상(data)에 적절한 InputStream 계열의 파이프(빨대)를 연결함
+           3. 대상(data)에서 (Java Application으로) 읽어들이는 작업을 함
+              <-- in.read()
+           4. 다 읽은 후(in.read()의 반환값이 -1인 경우)에는
+              반드시 Stream을 닫아주어서 (close() 호출)
+              pipe(빨대) 연결을 해제해야 함
+
+         [2] data 쓰기
+           1. data를 쓸 대상을 정함 (Data Destination)
+           2. 대상에 적절한 OutputStream 계열의 pipe를 연결함
+           3. 대상에 (data를) 쓰는 작업을 함  <-- out.write()
+           4. 다 쓴 후에는 반드시 Stream을 닫아주어서 (close() 호출)
+              pipe(빨대) 연결을 해제함
+
+
+기반 스트림 : source 에 직접 연결되는 스트림
+
+보조 스트림 : 기반 스트림의 성능을 향상시켜주는 스트림
+
+
+
+
+  1. InputStream 의 핵심적인 기능 : read()
+
+    1) 연결된 stream 을 통해서 read()하면
+       1 byte 의 내용을 int type 으로 읽음 (int type 으로 return 함)
+       <-- 이 때, 더 이상 읽어올 data 가 없으면
+           return 값이 -1이 됨 : read() 작업을 종료함
+    2) read() : 1 byte 에 쓰여진 값을 반환함
+    3) read(byte[]) : 읽어들인 data 는 byte[] 배열 안으로 들어가고
+                      return 값은 data 를 몇 개 읽었는지 반환함
+
+  2. OutputStream 의 핵심적인 기능  : write()
+
+    1) 대상 data에 연결된 stream을 통해서 write()하면
+       대상(Data Destination) 으로 data를 전송함
+
+       in.read() <-- InputStream 에서 1 byte 씩 읽어옴(가져옴)
+    2) write(in.read()) : InputStream 에 있는 data 를 1 byte 씩 전송함
+    3) write(byte[]) : byte[] 배열 안에 있는 data들을 전송함
+    4) write(byte[], start, length)
+       <-- byte[] 배열 안에 있는 data들을 시작 위치(start)부터
+           length 개수만큼 전송함

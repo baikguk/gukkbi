@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <select id ="genre">
+    <option value="classic">Classic</option>
+    <option value="blues" selected>Blues</option>
+  </select>
+  <script>
+    //<option value="pop" selected>Pop</option> 추가하기
+
+    let selectedOption = genre.options[genre.selectedIndex];
+    console.log(selectedOption.value);
+
+    let newOption = new Option('Pop','pop');
+    genre.append(newOption);
+
+    newOption.selected = true;
+  </script>
+</body>
+</html>

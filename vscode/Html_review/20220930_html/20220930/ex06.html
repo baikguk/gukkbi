@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* font-weight : 글자 굵기 속성 */
+    /* 해당 글꼴에서 굵기를 지원하지 않으면 normal(400), bold(700) 만 가능함 */
+
+    #text01{ color: rgb(246, 189, 148); font-weight: bold;}
+    #text02{ color: rgb(177, 181, 241); font-weight: bolder;}
+    #text03{ color: rgb(190, 241, 177); font-weight: lighter;}
+
+    /* 100 ~ 900 까지 입력할 수 있음 */
+    #text04{ color: rgb(248, 131, 131); font-weight: 100;}
+    #text05{ color: rgb(175, 143, 220); font-weight: 400;}
+    #text06{ color: rgb(147, 73, 162); font-weight: 900;}
+
+    /* font-style : 글자 기울기 속성 */
+    /* normal : 기울기 없음 */
+    /* italic : 기울임 */
+    #text07{ color: rgb(161, 154, 163); font-style: italic;}
+
+    address{ font-style: normal;}
+
+    a{text-decoration: none;}    
+
+    #text08{ text-decoration: overline;}
+    #text09{ text-decoration: line-through;}
+    #text10{ text-decoration: underline;}
+
+    #text11{ 
+      color: darkkhaki; 
+      text-decoration: underline;
+      text-decoration-color: green;
+      text-decoration-style: double;
+      text-decoration-thickness: 5px;    
+    }
+
+    /* text-transform : 영문 대소문자 지정 속성 */
+    #text12{ text-transform: uppercase; }
+    #text13{ text-transform: lowercase; }
+    #text14{ text-transform: capitalize; }
+
+    /* letter-spacing : 글자간격 지정 속성 */
+    /* normal : 글자간격을 원래대로 지정함 */
+    #text15{ letter-spacing: 10px;}
+    #text16{ letter-spacing: 20px;}
+    #text17{ letter-spacing: 30px;}
+
+    /* text-align : 글자 정렬 속성 */
+    #text18{ text-align: left;}
+    #text19{ text-align: center;}
+    #text20{ text-align: right;}
+    p{
+      width: 180px;
+      background-color: rgb(245, 208, 214);
+      text-align: justify;
+      /* text-align: center; */
+    }
+    p#secondp{
+      width: 150px;
+      background-color: rgb(245, 216, 163);
+      text-align: center;
+      line-height: 30px;
+    }
+    p#thirdp{
+      width: 150px;
+      background-color: rgb(181, 181, 244);
+      text-indent: 20px;
+    }
+
+  </style>
+</head>
+<body>
+  <h2 id="text01">title tag</h2>
+  <h2 id="text02">title tag</h2>
+  <h2 id="text03">title tag</h2>
+  <h2 id="text04">제목태그</h2>
+  <h2 id="text05">제목태그</h2>
+  <h2 id="text06">제목태그</h2>
+  <h2 id="text07">제목태그</h2>
+  <hr>
+  <address>글로벌IT인재개발원</address>
+  <hr>
+  <a href="https://www.naver.com">네이버</a>
+  <hr>
+  <h2 id="text08">제목태그</h2>
+  <h2 id="text09">제목태그</h2>
+  <h2 id="text10">제목태그</h2>
+  <h2 id="text11">제목태그</h2>
+  <hr>
+  <h2 id="text12">text_transform</h2>
+  <h2 id="text13">text_transform</h2>
+  <h2 id="text14">text_transform</h2>
+  <hr>
+  <h2 id="text15">letter_spacing</h2>
+  <h2 id="text16">letter_spacing</h2>
+  <h2 id="text17">letter_spacing</h2>
+  <hr>
+  <h2 id="text18">letter_spacing</h2>
+  <h2 id="text19">letter_spacing</h2>
+  <h2 id="text20">letter_spacing</h2>
+  <p>
+    동해물과 백두산이 마르고 닳도록
+    하느님이 보우하사 우리나라 만세
+  </p>
+  <p id="secondp">
+    동해물과 백두산이 마르고 닳도록
+    하느님이 보우하사 우리나라 만세
+  </p>
+  <p id="thirdp">
+    동해물과 백두산이 마르고 닳도록
+    하느님이 보우하사 우리나라 만세
+  </p>
+</body>
+</html>
+

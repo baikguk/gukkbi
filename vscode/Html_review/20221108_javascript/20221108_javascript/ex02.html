@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let str6 = 'As sly as a fox, as strong as an ox';
+    //          01234567890123456789012345678901234
+    //                    1         2         3  
+    // 찾을 문자열
+    let target = 'as';
+    let idx = 0; 
+    while(true){
+      let foundIdx = str6.indexOf(target, idx);
+      if(foundIdx == -1) {
+        console.log('foundIdx : ' + foundIdx);
+        console.log('찾는 문자열이 더 이상 없습니다');
+        break;
+      }  
+      console.log(`위치(index 번호) : ${foundIdx}`);
+      // 다음 index 로 옮겨서 검색
+      idx = foundIdx + 1;
+    }
+    console.log('==============================');
+
+    let position = -1;
+    while((position = str6.indexOf(target, position+1)) != -1){
+      console.log(`위치(index 번호) : ${position}`);
+    }
+
+    str6 = 'as sly as a fox, as strong as an ox';
+    target = 'as';
+    /*
+    찾는 문자열이 index 0 번에 있는 경우, 처리하지 못함
+    if(str6.indexOf(target)){
+      console.log(`${target} 찾음 !!!`);
+    }
+    */
+    // -1 과 비교해야 찾는 문자열이 index 0 번에 있어도 처리됨
+    if(str6.indexOf(target) != -1){
+      console.log(`${target} 찾음 !!!`);
+    }
+
+
+  </script>
+</body>
+</html>

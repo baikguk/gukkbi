@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div>user : </div>
+  <ul>
+    <li>global</li>
+    <li>it</li>
+    <li>humba</li>
+    <li>resource</li>
+    <li>development</li>
+    <li>institute</li>
+  </ul>
+  <script>
+    //<div> (Dom) node
+      //<div>user : </div> (Dom) node
+    console.log(document.body.firstElementChild);
+    console.log(document.body.children[0]);
+    console.log(document.body.childNodes[1]);
+    
+    //<ul> (Dom) node
+    console.log(document.body.children[1]);
+
+    //<li> (DOm) node
+    //global
+    console.log(document.body.children[1].firstElementChild)
+    //institute
+    console.log(document.body.children[1].lastElementChild)
+
+    //<script> (DOM)mide
+    console.log(document.body.children[2]);
+    console.log(document.body.lastElementChild)
+
+  </script>
+</body>
+</html>

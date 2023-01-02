@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 객체 리터럴을 return 하는 함수  : JSON
+    //   ㄴ {key1:value1, key2:value2, key3:value3, key4:value4, ...}
+    //      { } 
+    /*
+    function makePerson(name, age){
+      return {
+        name:name,
+        age:age,
+      };
+    }
+    */
+    // 단축 프로퍼티
+    function makePerson(name, age){
+      return {
+        name,
+        age,
+      };
+    }   
+    makePerson('글로벌', 23);
+
+    let person = makePerson('글로벌', 23);
+    console.log(person.name);
+    console.log(person.age);
+
+    let user = {
+      name,
+      age:25,    
+    };
+    // user.name = '윤봉길'
+    console.log(user.name);
+    console.log(user.age);
+
+  </script>
+</body>
+</html>

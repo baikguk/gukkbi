@@ -1,0 +1,43 @@
+db.employees.find({})
+  ㄴ db.getCollection('employees').find({})
+
+employees collection 에서 status key 삭제하기 
+ : Capped Collection 이라서 삭제할 수 없음
+db.employees.update({}, {$unset:{status:1}}, {multi:true})
+ ㄴ Cannot change the size of a document in a capped collection: 69 != 55
+
+db.employees.find({})
+
+db.articles.isCapped()
+ ㄴ false 
+db.articles.find({}) 
+
+db.firstcoll.isCapped()
+ ㄴ false 
+db.firstcoll.find({})  
+
+firstcoll collection 의 name key 삭제하기
+db.firstcoll.update({},{$unset:{name:1}},{multi:true})
+
+name key 삭제한 것 확인
+db.firstcoll.find({})  
+
+emp collection 생성
+db.createCollection('emp')
+
+db.emp.insertMany(
+  [
+    {user_id:"bcd001", age:45, status:"A"},
+    {user_id:"bcd002", age:25, status:"C"},
+    {user_id:"bcd003", age:50, status:"A"},
+    {user_id:"bcd004", age:35, status:"A"},
+    {user_id:"abc001", age:28, status:"C"}
+  ]
+)
+db.emp.find({})
+
+- emp collection 에서 status 가 "C"인 document 모두 삭제하기
+db.emp.deleteMany({status:"C"})
+db.emp.find({})
+
+

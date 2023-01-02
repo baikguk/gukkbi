@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="element" about="elephant">innerHTML</div>  
+  <script>
+    /*
+      element.getAttribute(name)  : 속성값 반환
+      element.getAttributes : 여러 속성을 collection 에 담아서 반환
+      element.hasAttribute(name)  : 속성 여부 반환
+      element.setAttribute(name, value)  : 속성값 변경
+      element.removeAttribute(name) : 속성값 삭제
+      
+    */
+    console.log(element.getAttribute('about'));
+    console.log(element.hasAttribute('about'));
+
+    // id 가 element 인 div element  에 
+    // test 라는 속성을 추가하면서 값을 지정함
+    // 속성에 할당한 값 1234567 은 문자열로 변환됨
+    element.setAttribute('test', 1234567);
+    // test 라는 속성에 할당된 값 확인하기
+    console.log(element.getAttribute('test'));
+    console.log(element.hasAttribute('test'));
+    // test 라는 속성이 있는 element 반환
+    // <div id="element" about="elephant" test="1234567">innerHTML</div>
+    console.log(element.outerHTML);
+    // innerHTML
+    console.log(element.innerHTML);
+
+    // for 문으로 속성 전체 확인하기
+    // element.attributes 
+    //  - element 에 있는 모든 속성을 collection 으로 반환
+    for(let attr of element.attributes){
+      console.log(`${attr.name} :  ${attr.value}`);
+    }
+    /*
+      id :  element   
+      about :  elephant
+      test :  1234567
+    */
+
+
+  </script>
+</body>
+</html>

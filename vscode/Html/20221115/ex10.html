@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input id ="element" type="'button" value="클릭!!">
+  <input type="'button" value="클릭!!" onclick="alert(event.type)">
+  <button id ="btn1">클릭해 주소~</button>
+  <button id ="btn2">클릭해 주소~</button>
+  <script>
+    /*
+      event : 이벤트가 발생했을 때, browser가 자동으로 생성하는
+              이벤트 객체
+    */
+    element.onclick = function(event){
+        //이벤트 type. element. click event 발생 좌표
+        console.log(event.type + " 이벤트가 "+ event.currentTarget + "에서 발생함") ;
+        console.log("이벤트 발생 좌표 : " +event.clientX + " - " +event.clientY)
+    }
+    let eventObject = {
+      handleEvent(event){
+        //click 이벤트가 [object HTMLButtonElement] 에서 발생함
+        alert(event.type + " 이벤트가 "+ event.currentTarget + " 에서 발생함");
+      }
+    }
+    btn1.addEventListener('click', eventObject);
+
+    class Menu{
+      handleEvent(event){
+        switch(event.type){
+          case 'mousedown' :
+            btn2.innerHTML = "마우스 버튼 누름"
+            break;
+        
+          case 'mouseup' :
+            btn2.innerHTML = "마우스 버튼 뗅"
+            break;
+        }
+      }
+    }
+    let menu = new Menu();
+    btn2.addEventListener('mousedown',menu);
+    btn2.addEventListener('mouseup',menu);
+    
+  </script>
+</body>
+</html>

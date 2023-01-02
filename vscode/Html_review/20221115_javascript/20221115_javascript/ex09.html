@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input id="input1" type="button" value="클릭"/>
+  <script>
+    function handler1() {alert('클릭1');};
+    function handler2() {alert('클릭2');};
+
+    input1.onclick = () => alert('안녕하세요');
+    input1.addEventListener("click", handler1);
+    input1.addEventListener("click", handler2);
+  </script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    console.log(2 > 1);
+    console.log(2 == 1);
+    console.log(2 != 1);
+
+    console.log('Z' > 'A');
+    console.log('Global' > 'Globap');
+    console.log('Globall' > 'Global');
+
+    // '0' 가 숫자 0 로 변환된 후 비교됨
+    console.log('0' > 1);
+    // '01'이 숫자 1 로 변환된 후 비교됨
+    console.log('01' == 1);
+
+    // true 가 숫자 1로 변환된 후 비교됨
+    console.log(true == 1);
+    // false 가 숫자 0으로 변환된 후 비교됨
+    console.log(false == 0);
+
+    // 숫자 0 을 boolean type 으로 형변하면 false 가 됨
+    let a = 0;
+    console.log('Boolean(a) : ' + Boolean(a));
+
+    // 문자열 '0' 을 boolean type 으로 형변환하면 true 가 됨
+    let b = '0';
+    console.log('Boolean(b) : ' + Boolean(b));
+
+    // == 연산자를 사용하면 '0' 은 숫자 0 으로 변환되어 비교됨
+    console.log('a == b : ' + (a == b));
+
+
+    // == (equality operator : 동등연산자)
+    // '' (빈문자열)을 숫자 0으로 변환해서 비교함
+    console.log('0 == false : ' + (0 == false));
+    console.log("'' == false : " + ('' == false));
+
+    // === (strict equality operator : 일치연산자)
+    // 값과 자료형 모두 비교함
+    console.log('0 === false : ' + (0 === false));
+    console.log("'' === false : " + ('' === false));
+
+    // == 연산자를 사용하는 경우에는
+    // null 과 undefined 는 true 로 인식함
+    console.log("null  == undefined : " + (null == undefined));
+
+    // 자료형까지 비교하므로 false 가 됨
+    console.log("null === undefined : " + (null === undefined));
+
+    
+    // null 과 0 비교하기
+    // == 연산자는 피연산자가 undefined 나 null 인 경우,
+    // 형변환을 하지 않음
+    // null  == undefined 인 경우에만 true 를 반환함
+    //  ㄴ 이 이외의 경우(null 이나 undefined 를 다른 값과 비교하는 경우)
+    //     에는 무조건 false 를 반환함
+    console.log("null > 0 : " + (null > 0));
+    console.log("null == 0 : " + (null == 0));
+    console.log("null < 0 : " + (null < 0));
+  
+    // >=, <= 인 경우에는 null 을 숫자 0 으로 변환함
+    console.log("null >= 0 : " + (null >= 0));
+    console.log("null <= 0 : " + (null <= 0));
+
+    // undefined
+    // 아래 두 경우에서는  undefined 가 NaN 으로 변환됨
+    // NaN  이 피연산자인 경우, 비교연산자는 항상 false 를 반환함    
+    console.log("undefined > 0 : " + (undefined > 0));    
+    console.log("undefined < 0 : " + (undefined < 0));
+
+    // undefined 는 null 과 == 로 비교할 때만 true 가 되고
+    // 그 이외의 경우에는 모두 false 가 됨
+    console.log("undefined == 0 : " + (undefined == 0));
+
+    // <-- null 이나 undefined 가 될 수 있는 변수가
+    // > 나 < 의 피연산자가 되지 않도록 하는 것이 좋음
+    //  ㄴ 변수의 값이 null 이나 undefined 인지
+    //     확인하고 비교연산자를 사용할지 말지를 결정하는 것이 좋음
+
+
+    // 비교연산자는 boolean type 의 값을 반환함
+    // 문자열의 비교는 사전 순서대로 비교됨 (ASCII code)
+    // 서로 다른 type 의 값을 비교하는 경우, 숫자형으로 변환된 후 비교됨
+    // null 과 undefined 는 서로 == 로 비교할 때만 true 이고 그 이외에는 false
+     
+    console.log('apple' > 'pineapple');
+
+    // true : 둘다 문자형이므로 숫자형으로 변환되지 않고
+    //        ascii code 로 비교됨 - 자릿수에 맞추어서 비교함
+    //   2    첫 번째 자리에 있는 2와 1이 비교됨               
+    //   12
+    console.log('2' > '12');
+
+    console.log(null == undefined);
+    console.log(null === undefined);
+
+    // null 은 undefined 하고 == 로 비교할 때만 true
+    console.log(null == '\n0\n');
+
+    // type 이 달라서 false
+    console.log(null === +'\n0\n');
+
+
+
+  </script>
+  
+</body>
+</html>

@@ -1,0 +1,26 @@
+@charset "utf-8";
+
+*{padding :0;margin:0;}
+
+.intro{
+  width: 910px; margin: 30px;
+  border-spacing: 0; /*cell 간의 여백을 제거함*/
+  border-collapse: collapse;
+}
+.intro caption{
+  font-size: 24px; font-weight: bold;
+  text-align: left;
+  margin-bottom: 20px;
+}
+.intro th, .intro td{
+  border-right-width: 1px solid #ccc;
+  border-bottom:1px solid #ccc;
+  padding : 10px;
+  width : 130px;
+  text-align: center;
+  font-size: 14px;
+}
+.intro th{background-color: #f1f1f1;}
+.intro thead{border-top: 2px solid#333 ;}
+.intro .last{border-right: none;}
+.intro tbody th{ font-weight: normal;}

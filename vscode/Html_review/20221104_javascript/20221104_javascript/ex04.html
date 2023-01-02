@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    /*
+      new + 생성자 를 사용해서 객체 생성하기
+               ㄴ 생성자 함수
+    */
+
+    function User(name){
+      this.name = name;
+      this.isMale = true;
+
+      // return this; <-- 생략되어 있음
+    }
+
+    let u1 = new User('이순신');
+
+    console.log('u1.name :' + u1.name);
+    console.log('u1.isMale :' + u1.isMale);
+
+    let u2 = new User('안중근');
+    let u3 = new User('유관순');
+    console.log('u2.name :' + u2.name);
+    console.log('u3.name :' + u3.name);
+
+    // 익명 생성자 함수
+    // 일회용 객체로 활용할 때 주로 사용함
+    let u4 = new function(){
+      this.lastName = 'Cruise';
+      this.firstName = 'Tom';
+    };
+
+
+    
+  </script>
+</body>
+</html>

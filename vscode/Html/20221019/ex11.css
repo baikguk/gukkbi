@@ -1,0 +1,38 @@
+@charset "urf-8";
+
+/*base*/
+*{
+  padding : 0; margin: 0;
+  /* 기본 텍스트 설정하기*/
+  font-size: 16px; color: #666;
+}
+li{list-style: none;}
+a{ text-decoration: none;}
+.management{
+  width: 1200px;
+  margin: 0 auto;
+  padding: 40px 0;
+  box-sizing: border-box;
+}
+.management::after{
+  content:'';
+  /*width를 100%로 처리*/
+  display: block;
+  clear: both;
+}
+.management h3{
+  width: 100%; height: 140px;
+  text-align: center;
+
+}
+.management h3 span{
+  display: block; height: 70px;
+  color:black;
+}
+.management h3 span.eng{
+  font-size:40px;
+}
+.management h3 span.kor{
+  font-size:28;
+  font-weight: normal;
+}

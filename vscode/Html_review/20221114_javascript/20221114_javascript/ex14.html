@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!-- <div>ALERT !!!</div> -->
+  <script>
+    let h1 = document.createElement("h1");
+    textNode = document.createTextNode("Hello !! javaScript !!!");
+    h1.appendChild(textNode);
+    document.body.appendChild(h1);
+    h1.style.color = "magenta";
+
+    let div = document.createElement("div");
+    textNode = document.createTextNode("ALERT !!!");
+    div.appendChild(textNode);
+    document.body.appendChild(div);
+    div.style.color = "orange";
+
+    let p = document.createElement("p");
+    textNode = document.createTextNode("Hello !! javaScript !!!");
+    p.appendChild(textNode);
+    document.body.appendChild(p);
+    p.style.color = "lightgreen";
+  </script>
+</body>
+</html>

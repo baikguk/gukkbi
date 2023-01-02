@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{padding:0; margin: 0;}
+    div{
+      width: 200px; height: 200px;
+      background-color: antiquewhite;
+      margin-bottom: 20px;
+    }
+    /* 자손 element가 부모 영역의 정가운데 오도록 처리함*/
+
+    /*자손이 text(inline)인 경우*/
+    #box1{
+      /*글자를 가로의 가운데 오도록 함*/
+      text-align: center;
+      /*
+      한 줄 텍스트인 경우에는 
+      height와 line-height가 같으면 
+      세로중앙에 위치함*/
+      line-height: 200px;
+  
+      
+    }
+    #box1_1{
+      text-align: center;
+      line-height: 200px;
+    }
+
+    /*자손이 이미지인 경우*/
+    #box2{
+      text-align: center;
+      padding-top: 50px;/*div의 height가 250px이 되어 늘어마*/
+      box-sizing: border-box; /*늘어난 height를 부모에 맞게 처리함*/
+    }
+
+    /*자손이 블록 요소인 경우*/
+    p{
+      width: 100px; height: 100px;
+      background-color: rgb(7, 231, 231);
+      color : brown;
+          /* 상하 좌우- 블록요소를 부모의 가로 가운데 위치시킴*/
+      margin: 0 auto;
+    }
+
+    /* 블록 요소에는 적용되지 않음*/
+    #box3{text-align: center;}
+
+    /*부모가 body인 경우*/
+    #box4{
+      margin:0 auto;
+    }
+  </style>
+
+  
+</head>
+<body>
+  <div id = "box1">box1</div>
+  <div id = "box1_1">박스</div>
+  <div id = "box2">
+    <img src = "image/cat.jpg" width="100" alt = "">
+  </div>
+  <div id = "box3">
+    <p>문단태그</p>
+  </div>
+  <div id = "box4">box4</div>
+</body>
+</html>

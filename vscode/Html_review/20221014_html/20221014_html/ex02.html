@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* 
+     1. 형요소 + 동생요소 { } 
+        ㄴ 바로 뒤에 있는 동위선택자만 선택함
+    */
+    h1 + h2{ color: red;}
+
+    /* 
+     1. 형요소 ~ 동생요소 { } 
+        ㄴ 뒤에 있는 모든 동위선택자를 선택함
+    */
+    h3 ~ h4{ color: red;}
+    
+  </style>
+</head>
+<body>
+  <!-- 동위 요소(element) -->
+  <h1>제목태그1</h1>
+  <h2>제목태그2</h2>
+  <h2>제목태그2</h2>
+  <h2>제목태그2</h2>
+  <h2>제목태그2</h2>
+  <h2>제목태그2</h2>
+  <br><br>
+  <h3>제목태그3</h3>
+  <h4>제목태그4</h4>
+  <h4>제목태그4</h4>
+  <h4>제목태그4</h4>
+  <h4>제목태그4</h4>
+  <h4>제목태그4</h4>
+</body>
+</html>

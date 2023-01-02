@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /*font weight 굵기*/
+    /*해당 글꼴에서 굵기를 지원하지 않으면/ normal(400), bold(700)만 가능함*/
+    #text01{ color:rebeccapurple; font-weight: bold; }
+    #text02{ color:burlywood; font-weight: bolder; }
+    #text03{ color:aqua; font-weight: lighter; }
+    #text04{ color:tan; font-weight: 100; } /*100~900입력가능*/
+    #text05{ color:palegreen; font-weight: 400px;  }
+    #text06{ color:palegreen; font-weight: 900px; }
+    
+
+    /*font-style 글자 기울기 속성*/
+    /* normal 기울기 없음*/
+    /*italic 기울기 잇음*/
+    #text07{ color:palegreen; font-style: italic; }
+    address{ font-style: normal; }
+    a{text-decoration: none;}
+    #text08{text-decoration: overline;    }
+    #text09{text-decoration: line-through;    }
+    #text10{text-decoration: underline;    }
+    #text11{
+      color: rebeccapurple;
+      text-decoration: underline;
+      text-decoration-color: blue ;
+      text-decoration-style: double; /*ctrl+spacebar 하면 메소드 목록 볼수있음*/
+      text-decoration-thickness: 10px; 
+    }
+
+    /* text-transform : 영문대소문자 지정 속성*/
+    #text12{text-transform: uppercase ;}
+    #text13{text-transform: lowercase ;}
+    #text14{text-transform: capitalize ;}
+
+    /*letter-spacing : 글자간격
+      normal : 글자간격을 원래대로
+      */
+    #text15{letter-spacing: 10px ;}
+    #text16{letter-spacing: 20px ;}
+    #text17{letter-spacing: 30px ;}
+
+    /*text align 글자 가로정렬*/
+    #text18{text-align: left ;}
+    #text19{text-align: center ;}
+    #text20{text-align: right ;}
+
+    p{
+      width: 180px;
+      background-color: aliceblue;
+      text-align: justify;
+  
+
+    }
+    p#secondp{
+      width: 150px;
+      background-color: orange;
+      text-align: center;
+      line-height: 30px;
+    }
+    p#thirdp{
+      width: 150px;
+      background-color: aqua;
+      text-indent: 20px; /*들여쓰기*/
+    }
+  </style>
+</head>
+<body>
+  <h2 id = "text01">title tag</h2>
+  <h2 id = "text02">title tag</h2>
+  <h2 id = "text03">title tag</h2>
+  <h2 id = "text04">제목태그</h2>
+  <h2 id = "text05">제목태그</h2>
+  <h2 id = "text06">제목태그</h2>
+  <h2 id = "text07">제목태그</h2>
+  <hr>
+  <address>글로벌IT인재개발원</address>
+  <hr>
+  <a href="https://www.naver.com">네이버</a>
+  <hr>
+  <h2 id = "text08">제목태그</h2>
+  <h2 id = "text09">제목태그</h2>
+  <h2 id = "text10">제목태그</h2>
+  <h2 id = "text11">제목태그</h2>
+  <hr>
+  <h2 id = "text12">text_transform</h2>
+  <h2 id = "text13">text_transform</h2>
+  <h2 id = "text14">text_transform</h2>
+  <hr>
+  <h2 id = "text15">letter_spacing</h2>
+  <h2 id = "text16">letter_spacing</h2>
+  <h2 id = "text17">letter_spacing</h2>
+  <hr>
+  <h2 id = "text18">글자정렬</h2>
+  <h2 id = "text19">글자정렬</h2>
+  <h2 id = "text20">글자정렬</h2>
+  <hr>
+  <p>동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라 만세</p>
+  <p id=secondp>동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라 만세</p>
+  <p id=thirdp>동해물과 백두산이 마르고 닳도록 하느님이 보우하사 우리나라 만세</p>
+</body>
+</html>

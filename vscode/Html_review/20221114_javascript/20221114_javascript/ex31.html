@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <table id="table">
+    <thead>
+      <tr>
+        <th>Name</th><th>Surname</th><th>Age</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>John</td><td>Smith</td><td>10</td>
+      </tr>
+      <tr>
+        <td>Pete</td><td>Brown</td><td>15</td>
+      </tr>
+      <tr>
+        <td>Ann</td><td>Lee</td><td>5</td>
+      </tr>
+      <tr>
+        <td>Global</td><td>IT</td><td>23</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <script>
+    // name 을 기준으로 오름차순 정렬하기
+    //  <tbody> 에서 모든 <tr> 가져오기
+    //  name 필드에 해당하는 첫 번째 <td> 내용을 기준으로 정렬함  
+    // 정렬 후, append() 를 사용해서 정렬된 node 를 tbody 에 삽입하기
+    // javascript 에서 <table> 태그는 table 로, <tbody> 태그는 tBodies 로 인식함
+    // 아래 주석 제거하면 정렬됨
+    let sortedRows = Array.from(table.tBodies[0].rows)
+                          .sort((row1, row2) => row1.cells[0].innerHTML
+                                                    .localeCompare(row2.cells[0].innerHTML)); 
+    
+    table.tBodies[0].append(...sortedRows);
+    
+  </script>
+
+</body>
+</html>

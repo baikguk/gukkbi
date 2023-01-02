@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 삼항연산자 (ternary operator)
+
+    age = 20;
+    let entry = (age > 18) ? '입장가능' : '입장불가';
+    console.log(entry);
+
+    entry = (age > 18) ? true : false;
+    console.log(entry);
+
+    entry = age > 18;
+    console.log(entry);
+
+    score = 87;
+
+    let grade = (90 <= score && score <= 100) ? 'A' : 
+                (80 <= score) ? 'B' :
+                (70 <= score) ? 'C' :
+                (60 <= score) ? 'D' : 'F';
+
+    console.log('당신은 ' + grade + ' 학점입니다');
+
+    // if - else if - else
+    if(90 <= score && score <= 100) {
+      grade = 'A';
+    }else if(80 <= score){
+      grade = 'B';
+    }else if(70 <= score){
+      grade = 'C';
+    }else if(60 <= score){
+      grade = 'D';
+    }else{
+      grade = 'F';
+    }
+    console.log('당신은 ' + grade + ' 학점입니다');
+
+  </script>  
+</body>
+</html>

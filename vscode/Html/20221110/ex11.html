@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let animal = {
+      walk(){
+        if(!this.isSleeping){
+          console.log('동물이 걷습니다');
+        }   
+      },
+      sleep(){
+        this.isSleeping = true;
+      }
+    }
+    let rabbit = {
+      name : '귀여운 토끼',
+      __proto__ : animal
+    };
+    //
+    rabbit.walk();
+    animal.walk();
+    // rabbit에 isSleeping 이라는 property를 추가함( value는 true가 됨)
+    rabbit.sleep();
+    console.log('rabbit.isSleeping : ' + rabbit.isSleeping);
+    console.log('rabbit.isSleeping : ' + animal.isSleeping);
+
+    console.log('=======================');
+
+
+    let animal2 = {
+      eats : true,
+    };
+    let rabbit2 = {
+      jumps : true,
+      __proto__ : animal2
+    }
+
+    // Object.keys(): 현재 객체의 key들을 반환함
+    // Object.keys(rabbit2) -> rabbit2 에 있는 key만 반환함
+    //
+    console.log(Object.keys(rabbit2));
+
+    //for...in 반복문으로 하면 부모에 있는 key 도 가져옴
+    for(let prop in rabbit2){
+      console.log(prop);
+    }
+
+    let animals3 = {
+      eats: true
+    };
+
+    let  rabbit3 = {
+      jumps : true,
+      __proto__ : animals3
+    };
+
+    //hasOwnProperty() : 상속받은 property말고
+                    //   자식에 있는 property가 있는지 확인함
+    for(let prop in rabbit3){
+      let isChild = rabbit3.hasOwnProperty(prop);
+
+      if(isChild){
+        console.log(`자식의 property : ${prop}`);
+      }else{
+        console.log(`부모의 property : ${prop}`);
+      }
+    }
+  </script>
+</body>
+</html>

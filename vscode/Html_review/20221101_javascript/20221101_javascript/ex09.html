@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+    console.log(true  && true && true && true && true);
+    console.log(true  && false && true && true && true);
+    console.log(false && true && true && true && true);
+    console.log(false && false && true && true && true);
+
+    console.log(true  || true || true || true || true);
+    console.log(true  || false || true || true || true);
+    console.log(false || true || true || true || true);
+    console.log(false || false || false || false || false);
+
+
+    // 논리연산자 ( logical operator )  &&, || 경우
+    // && 연산인 경우, false 가 나오면 뒤의 비교연산 결과를 확인하지 않음
+    // || 연산인 경우, true 가 나오면 뒤의 비교연산 결과를 확인하지 않음    
+    
+    // bitwise 연산자  -->  bit 연산자
+    // bitwise operator
+
+    console.log(1 && 0);
+    console.log(1 && 10);
+    console.log(1 && (10 % 3));
+
+    console.log(0 && (10 % 3));
+
+
+    console.log(1 || 0);
+    console.log(1 || 10);
+    console.log(1 || (10 % 3));
+
+    console.log(0 || (10 % 3));
+
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sprite Image</title>
+  <style>
+    *{ padding: 0; margin: 0; }
+    li{ list-style: none; }
+    a{ text-decoration: none; }
+
+    .iconbanner{
+        width: 1200px; height: 200px;
+        margin: 0 auto;
+        background-color: beige;
+    }
+    .iconbanner ul{
+        width: 100%; height: 100%;
+        padding: 15px 0; box-sizing: border-box;
+        display: flex; /* 리스트 수평나열 처리 */
+    }
+    .iconbanner li{
+        flex: 1; /* 1:1:... */
+        height: 100%;
+    }
+    .iconbanner a{
+        display: block; /* 영역 적용을 위해 변경 */
+        width: 100%; height: 100%; /* 부모영역 전부 상속 */
+        padding-top: 150px; box-sizing: border-box;
+        text-align: center; color: #333;
+
+        background-image: url(images/hotel_sprite.png);
+        background-repeat: no-repeat;
+    }
+    .iconbanner li:nth-child(1) a{ background-position: 0 0; }
+    .iconbanner li:nth-child(2) a{ background-position: -150px 0; }
+    .iconbanner li:nth-child(3) a{ background-position: -300px 0; }
+    .iconbanner li:nth-child(4) a{ background-position: -450px 0; }
+    .iconbanner li:nth-child(5) a{ background-position: -600px 0; }
+    .iconbanner li:nth-child(6) a{ background-position: -750px 0; }
+    .iconbanner li:nth-child(7) a{ background-position: -900px 0; }
+    .iconbanner li:nth-child(8) a{ background-position: -1050px 0; }
+</style>
+</head>
+<body>
+  <div class="iconbanner"  >
+    <ul>
+      <li><a href="#">객실안내</a></li>
+      <li><a href="#">다이닝</a></li>
+      <li><a href="#">인피니티풀</a></li>
+      <li><a href="#">룸서비스</a></li>
+      <li><a href="#">발렛서비스</a></li>
+      <li><a href="#">세차서비스</a></li>
+      <li><a href="#">세탁서비스</a></li>
+      <li><a href="#">금고서비스</a></li>           
+    </ul>
+  </div>
+</body>
+</html>

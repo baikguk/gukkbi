@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    /*
+       boolean type 으로 형변환하기
+    */
+   console.log(Boolean(1));
+   console.log(Boolean(0));   // false
+   console.log(Boolean("0"));  // true
+   console.log(Boolean("hello javascript"));
+   console.log(Boolean(""));
+   console.log(Boolean(null));  // false
+   console.log(Boolean(undefined));  // false
+   console.log(Boolean(NaN));  // false
+
+
+   /*
+     연산자
+     operator (연산자)
+     operand (피연산자 : 연산의 대상이 되는 것)
+       ㄴ argument 라고 부를 때도 있음
+     binary operator (이항연산자)   : 피연산자가 두 개 이상
+     unary operator (단항연산자) : 피연산자가 하나
+     ternary operator (삼항연산자) : 피연산자가 세 개 (이상)
+
+   */
+
+    let n1 = 10;
+    console.log(n1);
+    n1 = -n1;
+    console.log(n1);
+
+    // + - * / % **
+
+    console.log(2 ** 2);
+    console.log(4 ** (1/2));
+
+    //  문자열에서 + 연산자는 연결연산자
+    let firstName = "순신";
+    let lastName  = "이";
+    console.log(lastName + " " + firstName);
+
+    // 문자열과 다른 type 이 + 연산하면 string type 이 됨
+    console.log(typeof ('1' + 2));
+    console.log('1' + 2);
+
+    console.log('7' + 7 + 7);
+    console.log(7 + 7 + '7');
+
+    // number type 으로 자동형변환 되어 연산됨
+    console.log(8 - '3');
+    console.log(8 / '2');
+    console.log('8' / '2');
+
+    console.log(typeof (8 - '3'));
+    console.log(typeof (8 / '2'));
+    console.log(typeof ('8' / '2'));
+
+    // 단항연산자 +
+    let number = 2;
+    console.log(+number);
+
+    number = -2;
+    console.log(+number);
+
+    // 단항연산자 + 사용시
+    // number type 이 아닌 피연산자는 number type 으로
+    // 자동형변환됨
+    console.log(+true);
+    console.log(+false);
+    console.log(+""); // string -> boolean -> number
+    console.log(true);
+    console.log("");
+
+    let dog = "3";
+    let cat = "5";
+    console.log(dog + cat);
+    // 단항연산자 + 의 우선순위가
+    // 이항연산자 + 의 우선순위 보다 높음
+    console.log(+dog + +cat);
+    console.log(Number(dog) + Number(cat));
+
+    let num1 = 1;
+    let num2 = 2;
+    console.log('num1 : ' + num1);
+    console.log('num2 : ' + num2);
+
+    let num3 = 3 - (num1 = num2 + 2);
+ 
+    console.log('num1 : ' + num1);
+    console.log('num2 : ' + num2);
+    console.log('num3 : ' + num3);
+
+    let number1, number2, number3;
+
+    // 할당 연산자 체이닝
+    number1 = number2 = number3 = 3 + 5;
+
+    console.log('number1 : ' + number1);
+    console.log('number2 : ' + number2);
+    console.log('number3 : ' + number3);
+
+    number3 = 3 + 5;
+    number2 = number3;
+    number1 = number2;
+    
+    console.log('number1 : ' + number1);
+    console.log('number2 : ' + number2);
+    console.log('number3 : ' + number3);
+
+
+
+  </script>
+</body>
+</html>
+

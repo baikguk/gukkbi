@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div{
+      width: 400px; padding: 10px;
+      border: 4px solid blue;
+    }
+    img{
+      width: 300px; height:300px;
+    }
+    /* 
+      object-fit 
+        요소의 크기에 맞게 <img> 태그와 <video> 태그의
+        크기를 조정함  
+      fill : 기본값 - 요소의 크기에 잠게 꽉 채워 보여줌
+      contain : 비율고정으로 이미지를 전부 보여줌
+                 ㄴ 남는 부분이 있을 수 있음
+      cover : 비율고정으로 이미지를 꽉채워서 보여줌
+                 ㄴ 잘리는 부분이 있을 수 있음
+      none  : 크기를 조정하지 않음
+              크면 잘리고, 작으면 남음
+      scale-down : 크기가 원본보다 크면 아무 효과 없는 것 처럼 보이고
+                   크기가 원본보다 작으면 원본보다 작아지는 것 처럼 보임                    
+
+    */
+    .img2{ object-fit: fill;}
+    .img3{ object-fit: contain;}
+    .img4{ object-fit: cover;}
+    .img5{ object-fit: none;}
+    .img6{ object-fit: scale-down;}
+  </style>
+</head>
+<body>
+  <h3>object-fit 적용 안 함</h3>
+  <div>
+    <img src="images/test.jpg" alt="" class="img1">
+  </div>
+  <hr>
+  <h3>fill</h3>
+  <div>
+    <img src="images/test.jpg" alt="" class="img2">
+  </div>
+  <hr>
+  <h3>contain</h3>
+  <div>
+    <img src="images/test.jpg" alt="" class="img3">
+  </div>
+  <hr>
+  <h3>cover</h3>
+  <div>
+    <img src="images/test.jpg" alt="" class="img4">
+  </div>
+  <hr>
+  <h3>none</h3>
+  <div>
+    <img src="images/test.jpg" alt="" class="img5">
+  </div>
+  <hr>
+  <h3>scale-down</h3>
+  <div>
+    <img src="images/test.jpg" alt="" class="img6">
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id = "element1"></div>
+  <div id = "element2"></div>
+  <script>
+    //innerHTML : 입력한 문자열이 HTML 형태로 태그와 함께 저장됨
+    //textContent : element 내부의 text만 순수한 text형태로 저장됨
+                    //ㄴ 태그를 구성하는 특수함 ㄴ 문자들도 문자열로 처리됨
+
+    let name = prompt('이름을 입력하세요','<b>글로벌</b>');
+
+    element1.innerHTML = name;
+    element2.textContent = name;
+
+    //element1.innerHTML : html의 element로 동자함
+    console.log('element1.innerHTML' + element1.innerHTML)  ;
+
+    //element1.textContent : 태그까지 문자열로 변환ㄴ디어 elemnet의 기능이 없어짐
+    console.log('element2.textcontetn : '+element2.textContent);
+  </script>
+</body>
+</html>

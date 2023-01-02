@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p>hello javascript</p>
+  <p>2 초 후에 페이지 내용이 사라지게 됨</p>
+  <script>
+    // document.write() : 브라우저 화면에 출력함
+    // 페이지를 불러오는 도중에만 작동함
+    // 페이지 로딩(rendering) 이 완료된 후
+    // 호출하면 기존 내용이 다 삭제됨 - 주의해서 사용할 것
+    document.write('<b>여기는 자바스크립크 교실입니다</b>')
+    setTimeout(() => document.write('<b>기존의 내용이 사라짐</b>'), 2000);
+  </script>
+</body>
+</html>

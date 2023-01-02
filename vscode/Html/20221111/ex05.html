@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    let animal = {
+      name : 'animal',
+      eat(){
+        console.log(`${this.name} 이(가) 먹이를 먹습니다`);
+      }
+    };
+    let rabbit = {
+      __proto__ : animal,
+      name : 'rabbit',
+      eat(){
+      this.__proto__.eat(); 
+      this.__proto__.eat.call(this);
+      }
+    };
+    let longEar = {
+      __proto__:rabbit,
+      eat(){
+      this.__proto__.eat.call(this);
+      }
+    }
+    //proto는 상속관계 한번만 가능 여러번 상속후 메소드 실행시 아래 오류가 발상하게됨
+    // longEar.eat(); //Uncaught RangeError: Maximum call stack size exceeded
+  </script>
+</body>
+</html>

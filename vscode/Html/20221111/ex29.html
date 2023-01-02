@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p> p 태그</p>
+  <div> div 태그</div>
+
+  <script>
+    console.log(document.body.innerHTML);
+    document.body.innerHTML = '글로벌 아이티';
+    console.log(document.body.innerHTML); //<body>글로벌아이티</body>와 동일함
+  </script>
+</body>
+</html>

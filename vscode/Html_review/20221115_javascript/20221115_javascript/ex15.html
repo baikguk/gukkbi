@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{
+      box-sizing: border-box;
+    }
+    body{
+      font-family: Verdana, sans-serif; margin: 0;
+    }
+    .slides{
+      display: none;
+    }
+    img{
+      vertical-align: middle;
+    }    
+    /* slideshow-container */
+    .slideshow-container{
+      max-width: 1000px; position: relative; margin: auto;
+    }
+
+    /* previous, next button */
+    .prev, .next{
+      cursor: pointer; position: absolute;
+      top: 50%; width: auto; padding: 16px; margin-top: -22px;
+      color:  gray; font-weight: bold; font-size: 18px;
+      transition:  0.6s ease;
+      border-radius: 0 3px 3px 0; 
+      /* user-select: none;  text 선택이 안 되게 함 */
+      user-select: none;    
+    }
+
+    /* next button 은 오른쪽에 배치함 */
+    .next{ right: 0; border-radius:  3px 0 0 3px;}
+
+    /* 
+      이전 보기, 다음 보기 버튼에 마우스 올리면  
+      투명한 검은 색 배경 나오도록 함 
+    */
+    .prev:hover, .next:hover{
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    /* Caption text */
+    .text{
+      color: #f2f2f2; font-size: 15px;
+      padding: 8px 12px; position: absolute;
+      bottom: 8px; width: 100%; text-align: center;
+    }
+
+    /* slideNumber */
+    .slideNumber{
+      color: #f2f2f2;  font-size: 12px;
+      padding: 8px 12px; position: absolute; top: 0;
+    }
+
+    /* dot */
+    .dot{
+      cursor: pointer; height: 15px; width: 15px; margin: 0 2px;
+      background-color: #bbb; border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+
+    .active, .dot:hover{
+      background-color:  #717171;
+    }
+
+    /* fadding animation */
+    .fade{
+      animation-name: fade;
+      animation-duration: 1.5s;
+    }
+
+    @keyframes fade{
+      from {opacity: .4}
+      to {opacity: 1}
+    }
+
+    /* 작은 사이즈의 화면에서는 text 크기 줄이기 */
+    @media only screen and (max-width: 300px){
+      .prev, .next, .text { font-size: 11px; }
+    }
+
+  </style>
+</head>
+<body>
+  <div class="slideshow-container">
+    <div class="slides fade">
+      <div class="slideNumber">1 / 4</div>
+      <img src="images/img_nature_wide_01.jpg" style="width: 100%;">
+      <div class="text">Caption Text</div>
+    </div>
+    <div class="slides fade">
+      <div class="slideNumber">2 / 4</div>
+      <img src="images/img_nature_wide_02.jpg" style="width: 100%;">
+      <div class="text">Caption Text</div>
+    </div>
+    <div class="slides fade">
+      <div class="slideNumber">3 / 4</div>
+      <img src="images/img_nature_wide_03.jpg" style="width: 100%;">
+      <div class="text">Caption Text</div>
+    </div>
+    <div class="slides fade">
+      <div class="slideNumber">4 / 4</div>
+      <img src="images/img_nature_wide_04.jpg" style="width: 100%;">
+      <div class="text">Caption Text</div>
+    </div>   
+    <a class="prev" onclick="plusSlides(-1)"><</a>
+    <a class="next" onclick="plusSlides(1)">></a>
+  </div>
+  <br>
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+  </div>
+
+  <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    // previous button, next button
+    function plusSlides(number){
+      showSlides(slideIndex += number);
+    }
+
+    // dot
+    function currentSlide(number){
+      showSlides(slideIndex = number);
+    }
+
+    // 화면에 나오는 그림 골라서 보여주기
+    function showSlides(number){
+      let i;
+      let slides = document.getElementsByClassName('slides');
+      let dots   = document.getElementsByClassName('dot');
+
+      if(number > slides.length) { slideIndex = 1; }
+      if(number < 1) { slideIndex = slides.length; }
+
+      for(i = 0; i < slides.length ; i++){
+        slides[i].style.display = "none";
+      }
+      for(i = 0; i < dots.length; i++){
+        dots[i].className = dots[i].className.replace(' active', '');
+      }
+
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+    }
+  </script>
+</body>
+</html>

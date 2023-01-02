@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>fill map</title>
+</head>
+<body>
+    <script>
+      const h = 10;
+      const w = 10;
+
+      const grid =Array(h*w).fill().map((arr,i) =>{
+        return i;
+      });
+      /* Array(h*w).fill();  undefined로 100개를 채움*/
+      /*fill(1) : 1로 채움 */
+      console.log(grid);
+      
+      setTimeout(()=> console.log('hello'), 3000)
+    </script>
+</body>
+</html>

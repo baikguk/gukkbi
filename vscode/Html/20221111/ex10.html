@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // privaet property, method 에는 #을 사용함
+    class CoffeeMachine{
+      #waterLimit = 200;
+      #checkWater(water){
+        if (water <0 ){
+          console.log('물으리 양은 음수로 정할수 없음')
+          throw new Error('물으리 양은 음수로 정할수 없음')
+          
+        }
+        if(water > this.#waterLimit){
+          cosole.log('물의 양이 용량을 초과함')
+        }
+      }
+      //같은 클래스 안에서는 private property에 접근 가능함
+      set waterLimit(water){
+       console.log('물의 양이 용량을 초과함') 
+      }
+      get waterLimit(){
+        return this.#waterLimit;
+      }
+    }
+    let coffeemachine = new CoffeeMachine();
+    // private property는 class 외부에서 접근할 수 없음
+    // coffeemachine.#waterLimit = 300; //Property '#waterLimit' is not accessible outside class 'CoffeeMachine' because it has a private identifier
+    // setter을 호출해야함
+    coffeemachine.waterLimit =300;
+    // privaet property 는 class외부에서 접근할 수 없음
+    // console.log(coffeemachine.#waterLimit);
+    console.log('coffeeMachine.waterLimit : '+ coffeemachine.waterLimit); //undefined, getter을 만들어줘야 값이 할당됨
+
+    // private property가 있는 클래스 상속하기
+    class ChildeCoffeeMachine extends CoffeeMachine{
+      // #waterLimit = 100;
+      method1(){
+        //부모에서 private property로 선언된 멤버변수는
+        // 자식에서 바로 참조할 수 없고 다시 선언해야(declare)함
+        // console.log('this.#waterLimit : '+ this.#waterLimit);
+        console.log('this.waterLimit : '+ this.waterLimit);
+      }
+    }
+   let chm = new ChildeCoffeeMachine();
+   console.log(chm.method1());
+  </script>
+</body>
+</html>

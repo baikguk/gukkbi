@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <input>
+  <script>
+    let input = document.querySelector('input');
+    
+    input.setAttribute('value', 'globalit');
+    console.log(input.value);
+
+    // value 속성의 속성값을 변경함
+    input.value = 'humanResources';
+    // 변경 후 value 속성에 할당된 값을 확인
+    console.log(input.value);
+    // 변경 전 value 속성에 할당된 값을 확인
+    // 중간에 값이 변경되어도 변경 전의 값으로
+    // 다시 복구하는 경우에 사용함
+    console.log(input.getAttribute('value'));
+    
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    /*
+      iterable : Symbol.iterator 키가 있는 property를 가진 객체
+      array-like(유사배열) : index, length 속성(property)가 있어서 배열
+                            처럼 보이지만 Symbol.iterator이 없음
+    */
+   let arrayLike = {
+    0: "Hello",
+    1: "javascript",
+    length :2 
+   };
+
+  //  arrayLike is not iterable
+  //  for(let item of arrayLike){
+  //   console.log(item)
+  //  }
+
+  //Array.from : 유사배열을 실제 배열로 만들어줌
+
+  let range = {
+      0: 1,
+      1: 5,
+      length:2
+    };
+
+  let arr2 = Array.from(range);
+  console.log(arr2);
+  
+  </script>
+</body>
+</html>

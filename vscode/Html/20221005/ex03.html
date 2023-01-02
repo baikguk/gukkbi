@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    div{
+      display: inline-block;
+      width: 400px;
+      height: 300px;
+      border-radius: 10px;
+      margin: 10px;
+      color:white;
+    }
+    /*
+    radial-gradient(최종모양 크기 at 위치,start-color, color1,color2,color3)
+    최종모양 기본값 : element(width, height) 모양을 따라감
+    */
+    .gra1{
+      background: radial-gradient(white,yellow,red);
+    }
+    .gra2{
+      background: radial-gradient(circle,white,yellow,red);
+    }
+    .gra3{
+      background: radial-gradient(circle at 10% 10%,white,yellow, red);  
+    }
+    /*
+    그래디언트 원으 크기 저장하기
+    closest-side: 가장자리가 중심에서 가장 가까원 요소와 모소리에 만남
+    closest-corner: 가장자리가 중심에서 가까운 요소의 코너에 닿음
+    farthest-side:가장자리가 중심에서 가장 먼 요소와 모소리에 만남
+    farthest-corner 가장자리가 중심에서 먼 요소의 코너에 닿음
+    */
+    .gra4{
+    background: radial-gradient(circle closest-side at 30% 40%,white,yellow,red)
+  }
+  .gra5{
+    background: radial-gradient(circle closest-corner at 30% 40%,white,yellow,red)
+  }
+  .gra6{
+    background: radial-gradient(circle farthest-side at 30% 40%,white,yellow,red)
+  }
+  .gra7{
+    background: radial-gradient(circle farthest-corner at 30% 40%,white,yellow,red)
+  }
+
+  </style>
+  
+</head>
+
+<body>
+  <div class="gra1"></div>
+  <div class="gra2"></div>
+  <div class="gra3"></div>
+  <div class="gra4"></div>
+  <div class="gra5"></div>
+  <div class="gra6"></div>
+  <div class="gra7"></div>
+
+</body>
+
+</html>

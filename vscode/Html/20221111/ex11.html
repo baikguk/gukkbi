@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    //instanceof 연산자
+    class Rabbit{}
+    let rabbit = new Rabbit();
+    console.log(rabbit instanceof Rabbit);
+    console.log('==========');
+    function Rabbit2(){}
+    let rabbit2 = new Rabbit2();
+    console.log(rabbit2 instanceof Rabbit2);
+    console.log('==========');
+    let arr1 = [1,2,3,4,5];
+    console.log(arr1 instanceof Array);
+    console.log('==========');
+    console.log(arr1 instanceof Object);
+    console.log('==========');
+
+    class Animal{}
+    class Cat extends Animal{}
+    let cat = new Cat();
+    console.log(cat instanceof Cat);
+    console.log(cat instanceof Animal);
+    console.log('==========');
+  </script>
+</body>
+</html>

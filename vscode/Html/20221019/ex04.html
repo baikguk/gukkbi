@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS flexbox</title>
+  <style>
+    section{
+      width: 600; padding :10px;
+      border : 4px solid blue;
+    }
+    div{
+      /* block 요소 - 수직으로 나열하기*/
+      width : 100px; height: 100px;
+      background-color: orange;
+      
+    }
+    /*
+      inline-block 요소 처리하기
+        장점 : 부모의 자손의 높이를 인식함
+        단점1 : 요소 사이 사이에 공백이 발생함
+        단점2 : 영역여백을 잘못 계산하면 무너지는 현상(wrap) 발생함
+    */
+    .box1 > div{
+      display: inline-block;
+      margin : 0 10px;
+    }
+
+    /*
+      float left로 처리했을 경우
+        장점1 : 요소 사이에 공백이 없으
+        장점2 : 단점을 보완할 수 있음
+        단점1 : 부모가 자손의 높이를 인식함
+        단점2 : 영역여백을 잘못 계산하면 무너지는 현상(wrap) 발생함
+     */
+     .box2::after{  
+      content:' ';
+      /* 기본이 inline인 요소*/
+      /* block 요소로 변경함 */
+      display : block;
+
+      /*형제 요소들이 같이 floating 되지 않도록 함*/
+      clear:both;
+     }
+
+     .box2 > div{
+      float:left;
+      margin:0 15px;
+     }
+     /*
+      flexbox로 처리
+        display: flex로 설정하면
+        부모요소가 조손요소를 flexbox로 변경하ㅏㅁ
+          장점1 : 부모가 자손 높이를 인식함
+          장점2 : 자손 사이에 공백이 발생하지 않음
+          장점3 : 영역/여백의 계산을 잘못해도 무너지지 않음(wrap 현상이 없ㅇ음)
+          단점 : ie 10 이하 version에서는 적용되지 않음
+     */
+     .box3{
+      display: flex;
+     }
+     .box3 div{
+        margin:0 15px
+     }
+  </style>
+</head>
+<body>
+  <!-- inline-block 요소 처리하기 -->
+  <section class ="box1">
+    <div>박스1</div>
+    <div>박스2</div>
+    <div>박스3</div>
+    <div>박스4</div>
+    <div>박스5</div>
+  </section>
+  <hr>
+<!-- float left 요소 처리하기 -->
+  <section class ="box2">
+    <div>박스1</div>
+    <div>박스2</div>
+    <div>박스3</div>
+    <div>박스4</div>
+    <div>박스5</div>
+  </section>
+  <hr>
+  <!-- flexbox 요소 처리하기 -->
+  <section class ="box3">
+    <div>박스1</div>
+    <div>박스2</div>
+    <div>박스3</div>
+    <div>박스4</div>
+    <div>박스5</div>
+  </section>
+  <hr>
+</body>
+</html>

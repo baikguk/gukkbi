@@ -1,0 +1,108 @@
+@charset "utf-8";
+
+*{padding: 0; margin: 0;}
+
+/* 1) 구성요소 layout */
+header{
+  width: 100%; min-width: 970px; height: 125px;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 5px;
+}
+.main_contents01{
+  width: 970px; height: 430px;
+  margin: 0 auto 10px;
+}
+.main_contents02, .main_contents03{
+  width: 970px; height: 210px;
+  margin: 0 auto 10px;
+}
+.main_contents04{
+  width: 970px; height: 230px;
+  margin: 0 auto 55px;
+}
+.relative_site{
+  width: 970px; height: 40px;
+  margin: 0 auto 25px;
+  background-color: pink;
+}
+footer{
+  width: 100%; min-width: 970px; height: 175px;
+  border-top: 1px solid #ccc;
+}
+.quick_menu{
+  /* scroll 따라다니지 않게 설정 */
+  position: absolute; top: 131px; right: calc(50% - 575px);
+  width: 80px; height: 640px;
+  background-color: coral;
+}
+
+/* 2) 행간 layout */
+.h_top{
+  width: 970px; height: 80px; margin: 0 auto;
+  background-color: pink;
+}
+.gnb{
+  width: 100%; height: 45px;
+  background-color: #1a428a;
+}
+.inner_wrap{
+  width: 970px; height: 100%; margin: 0 auto;
+  background-color: beige;
+}
+.f_top{
+  width: 970px; height: 50px; margin: 0 auto;
+  background-color: pink;
+}
+.f_bottom{
+  width: 970px; height: 125px; margin: 0 auto;
+  background-color: lightblue;
+}
+
+/* 3) 열간 layout */
+.main_slider{
+  float:left; width: 480px; height: 100%;
+  margin-right: 10px; background-color: lightblue;
+}
+.notice{
+  float: left; width: 235px; height: 210px;
+  margin-right: 10px; margin-bottom: 10px; padding: 15px;
+  border: 1px solid #ccc; box-sizing: border-box;
+}
+.company_video{
+  float: right; width: 235px; height: 210px;
+  margin-bottom: 10px; background-color: lightblue;
+}
+.i_slider{
+  float: right; width: 480px; height: 210px;
+  background-color: lightblue;
+}
+.main_contents02, .main_contents03, .main_contents04{
+  /* 자손 요소들의 배치를 flex 로 함 */
+  display: flex;
+  /* 첫 번째 요소와 마지막 요소를 양끝에 붙이고 간격을 동일하게 함 */
+  justify-content: space-between;
+}
+.product{
+  width: 480px; height: 100%; padding: 15px;
+  border: 1px solid #ccc; background-color: #f7f7f7;
+  box-sizing: border-box;
+}
+.free_hair{
+  width: 480px; height: 100%; padding: 15px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+.purchase, .store, .management, .search{
+  width: 235px; height: 210px;
+  border: 1px solid #ccc; padding: 15px;
+  box-sizing: border-box; background-color: #f7f7f7;
+}
+.call_consult{
+  width:  480px; height: 100%;
+  border: 1px solid #ccc; padding: 15px;
+  box-sizing: border-box; background-color: #f0f7ff;
+}
+.customer{
+  width: 480px; height: 100%;
+  background-color: coral;
+}

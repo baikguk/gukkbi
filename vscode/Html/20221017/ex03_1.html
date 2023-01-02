@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /* nth-child : 태그 종류가 중요하지 않고 순번이 중요함*/
+    h1:nth-child(1){color: red;}
+    /* 첫번째는 (nth-child(1)) h1이지 h2 아님*/
+    h2:nth-child(2){color: blue;}
+    h2:nth-child(6){color: rgb(89, 89, 190);}
+    h3:nth-child(11){color:green;}
+
+
+  </style>
+</head>
+<body>
+  <div>
+    <h1>제목태그1</h1>
+    <h2>제목태그2</h2>
+    <h3>제목태그3</h3>
+    <hr>
+    <h1>제목태그1</h1>
+    <h2>제목태그2</h2>
+    <h3>제목태그3</h3>
+    <hr>
+    <h1>제목태그1</h1>
+    <h2>제목태그2</h2>
+    <h3>제목태그3</h3>
+
+  </div>
+  
+</body>
+</html>

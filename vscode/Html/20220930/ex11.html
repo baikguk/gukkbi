@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    /*
+      backgrond-image 배경이미지 속성
+      url : css외부에서 파일을 불러오는 함수
+    */
+    div{
+      
+      background-image: url(images/shape.png); /*기본적으로 반복해서 채움*/
+     /* background-repeat: no-repeat;/* 반복 멈춰! */
+     width: 500px; height: 170px;
+     margin-bottom:  20px;
+     border: 5px solid black;
+    }
+    #box01{
+      background-repeat: repeat;
+    }
+    #box02{
+      background-repeat: no-repeat;
+    }
+    #box03{
+      background-repeat: repeat-x;
+    }
+    #box04{
+      background-repeat: repeat-y;
+    }
+    #box05{
+      background-repeat: space; /*pixel 사이에 여백을 주어서 처리함*/
+    }
+    #box06{
+      background-repeat: round;/*pixel이 늘어남*/
+    }
+   
+    
+  </style>
+</head>
+<body>
+  <div id = "box01"></div>
+  <div id = "box02"></div>
+  <div id = "box03"></div>
+  <div id = "box04"></div>
+  <div id = "box05"></div>
+  <div id = "box06"></div>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id ="div">버튼1</div>
+  <div id ="div2">버튼2</div>
+ 
+
+  <script>
+    //문자열을 사용해서 전체 style을 설정하는 경우에는
+    //style.cssText를 사용함
+    div.style.cssText = `color:red;
+      background-color : blue;
+      width:100px;
+      text-align: center;
+      `
+    div2.setAttribute('style','color:orange; background-color: navy; width:100px; text-align:center');
+  </script>
+</body>
+</html>

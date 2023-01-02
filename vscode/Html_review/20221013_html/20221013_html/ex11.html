@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    thead{ background-color: rgb(248, 214, 219);}
+    tbody{background-color: beige;}
+    tfoot{background-color: lightcyan;}
+  </style>
+</head>
+<body>
+  <table border="1">
+    <caption>강남의 커피전문점 상반기 매출</caption>
+    <!--
+        * 행 구조 태그
+        1. thead : 제목행이 여러 줄일 때 묶기 위해 사용
+        2. tbody : 일반 데이터행이 여러 줄일 때 묶기 위해 사용
+        3. tfoot : 데이터로 나온 결론을 묶기 위해 사용
+    -->
+    <thead>
+        <tr>
+            <th>점포</th>
+            <th>스타벅스</th>
+            <th>할리스</th>
+            <th>커피빈</th>
+        </tr>
+        <tr>
+            <th>위치</th>
+            <th>5번출구</th>
+            <th>8번출구</th>
+            <th>11번출구</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>1월매출</th>
+            <td>100</td>
+            <td>70</td>
+            <td>50</td>
+        </tr>
+        <tr>
+            <th>2월매출</th>
+            <td>100</td>
+            <td>70</td>
+            <td>50</td>
+        </tr>
+        <tr>
+            <th>3월매출</th>
+            <td>100</td>
+            <td>70</td>
+            <td>50</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <th>합계</th>
+            <td>300</td>
+            <td>210</td>
+            <td>150</td>
+        </tr>
+        <tr>
+            <th>평균</th>
+            <td>100</td>
+            <td>70</td>
+            <td>50</td>
+        </tr>
+    </tfoot>
+</table>
+</body>
+</html>

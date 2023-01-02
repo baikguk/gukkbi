@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>order-state</title>
+  <style>
+    .order[data-order-state="new"]{
+      color: lightgreen;
+    }
+    .order[data-order-state="pending"]{
+      color: blue;
+    }
+    .order[data-order-state="canceled"]{
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <!-- 
+      data- 속성은 custom data 을 전달할 때 사용함 
+        ㄴ 읽기도 가능하고 쓰기도 가능함
+  -->
+  <div id="order" class="order" data-order-state="new">
+    A new Order
+  </div>
+  <script>
+    // order.dataset.orderState : new
+    // data-order-state 속성을 javascript 에서 
+    // order.dataset.orderState 로 인식함
+    // order.dataset.orderState : new
+    console.log('order.dataset.orderState : ' + order.dataset.orderState);
+    // data-order-state 속성의 값을 javascript 에서
+    // 동적으로 pending 으로 변경함 : 화면에서 글자 색이 변경됨
+    order.dataset.orderState = 'pending';
+    // order.dataset.orderState : pending
+    console.log('order.dataset.orderState : ' + order.dataset.orderState);
+    
+  </script>
+</body>
+</html>

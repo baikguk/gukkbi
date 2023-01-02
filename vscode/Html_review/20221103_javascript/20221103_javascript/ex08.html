@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // [fruit] <- computed property - 계산된 프로퍼티
+    let fruit = prompt('key 값을 입력하세요', 'apple');
+    let bag = {
+      [fruit] : 5,
+    };
+    console.log('bag.apple : ' + bag.apple);
+    console.log('bag.banana : ' + bag.banana);
+  </script>
+</body>
+</html>

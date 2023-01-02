@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    class Animal{
+    constructor(name){
+      this.speed = 0;
+      this.name = name;
+    }
+    run(speed){
+      this.speed = speed;
+      console.log(`${this.name}은 ${this.speed} 속도로 달린다`);
+    }
+
+    stop(){
+      this.speed = 0;
+      console.log(`${this.name}이(가) 멈춤`);
+    }
+  }
+  let animal = new Animal('귀여운 토끼');
+
+  class Rabbit extends Animal{
+    hide(){
+      console.log(`${this.name} 이(가) 숨었음`);
+    }
+  }
+  let rabbit = new Rabbit('이쁜 토끼');
+  rabbit.run(70);
+  rabbit.hide();
+
+  function test1(message){
+    return class{
+      sayHello(){console.log(message);}
+    }
+  }
+  let Greeting = test1('아령하세욘');
+  new Greeting().sayHello();
+  
+  class Person extends test1('안녕하세요'){}  
+  new Person().sayHello();
+  </script>
+</body>
+</html>
