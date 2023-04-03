@@ -1,0 +1,265 @@
+@charset "utf-8";
+
+/* reset */
+*{ margin: 0; padding: 0; } 
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, tbody, tfoot, thead, tr, th, td { margin: 0; padding: 0; }
+h1, h2, h3, h4, h5, h6 { font-weight: 700; font-size: inherit; }
+a { color: inherit; text-decoration: inherit;}
+img { vertical-align: middle; }
+a img { border: none; }
+li { list-style: none; }
+address, em, i { font-style: normal; }
+
+/* Main */
+
+body {
+  font-family: 'EliceDigitalBaeum-Bd';
+  background-color: rgb(241, 226, 194);
+}
+
+/* 웹폰트 깨짐 수정 */
+h2, p, b, dl, a {
+  transform: rotate(0.04deg);
+}
+
+.page_top {
+  position: relative;
+  top: 147px;
+  left: 0;
+  margin: 0 auto;
+  max-width:1000px;
+  z-index: 0;
+}
+
+.path {
+  position: absolute;
+  top: 34px;
+  right: 0;
+  padding: 14px 0 10px 0;
+  text-align: right;
+  z-index: 1;
+}
+
+.path li {
+  display: inline-block;
+}
+
+.path a {
+  display: inline-block;
+  padding-left: 17px;
+  height: 14px;
+  color: #666;
+  background: url(https://www.tlj.co.kr:7008/static/images/common/arrow_path.png) 7px 3px no-repeat;
+}
+
+.path a:first-child {
+  padding-left: 0;
+  background: none;
+}
+
+.page_title {
+  position: relative;
+  padding: 39px 0 0 17px;
+  max-width: 230px;
+  text-align: left;
+  z-index: 10;
+  font-family: '미원Miwon';
+}
+
+.page_title span {
+  
+  width: 100%;
+  height: 25px;
+  font-size: 19px;
+  text-indent: -999em;
+  color: #2f6d56;
+}
+
+.page_title:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 39px;
+  left: 3px;
+  width: 4px;
+  height: 19px;
+  background-color: #2f6d56;
+}
+
+.page_title .tit_new {
+  background-position: -250px 0px;
+}
+
+.container {
+  padding: 50px 0 50px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.product_visual {
+  position: relative;
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #d4ccc4;
+  overflow: hidden;
+}
+
+#content {
+  max-width: 1000px;
+  width:100%;
+  margin-bottom: 150px;
+}
+
+.product_visual .img_gift_delivery {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 192px;
+  height: 284px;
+  z-index: 11;
+}
+
+/* 상품 */
+
+*{ padding: 0; margin: 0; }
+li{ list-style: none; }
+
+.item_wrap {
+  float: left;
+  width: 250px;
+  height: unset;
+  margin-bottom: 30px;
+  padding: 3px;
+  box-sizing: border-box;
+}
+
+.item_wrap img {
+  width: 100%;
+}
+
+.item_wrap li:last-child{ margin-right: 0; }
+
+.item_wrap .info {
+  width: 100%;
+  height: 40px;
+  display: block;
+  text-align: center;
+  line-height: 40px;
+  background-color: white;
+}
+
+.item_wrap a {
+  display: block;
+  width: 100%;
+  height: unset;
+  overflow: hidden;
+  position: relative;
+  overflow: hidden;
+}
+
+.item_wrap figure {
+  overflow: hidden;
+}
+
+.item_wrap a:hover img {
+  transform: scale(1.2);
+  transition: 0.3s;
+}
+
+.item_wrap figcaption {
+  width: 70%;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  /* 오버플로우 오토로 두면 스크롤이 생긴다! 히든을 써야 스크롤이 사라짐! */
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  font-family: "Nanum Barun Gothic","돋움",sans-serif;
+  font-size: 15px;
+}
+
+.item_wrap a:hover figcaption, .item_wrap a:focus figcaption,
+.item_wrap a:hover .back, .item_wrap a:focus .back{
+  opacity: 1;
+}
+
+.item_wrap .back {
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.7);
+  position: absolute;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.back:after {
+  content: "";
+  border: white 1px solid;
+  position: absolute;
+  width: calc(100% - 30px);
+  height: calc(100% - 30px);
+  top: 15px;
+  left: 15px;
+}
+
+@media screen and (max-width:1000px) {
+  .container {
+    width: 100%;
+  }
+  .page_top {
+    width: 98%;
+  }
+  .product_list2 ul {
+    text-align: center;
+  }
+
+}
+
+  @media screen and (max-width:999px) {
+    .item_wrap {
+      clear: both;
+    }
+    .product_list2 ul li {
+      display: inline-block;
+      
+    }
+    .product_list2 ul {
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  @media screen and (max-width:1020px) {
+    .container {
+      width: 100%;
+    }
+    .page_top {
+      width: 98%;
+    }
+    product_list2 {
+      display: inline-block;
+      float: none;
+    }
+    .product_list2 ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+     .item_wrap {
+        width: 25%;
+     }
+     .item_wrap img {
+        width: 100%;
+     }
+  }
+  
+    @media screen and (max-width:900px) {
+      .item_wrap {
+        width: 33.333%;
+     }
+    }

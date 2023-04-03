@@ -1,0 +1,149 @@
+jQuery(function($){
+	// Frequently Asked Question
+	var article = $('.faq>.faqBody>li');
+	article.addClass('hide');
+	article.find('.a').hide();
+	$('.faq>.faqBody>li>.q>a').click(function(){
+		var myArticle = $(this).parents('li:first');
+		var isNew = "";
+		if($(this).parent().parent().hasClass("articlenew")){
+			isNew = "show_new";
+		}else{
+			isNew = "show";
+		}
+		if(myArticle.hasClass('hide')){
+			article.addClass('hide').removeClass('show').removeClass('show_new');
+			article.find('.a').hide();
+			myArticle.removeClass('hide').addClass(isNew);
+			myArticle.find('.a').show();
+			myArticle.find('a').attr("title", "접기");
+		} else {
+			myArticle.removeClass('show').removeClass('show_new').addClass('hide');
+			myArticle.find('.a').hide();
+			myArticle.find('a').attr("title", "펼치기");
+		}
+//		var posY = $(this).parents('li:first').position();
+//		$('html, body').animate({scrollTop:posY.top},500);
+		return false;
+	});
+});
+
+// GNB slide up(or down)
+jQuery(function($){
+	var $gnbDepth1 = $(".gnb .depth1");
+	var $gnbDepth2 = $(".gnb .depth2");
+	var $gnbDim2 = $(".gnb_dim2");
+
+	$gnbDepth1.on("focusin mouseover",function () {
+		//$(".gnb .depth2, .gnb_dim2").css({height : 0});
+		$(".gnb .depth2, .gnb_dim2").show();
+		//$gnbDim2.show();
+
+		$gnbDim2.stop().animate({height : 193}, 300);
+		$gnbDepth2.stop().animate({height : 193}, 300);
+		//$gnbDim2.slideDown(300);
+		//$gnbDepth2.slideDown(300);
+	});
+	$(".gnb > ul").on("mouseleave",function () {
+
+		$gnbDim2.stop().animate({height : 0}, 300);
+		$gnbDepth2.stop().animate({height : 0}, 300, function(){
+			$(".gnb .depth2, .gnb_dim2").hide();
+		});
+
+		//$(".gnb .depth2, .gnb_dim2").hide();
+
+		//$gnbDim2.slideUp(300);
+		//$gnbDepth2.slideUp(300);
+	});
+	$(".gnb .last").on("focusout",function () {
+		$gnbDim2.stop().animate({height : 0}, 300);
+		$gnbDepth2.stop().animate({height : 0}, 300, function(){
+			$(".gnb .depth2, .gnb_dim2").hide();
+		});
+	});
+});
+
+// top search toggle button
+jQuery(function($){
+	var $btnSrch = $(".top_search .btn_search");
+	var $inputSrch = $(".top_search .ipt02");
+	var $btnClose = $(".top_search .btn_close");
+	if (!txtTopSearchBar == true){
+		$inputSrch.hide();
+	}
+	$btnSrch.click(function(){
+		var inputWidth = $(".top_search .ipt02").width();
+		if(inputWidth == 0){
+			$inputSrch.show().animate({width:'135px'},200, function(){
+				$inputSrch.focus();
+			});
+			$btnClose.fadeIn();
+		}
+	});
+	$btnClose.click(function(){
+		$inputSrch.animate({width:'0'},200, function(){
+			$inputSrch.hide();
+			$btnSrch.focus();
+		});
+		$btnClose.fadeOut(0);
+	});
+});
+
+// product item keyborad focus
+jQuery(function($){
+	var lastNum, thisNum, le,
+		oldNum = 0;
+
+	$(document).on("focusin" ,".item_wrap > a", function(){
+		thisNum = $(this).parent().index(),
+		lastNum = $(this).closest("ul").find("li").length-1,
+		le = $(this).next(".over").find("a").length-1;
+
+		if (thisNum == lastNum && !$(this).is(".pass")){
+			$(this).next().find("a").eq(le).keydown(function(e){
+				var keyCode = e.keyCode || e.which;
+				if(keyCode == 9){
+					if(!e.shiftKey){
+						$(this).closest(".over").css("opacity","0");
+					}
+				}
+			});
+		};
+
+		$(".item_wrap .over").removeAttr("style");
+		$(this).addClass("pass").next(".over").css("opacity",".95");
+		oldNum = thisNum;
+		return false;
+	});
+
+	$(document).on("focusin",".item_wrap .over a" , function(){
+		var lastNum = $(this).closest(".over").find("a").length-1;
+		$(this).closest(".over").find("a").eq(lastNum).addClass("focusCheck");
+		if ($(this).is(".focusCheck")){
+			$(".item_wrap .over").removeAttr("style");
+			$(this).closest(".over").css("opacity",".95");
+		};
+	});
+
+	$(document).on("keydown" ,".item_wrap > a", function(e){
+		var keyCode = e.keyCode || e.which;
+		if (thisNum == 0){
+			if(keyCode == 9){
+				if(e.shiftKey){
+					$(".item_wrap .over").removeAttr("style");
+				};
+			};
+		};
+	});
+});
+
+// 창업안내 bxslider 2017-02-10
+jQuery(function($){
+	$(".cont-intro-visual .bxslider .slider").bxSlider({
+		pager : true,
+		speed : 200,
+		infiniteLoop : false,
+		hideControlOnEnd : true
+	});
+});

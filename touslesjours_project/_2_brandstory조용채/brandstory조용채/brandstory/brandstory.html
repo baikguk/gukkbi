@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>New TourJours</title>
+	<link rel="stylesheet" href="css/brand.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="js/common.js"></script>
+</head>
+
+<body>
+	<div id="wrap">
+		<!-- header -->
+		<div id="header" class="ingredient1">
+			<div class="gnb_dim"></div>
+			<div class="gnb_dim2"></div>
+			<div class="headerWrap">
+				<h1 class="logo"><a href="https://www.tlj.co.kr:7008"><img src="img/head/logo.png" alt="뚜레쥬르 로고" /></a>
+				</h1>
+				<!-- SNS -->
+				<ul class="sns">
+					<li>
+						<a href="https://www.facebook.com/TOUSlesJOURS" class="facebook" target="_blank"
+							title="새창열림">페이스북</a>
+						<a href="https://twitter.com/cjtlj" class="twitter" target="_blank" title="새창열림">트위터</a>
+						<a href="https://www.instagram.com/touslesjours_kr/" class="instagram" target="_blank"
+							title="새창열림">인스타그램</a>
+					</li>
+				</ul>
+				<!-- //SNS -->
+				<!-- TopNavigationBar -->
+				<ul class="tnb">
+					<li>
+						<a href="javascript:showMenuInfo('080000', 'U');" class="tnb_store"><span>매장안내 &nbsp;</span></a>
+						<a href="javascript:showMenuInfo('090000', 'U');" class="tnb_customer"><span>고객센터
+								&nbsp;</span></a>
+						<a href="javascript:showMenuInfo('050000', 'U');" class="tnb_recruit"> <span>채용안내</span></a>
+						<a href="javascript:showMenuInfo('060000', 'U');" class="tnb_foundation"></a>
+					</li>
+				</ul>
+				<!-- //TopNavigationBar -->
+				<!-- GNB -->
+				<div class="gnb">
+					<ul>
+						<li class="gnb_brand">
+							<a id="skip_gnb" class="depth1" MENU_CODE="010000" depth="1">브랜드 스토리</a>
+							<ul class="depth2">
+								<li><a MENU_CODE="010100" depth="2">브랜드 스토리</a></li>
+								<li><a MENU_CODE="010200" depth="2">뚜레쥬르 광고</a></li>
+								<li><a MENU_CODE="010800" depth="2">뚜레쥬르 재료 이야기</a></li>
+								<li><a MENU_CODE="010500" depth="2">글로벌 뚜레쥬르</a></li>
+								<li><a MENU_CODE="010400" depth="2">뚜레쥬르 라뜰리에</a></li>
+								<li><a MENU_CODE="010700" depth="2">뚜레쥬르 착한빵</a></li>
+								<li><a MENU_CODE="010600" depth="2">뉴스 &amp; 공지사항</a></li>
+							</ul>
+						</li>
+						<li class="gnb_bread">
+							<a class="depth1" MENU_CODE="030000" depth="1">새로워진 뚜레쥬르</a>
+							<ul class="depth2">
+								<li><a MENU_CODE="030100" depth="2">New 뚜레쥬르 살펴보기</a></li>
+								<li><a MENU_CODE="030200" depth="2">건강한 데일리 베이커리</a></li>
+
+							</ul>
+						</li>
+						<li class="gnb_product">
+							<a class="depth1" MENU_CODE="020000" depth="1">제품 안내</a>
+							<ul class="depth2">
+								<li><a MENU_CODE="020100" depth="2">신제품</a></li>
+								<li><a MENU_CODE="020200" depth="2">빵</a></li>
+								<li><a MENU_CODE="020300" depth="2">케이크</a></li>
+								<li><a MENU_CODE="020400" depth="2">델리</a></li>
+								<li><a MENU_CODE="020900" depth="2">선물</a></li>
+								<li><a MENU_CODE="020600" depth="2">디저트&스낵</a></li>
+								<li><a MENU_CODE="020500" depth="2">음료</a></li>
+							</ul>
+						</li>
+						<li class="gnb_event">
+							<a class="depth1" MENU_CODE="040000" depth="1">이벤트&amp;멤버십</a>
+							<ul class="depth2">
+								<li><a MENU_CODE="040100" depth="2">진행중인 이벤트</a></li>
+								<li><a MENU_CODE="040200" depth="2">이벤트 당첨자</a></li>
+								<li><a MENU_CODE="040300" depth="2">CJ ONE 멤버십</a></li>
+								<li><a MENU_CODE="040400" depth="2">제휴 혜택</a></li>
+							</ul>
+						</li>
+						<li class="gnb_shop">
+							<a class="depth1" MENU_CODE="990000" depth="1">쇼핑몰&amp;케이크 배달신청</a>
+							<ul class="depth2">
+								<li><a MENU_CODE="990100" depth="2">예약/픽업서비스</a></li>
+								<li><a class="last" MENU_CODE="990200" depth="2">케이크 배달신청</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<!-- //GNB -->
+			</div>
+
+
+			<div class="page_top">
+				<div class="path"></div>
+				<h2 class="page_title blind"><span class="tit_bread_new">New 뚜레쥬르 살펴보기</span></h2>
+			</div>
+		</div>
+		<!-- //header -->
+	</div>
+	
+	<div class="page_top">
+		<div class="path"></div>
+		<h2 class="page_title"><span class="tit_story">브랜드 스토리</span></h2>
+	</div>
+
+	<div class="container brand-story" id="skip_cnt">
+		<div id="content">
+			<ul class="item-list">
+				<li class="nht-1">
+					<div class="thumb-img"><img src="/img/brand/img_brandstory_01.jpg" alt="손으로 반죽하는 사진"></div>
+					<div class="item-info">
+						<p class="tit">매일매일(Tous Les Jours), <br>매장에서 직접 굽는 <strong>신선한 베이커리</strong></p>
+						<p class="summary">뚜레쥬르는(Tous Les Jours - 프랑스어로 ‘매일매일’이라는 뜻)" 그 이름의 의미처럼<br>
+							매일매일 매장에서 직접 굽는 신선함을 가장 큰 가치로 하는 베이커리 입니다.<br>
+							1997년 구리교문에 처음 매장을 연 뚜레쥬르는,<br>
+							그 시절 공장에서 양산빵을 납품 받던 다른 베이커리들과 달리,<br>
+							하루 3번 매장에서 갓 구운 신선한 빵을 제공하며<br>
+							국내 베이커리 업계에 새로운 변화의 바람을 일으켰습니다.<br>
+							뚜레쥬르 매장에 들어서는 순간 감도는 갓 구워낸 빵의 고소하고 달큰한 향은<br>
+							대량 생산에 급급했던 여타의 베이커리 브랜드와는 분명히 다른 차별점이 되었습니다</p>
+					</div>
+				</li>
+				<li class="nht-2">
+					<div class="thumb-img"><img src="img/brand/img_brandstory_02.jpg" alt="갓 구운 빵"></div>
+					<div class="item-info">
+						<p class="tit"><strong>갓 구운 신선함</strong>이 <br>매장을 가득 채웁니다.</p>
+						<p class="summary">오븐에서 방금 꺼낸 빵이 가장 맛있다는 것을 알기에, 뚜레쥬르는 지금도<br>
+							더욱 따뜻하고 촉촉한 갓 구운 빵을 제공하기 위해 끊임없이 노력합니다.<br>
+							매장에서 직접 굽는 것에 그치지 않고, 언제라도 따끈한 빵을 만날 수 있게<br>
+							더욱 자주 굽고, 고객들이 필요한 시간에 맞춰 굽는 등<br>
+							세심하고 배려가 담긴 서비스도 준비하고 있습니다.<br>
+							갓 구워낸 빵은 고소한 향기와 따스한 온기로 매장을 가득 채우고,<br>
+							고객들에게는 가장 맛있는 빵을 맛보는 행복을 선물합니다.</p>
+					</div>
+				</li>
+				<li class="nht-3">
+					<div class="thumb-img"><img src="img/brand/img_brandstory_03.jpg"
+							alt="CJ제일제당의 밀가루, 빵 재료 / 1950~60년대 밀가루 생산 작업 현장 / 밀가루를 입자 크기대로 골라내는 작업"></div>
+					<div class="item-info">
+						<p class="tit">좋은 밀가루를 만드는 회사의 <br><strong>베이커리 브랜드</strong></p>
+						<p class="summary">좋은 밀가루도 좋은 빵의 맛을 내는 중요한 요소입니다.<br>
+							뚜레쥬르는 CJ제일제당의 깐깐한 60년 제분 기술 노하우가<br>
+							축적된 밀가루로 빵을 만드는 베이커리 입니다.<br>
+							뚜레쥬르와 CJ제일제당은 오랜 노력 끝에 베이커리 전용 맞춤<br>
+							밀가루, ‘온리원(OnlyOne)’을 개발하여, 개성있는 최적의 빵<br>
+							맛을 구현하고자 하였습니다.<br>
+							식빵은 더욱 부드럽고 촉촉하게, 페이스트리 류는 더욱 가볍고<br>
+							바삭하게…<br>
+							뚜레쥬르의 다양한 맞춤 밀가루는 빵마다의 개성 있는 식감을<br>
+							살려주고 장시간 동안 그 부드러움이 유지되며, 더 깊은 빵의<br>
+							풍미를 즐길 수 있도록 합니다.</p>
+					</div>
+				</li>
+				<li class="nht-4">
+					<div class="thumb-img"><img src="img/brand/img_brandstory_04.jpg" alt="뚜레쥬르 빵과 케이크에 들어가는 재료들"></div>
+					<div class="item-info">
+						<p class="tit">선별된 좋은 재료를 사용하여 <br><strong>더욱 건강한 제품</strong>을 제공하고자 합니다.</p>
+						<p class="summary">소중한 가족과 이웃에게 드리는 빵이기에,<br>
+							뚜레쥬르의 빵과 케이크는 들어가는 모든 재료를 하나 하나 꼼꼼히 선별해서 사용합니다.<br>
+							빵에 들어가는 소량의 소금도 미네랄이 많은 신안의 고급 천일염을 사용하는 고집부터,<br>
+							빵에 가장 많이 쓰이는 우유와 치즈를 유기농 우유, 자연치즈로 바꿔보기도 하고,<br>
+							각 지역의 싱싱한 제철 식재와 과일 등 자연의 기운을 담은 순수한 재료를 사용하는 등.<br>
+							항상 좋은 재료가 기본이 되는 건강하고 정직한 빵과 케이크를 만들고자 노력 합니다.</p>
+						<!-- 20160821 start -->
+						<div class="btn-area">
+							<a href="javascript:showMenuInfo('010800','U');" class="btn large st1"><span
+									class="shortcuts">뚜레쥬르 재료 이야기</span></a>
+						</div>
+						<!-- //20160821 end -->
+					</div>
+				</li>
+				<li class="nht-5">
+					<div class="thumb-img"><img src="img/brand/img_brandstory_05.jpg" alt="빵 만드는 모습이 담긴 사진"></div>
+					<div class="item-info">
+						<p class="tit">본질을 지키는 것은 기본, <br>더 나아가 <strong>혁신적인 변화로 업계를 선도</strong>합니다.</p>
+						<p class="summary">매일매일, 하루 3번 매장에서 직접 빵을 굽는 일.<br>
+							다른 베이커리에서 쉽게 도전하지 못했던 혁신적인 시도로<br>
+							베이커리 시장에 첫 발을 내딛은 뚜레쥬르.<br>
+							그 동안 뚜레쥬르는 혁신적인 운영방식 뿐 아니라<br>
+							베이커리 전용 맞춤 밀가루를 개발하는 등<br>
+							최고의 맛을 향한 열정과 베이커리 시장선도의 사명을 가지고 진화해왔습니다.<br>
+							앞으로도 뚜레쥬르는 고객과 감동시키는 새롭고 혁신적인 변화를 위해<br>
+							끊임없이 노력하겠습니다.</p>
+					</div>
+				</li>
+
+
+				<div class="tlj-cafe">
+					<div class="thumb-img"><img src="img/brand/img_brandstory_tlj.jpg" alt="뚜레쥬르 카페 전경"></div>
+					<p class="summary"><strong class="q-mark open">“</strong>
+						좋은 재료로 만들어 건강하고,<br>
+						매장에서 갓 구워 신선한 빵과 케이크를<br>
+						만날 수 있는 곳.<br>
+						여기는 신선함이 가득한 베이커리,<br>
+						뚜레쥬르입니다.
+						<strong class="q-mark close">”</strong>
+					</p>
+				</div>
+			</ul>
+			<!-- 연혁 -->
+			<div class="history">
+				<h2 class="tit_brand_history"><img src="img/brand/bg_history_visual.png" alt="뚜레쥬르 히스토리" /></h2>
+				<div class="new-bi"><img src="img/brand/tlj_new_bi.png" alt="뚜레쥬르 BI" /></div>
+				<div class="year2016">
+					<span class="img"></span>
+					<dl>
+						<dt>2016</dt>
+						<dd>몽골 마스터프랜차이즈 협약 체결</dd>
+						<dd>브랜드 아이덴티티 리뉴얼 <br>신선함이 가득한 베이커리 뚜레쥬르"</dd>
+					</dl>
+				</div>
+				<div class="year2014">
+					<span class="img"></span>
+					<dl>
+						<dt>2014</dt>
+						<dd>뚜레쥬르 브랑제리&amp;비스트로<br />(중국 북경 왕징 한국성)오픈</dd>
+					</dl>
+				</div>
+				<div class="year2013">
+					<span class="img"></span>
+					<dl>
+						<dt>2013</dt>
+						<dd><span class="bul"></span>베트남 30호점 돌파</dd>
+						<dd><span class="bul"></span>말레이시아 1호점 오픈</dd>
+					</dl>
+				</div>
+				<div class="year2012">
+					<dl>
+						<dt>2012</dt>
+						<dd>브랜드 컨셉/슬로건 변경 <br />'재료부터 다른 건강한 베이커리'</dd>
+					</dl>
+				</div>
+				<div class="year2011">
+					<span class="img"></span>
+					<dl>
+						<dt>2011</dt>
+						<dd><span class="bul"></span>라뜰리에 뚜레쥬르 오픈<br />(강남점, CJ제일제당센터점) </dd>
+						<dd><span class="bul"></span>인도네시아 1호점 <br />(스나이안시티몰점)오픈</dd>
+						<dd><span class="bul"></span>MF체결 (필리핀, 캄보디아, 말레이시아) </dd>
+					</dl>
+				</div>
+				<div class="year2010">
+					<span class="img"></span>
+					<dl>
+						<dt>2010</dt>
+						<dd><span class="bul"></span>브랜드 아이덴티티 리뉴얼 <br />'맛있고 건강한 홈메이드 베이커리'</dd>
+						<dd><span class="bul"></span>한국 서비스 품질지수 (KS-SQI) 4년 연속 1위 수상 </dd>
+					</dl>
+				</div>
+				<div class="year2009">
+					<span class="img"></span>
+					<dl>
+						<dt>2009</dt>
+						<dd>국내 1,000호점 오픈<br />(부천 중흥마을점) </dd>
+					</dl>
+				</div>
+				<div class="year2008">
+					<span class="img"></span>
+					<dl>
+						<dt>2008</dt>
+						<dd>KCSI/NCSI 1위 수상</dd>
+					</dl>
+				</div>
+				<div class="year2007">
+					<dl>
+						<dt>2007</dt>
+						<dd>베트남 1호점<br />(호치민 하이바쯩점)오픈 </dd>
+					</dl>
+				</div>
+				<div class="year2005">
+					<span class="img"></span>
+					<dl>
+						<dt>2005</dt>
+						<dd>중국 1호점(북경 오도구점)오픈 </dd>
+					</dl>
+				</div>
+				<div class="year2004">
+					<dl>
+						<dt>2004</dt>
+						<dd><span class="bul"></span>미국 1호점(밸리점) 오픈</dd>
+						<dd><span class="bul"></span>매출 1,000억원 달성 </dd>
+					</dl>
+				</div>
+				<div class="year2003">
+					<dl>
+						<dt>2003</dt>
+						<dd>국내 450호점 오픈 </dd>
+					</dl>
+				</div>
+				<div class="year2002">
+					<span class="img"></span>
+					<dl>
+						<dt>2002</dt>
+						<dd>카페형 매장의 최초 도입, 운영<br />(커피/샌드위치/과일주스 판매 복합 매장) </dd>
+					</dl>
+				</div>
+				<div class="year1999">
+					<span class="img"></span>
+					<dl>
+						<dt>1999</dt>
+						<dd>9월 100호점 오픈 </dd>
+					</dl>
+				</div>
+				<div class="year1998">
+					<dl>
+						<dt>1998</dt>
+						<dd>국내 가맹 사업 시작</dd>
+					</dl>
+				</div>
+				<div class="year1997">
+					<span class="img"></span>
+					<dl>
+						<dt>1997</dt>
+						<dd><span class="bul"></span>브랜드 아이덴티티 수립- ‘매일매일 갓 구운 빵, 뚜레쥬르’</dd>
+						<dd><span class="bul"></span>뚜레쥬르 1호점 오픈(구리 교문점)</dd>
+					</dl>
+				</div>
+			</div>
+			<!-- //연혁 -->
+			<!-- //20160804 end -->
+		</div>
+	</div>
+	<!-- //container -->
+
+
+	<p id="back-top">
+		<a href="#top"><span></span>상위로 이동하기</a>
+	</p>
+
+
+
+	<!-- footer -->
+	<!-- footer -->
+	<div id="footer">
+		<div class="family_site">
+			<div class="buttonWrap">
+				<div class="wrapList">
+					<ul>
+						<li>
+						<li>
+							<a href="#" target="_blank" title="CJ푸드빌 새창으로 열기" class="cj_foodville">CJ푸드빌</a>
+							<a href="#" target="_blank" title="빕스 새창으로 열기" class="vips">빕스</a>
+							<a href="#" target="_blank" title="더플레이스 새창으로 열기" class="the_place">더플레이스</a>
+							<a href="#" target="_blank" title="제일제면소 새창으로 열기" class="cheil">제일제면소</a>
+							<a href="#" target="_blank" title="엔그릴 새창으로 열기" class="ngrill">엔그릴</a>
+							<a href="#" target="_blank" title="CJ FOODWORLD 새창으로 열기" class="foodworld">CJ FOODWORLD</a>
+							<a href="#" target="_blank" title="N SEOUL TOWER 새창으로 열기" class="ntower">N SEOUL TOWER</a>
+						</li>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- //Family Site -->
+
+		<div class="footerWrap">
+			<ul>
+				<li>
+					<!-- Footer Menu -->
+					<ul class="fnb">
+						<li><a href="#" target="_blank" lass="company">
+								<img src="img/회사소개.png" alt="회사소개"></a></li>
+						<li><a href="#" target="_blank" class="recruit">
+								<img src="img/기사채용.png" alt="기사 채용안내"></a></li>
+						<li><a href="#" class="foundation" target="_blank">
+								<img src="img/이용약관.png" alt="이용약관"></a></li>
+						<li><a href="#" class="location" target="_blank">
+								<img src="img/위치기반서비스.png" alt="위치기반서비스 이용약관"></a></li>
+						<li><a href="#" class="clause">
+								<img src="img/창업안내.png" alt="창업안내"></a></li>
+						<li><a href="#" class="privacy" target="_blank">
+								<img src="img/개인정보동의.png" alt="개인정보처리방침"></a></li>
+						<li><a href="#" class="email">
+								<img src="img/이메일.png" alt="이메일무단수집거부"></a></li>
+						<li><a href="#" class="ethic" target="_blank">
+								<img src="img/윤리신고센터.png" alt="윤리신고센터"></a></li>
+						<li><a href="#" class="legal">
+								<img src="img/법적고기.png" alt="법적고지"></a></li>
+						<li><a href="#" class="sitemap2">
+								<img src="img/사이트맵.png" alt="사이트맵"></a></li>
+					</ul>
+					<!-- //Footer Menu -->
+				</li>
+				<li>
+					<div class="info">
+						<span class="business-name">
+							<img src="img/상호명.png" alt="상호명:CJ푸드빌(주)"></span>
+						<address>
+							<img src="img/주소.png"
+								alt="주소:(우)04555 서울시 중구 마른내로34(초동 106-9번지)KT&G을지로타워 3, 9-11층 CJ푸드빌㈜">
+						</address>
+						<span class="cs-center">
+							<img src="img/고객센터.png" alt="고객센터:1577-0700"></span>
+						<span class="certificate">
+							<img src="img/통신판매업종신고증.png" alt="통신판매업종신고증 제 2011-서울중구-0771호">
+							<a href="#" target="_blank">
+								<img src="img/사업자정보확인.png" alt="사업자정보확인"></a>
+						</span>
+						<span class="hosting"><img src="img/호스팅제공자.png" alt="호스팅제공자 : CJ올리브네트웍스(주)" /></span>
+						<span class="business-num"><img src="img/사업자등록번호.png"
+								alt="사업자등록번호:312-81-42519"></span>
+						<span class="ceo"><img src="img/대표이사.png" alt="대표이사:김찬호"></span>
+						<span class="manager"><img src="img/개인정보보호.png" alt="개인정보보호책임자:오창호"></span>
+						<span class="email"><a href="#">
+								<img src="img/대표이메일.png" alt="대표 이메일:help_master@cj.net"></a></span>
+					</div>
+					<p class="copyright">COPYRIGHT 2022&copy;CJ Foodville ALL RIGHT RESERVED.</p>
+				</li>
+			</ul>
+		</div>
+	</div>
+	</div>
+
+	<script type="text/javascript" src="js/common.js"></script>
+</body>
+
+</html>

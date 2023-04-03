@@ -1,0 +1,174 @@
+ 
+	 <div id="wrap">
+		<!-- header -->
+		<div id="header" class="ingredient1">
+		<div class="gnb_dim"></div>
+ 			<div class="gnb_dim2"></div>
+			<div class="headerWrap">
+				<h1 class="logo"><a href="https://www.tlj.co.kr:7008"><img src="img/head/logo.png" alt="뚜레쥬르 로고" /></a>
+				</h1>
+				<!-- SNS -->
+				<ul class="sns">
+					<li>
+						<a href="https://www.facebook.com/TOUSlesJOURS" class="facebook" target="_blank"
+							title="새창열림">페이스북</a>
+						<a href="https://twitter.com/cjtlj" class="twitter" target="_blank" title="새창열림">트위터</a>
+						<a href="https://www.instagram.com/touslesjours_kr/" class="instagram" target="_blank"
+							title="새창열림">인스타그램</a>
+					</li>
+				</ul>
+				<!-- //SNS -->
+				<!-- TopNavigationBar -->
+				<ul class="tnb">
+					<li>
+						<a href="javascript:showMenuInfo('080000', 'U');" class="tnb_store"><span>매장안내 &nbsp;</span></a>
+						<a href="javascript:showMenuInfo('090000', 'U');" class="tnb_customer"><span>고객센터
+								&nbsp;</span></a>
+						<a href="javascript:showMenuInfo('050000', 'U');" class="tnb_recruit"> <span>채용안내</span></a>
+						<a href="javascript:showMenuInfo('060000', 'U');" class="tnb_foundation"></a>
+					</li>
+				</ul>
+				<!-- //TopNavigationBar -->
+				<!-- GNB -->
+				<div class="gnb">
+					<ul>
+						<li class="gnb_brand">
+							<a id="skip_gnb" class="depth1" MENU_CODE="010000" depth="1">브랜드 스토리</a>
+							<ul class="depth2">
+								<li><a MENU_CODE="010100" depth="2">브랜드 스토리</a></li>
+								<li><a MENU_CODE="010200" depth="2">뚜레쥬르 광고</a></li>
+								<li><a MENU_CODE="010800" depth="2">뚜레쥬르 재료 이야기</a></li>
+								<li><a MENU_CODE="010500" depth="2">글로벌 뚜레쥬르</a></li>
+								<li><a MENU_CODE="010400" depth="2">뚜레쥬르 라뜰리에</a></li>
+								<li><a MENU_CODE="010700" depth="2">뚜레쥬르 착한빵</a></li>
+								<li><a MENU_CODE="010600" depth="2">뉴스 &amp; 공지사항</a></li>
+							</ul>
+						</li>
+						<li class="gnb_bread">
+							<a class="depth1" MENU_CODE="030000" depth="1">새로워진 뚜레쥬르</a>
+							<ul class="depth2">
+								<li><a MENU_CODE="030100" depth="2">New 뚜레쥬르 살펴보기</a></li>
+								<li><a MENU_CODE="030200" depth="2">건강한 데일리 베이커리</a></li>
+
+							</ul>
+						</li>
+						<li class="gnb_product">
+							<a class="depth1" MENU_CODE="020000" depth="1">제품 안내</a>
+							<ul class="depth2">
+								<li><a MENU_CODE="020100" depth="2">신제품</a></li>
+								<li><a MENU_CODE="020200" depth="2">빵</a></li>
+								<li><a MENU_CODE="020300" depth="2">케이크</a></li>
+								<li><a MENU_CODE="020400" depth="2">델리</a></li>
+								<li><a MENU_CODE="020900" depth="2">선물</a></li>
+								<li><a MENU_CODE="020600" depth="2">디저트&스낵</a></li>
+								<li><a MENU_CODE="020500" depth="2">음료</a></li>
+							</ul>
+						</li>
+						<li class="gnb_event">
+							<a class="depth1" MENU_CODE="040000" depth="1">이벤트&amp;멤버십</a>
+							<ul class="depth2">
+								<li><a MENU_CODE="040100" depth="2">진행중인 이벤트</a></li>
+								<li><a MENU_CODE="040200" depth="2">이벤트 당첨자</a></li>
+								<li><a MENU_CODE="040300" depth="2">CJ ONE 멤버십</a></li>
+								<li><a MENU_CODE="040400" depth="2">제휴 혜택</a></li>
+							</ul>
+						</li>
+						<li class="gnb_shop">
+							<a class="depth1" MENU_CODE="990000" depth="1">쇼핑몰&amp;케이크 배달신청</a>
+							<ul class="depth2">
+								<li><a MENU_CODE="990100" depth="2">예약/픽업서비스</a></li>
+								<li><a class="last" MENU_CODE="990200" depth="2">케이크 배달신청</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		
+
+========================================================================
+<!--하단-->
+	<!-- footer -->
+		<div id="footer">
+			<div class="family_site">
+				<div class="buttonWrap">
+					<div class="wrapList">
+						<ul>
+							<li>
+							<li>
+								<a href="#" target="_blank" title="CJ푸드빌 새창으로 열기" class="cj_foodville">CJ푸드빌</a>
+								<a href="#" target="_blank" title="빕스 새창으로 열기" class="vips">빕스</a>
+								<a href="#" target="_blank" title="더플레이스 새창으로 열기" class="the_place">더플레이스</a>
+								<a href="#" target="_blank" title="제일제면소 새창으로 열기" class="cheil">제일제면소</a>
+								<a href="#" target="_blank" title="엔그릴 새창으로 열기" class="ngrill">엔그릴</a>
+								<a href="#" target="_blank" title="CJ FOODWORLD 새창으로 열기" class="foodworld">CJ
+									FOODWORLD</a>
+								<a href="#" target="_blank" title="N SEOUL TOWER 새창으로 열기" class="ntower">N SEOUL
+									TOWER</a>
+							</li>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- //Family Site -->
+
+			<div class="footerWrap">
+				<ul>
+					<li>
+						<!-- Footer Menu -->
+						<ul class="fnb">
+							<li><a href="#" target="_blank" lass="company">
+									<img src="img/회사소개.png" alt="회사소개"></a></li>
+							<li><a href="#" target="_blank" class="recruit">
+									<img src="img/기사채용.png" alt="기사 채용안내"></a></li>
+							<li><a href="#" class="foundation" target="_blank">
+									<img src="img/이용약관.png" alt="이용약관"></a></li>
+							<li><a href="#" class="location" target="_blank">
+									<img src="img/위치기반서비스.png" alt="위치기반서비스 이용약관"></a></li>
+							<li><a href="#" class="clause">
+									<img src="img/창업안내.png" alt="창업안내"></a></li>
+							<li><a href="#" class="privacy" target="_blank">
+									<img src="img/개인정보동의.png" alt="개인정보처리방침"></a></li>
+							<li><a href="#" class="email">
+									<img src="img/이메일.png" alt="이메일무단수집거부"></a></li>
+							<li><a href="#" class="ethic" target="_blank">
+									<img src="img/윤리신고센터.png" alt="윤리신고센터"></a></li>
+							<li><a href="#" class="legal">
+									<img src="img/법적고기.png" alt="법적고지"></a></li>
+							<li><a href="#" class="sitemap2">
+									<img src="img/사이트맵.png" alt="사이트맵"></a></li>
+						</ul>
+						<!-- //Footer Menu -->
+					</li>
+					<li>
+						<div class="info">
+							<span class="business-name">
+								<img src="img/상호명.png" alt="상호명:CJ푸드빌(주)"></span>
+							<address>
+								<img src="img/주소.png"
+									alt="주소:(우)04555 서울시 중구 마른내로34(초동 106-9번지)KT&G을지로타워 3, 9-11층 CJ푸드빌㈜">
+							</address>
+							<span class="cs-center">
+								<img src="img/고객센터.png" alt="고객센터:1577-0700"></span>
+							<span class="certificate">
+								<img src="img/통신판매업종신고증.png" alt="통신판매업종신고증 제 2011-서울중구-0771호">
+								<a href="#" target="_blank">
+									<img src="img/사업자정보확인.png" alt="사업자정보확인"></a>
+							</span>
+							<span class="hosting"><img src="img/호스팅제공자.png"
+									alt="호스팅제공자 : CJ올리브네트웍스(주)" /></span>
+							<span class="business-num"><img src="img/사업자등록번호.png"
+									alt="사업자등록번호:312-81-42519"></span>
+							<span class="ceo"><img src="img/대표이사.png" alt="대표이사:김찬호"></span>
+							<span class="manager"><img src="img/개인정보보호.png" alt="개인정보보호책임자:오창호"></span>
+							<span class="email"><a href="#">
+									<img src="img/대표이메일.png" alt="대표 이메일:help_master@cj.net"></a></span>
+						</div>
+						<p class="copyright">COPYRIGHT 2022&copy;CJ Foodville ALL RIGHT RESERVED.</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="js/common.js"></script>

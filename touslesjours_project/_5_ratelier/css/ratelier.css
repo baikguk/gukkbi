@@ -1,0 +1,375 @@
+@charset "utf-8";
+
+/* reset */
+*{ margin: 0; padding: 0; } 
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, tbody, tfoot, thead, tr, th, td { margin: 0; padding: 0; }
+h1, h2, h3, h4, h5, h6 { font-weight: 700; font-size: inherit; }
+a { color: inherit; text-decoration: inherit;}
+img { vertical-align: middle; }
+a img { border: none; }
+li { list-style: none; }
+address, em, i { font-style: normal; }
+
+
+
+/* 웹폰트 깨짐 수정 */
+h2, p, b, dl, a {
+  transform: rotate(0.04deg);
+}
+
+/* ratelier */
+body {
+  font-family: 'EliceDigitalBaeum-Bd';
+}
+
+/* #wrap {
+  width: 100%;
+  position: relative;
+  min-width: 1000px;
+} */
+
+.container {
+  padding: 230px 0 50px 0;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(241, 226, 194);
+}
+
+.page_tops {
+  position: relative;
+  top: 147px;
+  left: 0;
+  width: 1000px;
+  z-index: 0;
+  margin: 0 auto;
+  font-family: '미원Miwon';
+}
+
+.path {
+  position: absolute;
+  top: 34px;
+  right: 0;
+  padding: 14px 0 10px 0;
+  text-align: right;
+  z-index: 1;
+}
+
+.path li {
+  display: inline-block;
+}
+
+.path a {
+  font-family: 'EliceDigitalBaeum-Bd';
+  display: inline-block;
+  padding-left: 17px;
+  height: 14px;
+  color: #666;
+  background: url(https://www.tlj.co.kr:7008/static/images/common/arrow_path.png) 7px 3px no-repeat;
+}
+
+.page_title {
+  position: relative;
+  padding: 39px 0 0 17px;
+  max-width: 230px;
+  text-align: left;
+  z-index: 10;
+}
+
+.page_title span {
+  width: 100%;
+  height: 25px;
+  font-size: 19px;
+  text-indent: -999em;
+  color: #2f6d56;
+}
+
+.page_title:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 39px;
+  left: 3px;
+  width: 4px;
+  height: 19px;
+  background-color: #2f6d56;
+}
+
+.container .tit_ratelier {
+  background-position: 0px -12  0px;
+}
+
+.container .page_title span {
+  font-size: 25px;
+  color: #0d4633;
+}
+
+.content {
+  position: relative;
+  width: 1000px;
+}
+
+.latelier_info {
+  overflow: hidden;
+  width: 850px;
+  padding: 58px 74px 85px;
+  border: 1px solid #bab1a4; /* 테두리라인 */
+  font-size: 18px;
+  color: #333;
+  line-height: 25px;
+  letter-spacing: -0.6px;
+}
+
+.latelier_logo {
+  width: 100%;
+  /* 로고 밑 언더바 */
+  border-bottom: 1px solid #bab1a4;
+  padding-bottom: 20px;
+  margin-bottom: 22px;
+}
+
+.container section{
+  max-width: 1720px;
+  margin: auto;
+  overflow: hidden;
+  padding: 40px 0px;
+}
+
+.container section div {
+	width: 50%;
+	float:left;
+	height:280px;
+}
+
+.container section div .p_bundle{
+  width: auto;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+.container .txt {
+  /* 그림과 맞춰서 텍스트 정렬하기 위해 사용 */
+	display: flex;
+  justify-content: center;
+  line-height: 160%;
+}
+
+.container img {
+  vertical-align: middle;
+}
+
+.container .image img {
+  width: 100%;
+}
+
+.container .p_bundle p {
+  display: block;
+}
+
+.container p.sub_title b{
+font-size: 32px;
+}
+
+/* animation */
+.container .p_bundle.motion p{	
+transform: translate3d(0,0,0) skewY(0deg);
+animation-name: bounceInUp;
+  animation-duration: 1.3s;
+}
+
+.latelier_wrap .map_info {
+  overflow: hidden;
+  border: 1px solid #c9c2ba;
+  margin-top: 22px;
+}
+
+.rate_info {
+  float: left;
+  width: 210px;
+  height: 250px;
+  padding: 25px 20px 20px 20px;
+}
+
+.shop_module {
+  padding-bottom: 70px;
+}
+
+.rate_info .tit {
+  font-size: 20px;
+  color: #000;
+}
+
+.container .rate_info dl {
+  display: block;
+}
+
+.container .rate_info dt {
+  font-weight: bold;
+  color: #2e2e2e;
+  margin-top: 15px;
+  font-size: 18px;
+}
+
+.container .rate_info dd {
+  color: #555;
+  line-height: 18px;
+  font-size: 15px;
+}
+
+.rate_map {
+  position: relative;
+  overflow: hidden;
+  background: url(https://ssl.pstatic.net/static/maps/mantle/1x/pattern_1.png) 0px 0px repeat transparent;
+  width: 748px;
+  height: 295px;
+}
+
+@keyframes bounceInUp {
+  from, 60%, 75%, 90%,
+  to {
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  from {
+    opacity: 0;
+    transform: translate3d(0, 2000px, 0) scaleY(5);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translate3d(0, -20px, 0) scaleY(0.9);
+  }
+
+  75% {
+    transform: translate3d(0, 10px, 0) scaleY(0.95);
+  }
+
+  90% {
+    transform: translate3d(0, -5px, 0) scaleY(0.985);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+
+/* resize */
+@media screen and (max-width:1150px){
+  .latelier_info {
+      width: calc(98% - 148px);
+      margin: auto;
+      padding: 58px 74px 85px;
+  }
+  
+  .latelier_wrap{
+      width: calc(98% + 2px);
+      margin: auto;
+  }
+  
+  /* 지도 반응형 */
+  .rate_map {
+      width: 100%;
+  }
+  
+  .rate_map iframe{
+      width:100%; 
+  }
+}
+
+@media screen and (max-width:1020px){
+  .container {
+      display: block;
+      width: 100%;
+  }
+}
+
+@media screen and (max-width:1000px){
+  .page_tops {
+      width: 98%;
+  }
+  .container section {
+      padding: 20px 0px;
+      height: auto;
+  }
+  .container section div.image{
+      height: 100%;
+  }
+  .container section {    
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+  }
+  .container section div {
+      height: 100%;
+  }    
+  .txt {
+      font-size: 16px;
+  }
+
+  .footerWrap > ul {
+    width: 100%;
+  }
+}
+  
+@media screen and (max-width:930px){
+  .latelier_info {
+      width: calc(98% - 60px);
+      margin: auto;
+      padding: 30px;
+  }
+  .path{
+      display:none;
+  }
+  p.sub_title b {
+      font-size: 30px;
+  }
+  .txt {
+      font-size: 18px;
+  }
+}
+
+@media screen and (max-width:830px){
+  p.sub_title b {
+      font-size: 1.5em;
+  }
+  .txt {
+      font-size: 0.9em;
+  }
+}
+
+@media screen and (max-width:710px){
+  .container section {
+      display: flex;
+      flex-direction: column;
+  }
+  .latelier_logo img{
+      width: 100%;
+  }
+  p.sub_title b {
+      font-size: 1.7em;
+  }
+  .container section .image {
+      order: 1;
+  }
+  .txt {  
+      padding: 20px 0px;
+      font-size: 1.1em;
+      text-align: center;
+      order: 2; 
+  }
+  .container section div {
+      width: 100%;
+      height: unset;
+  }
+}
+
+@media screen and (max-width:460px){    
+  p.sub_title b {
+      font-size: 1.5em;
+  }
+  .txt {  
+      font-size: 0.8em;
+  }
+}

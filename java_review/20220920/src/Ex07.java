@@ -1,26 +1,26 @@
 
 public class Ex07 {
-	
+
 	// class scope
 	// 멤버변수
 	final int number1;
-	
+
 	static float fNumber1;
-	
+
 	static boolean b1;
-	
+
 	static char ch;
-	
+
 	static String str1;
-	
+
 	public static void main(String[] args) {
-		
+
 		System.out.println("number1(멤버변수)  : " + number1);
 		System.out.println("fNumber1(멤버변수) : " + fNumber1);
 		System.out.println("b1(멤버변수) : " + b1);
 		System.out.println("ch(멤버변수) : " + ch);
 		System.out.println("str1(멤버변수) : " + str1);
-		
+
 		// main method scope - local scope
 		
 		/*
@@ -41,34 +41,35 @@ public class Ex07 {
       지역변수는 사용하기 전에 반드시 초기화해야 함
 		                             ㄴ 자동으로 초기화가 지원되지 않음		                             
 		*/
-		
+
 		int number2 = 222;
 		// The local variable number2 may not have been initialized
 		System.out.println("number2 : " + number2);
-		
-		
+
+
 		int score = 0;
 		float fNumber2 = 0.0F;
-		
+
 		// char type 은 주로 공백문자로 초기화함
 		char ch2 = '\u0000';
 		char ch3 = ' ';
-		
+
 		// char type 에 빈문자라는 것은 없음
 		// char ch4 = '';
-		
+
 		// String type 은 주로 빈문자열로 초기화함
 		// null 값을 할당한다는 것은
 		// str2 에 연결된 값이 아무것도 없다는 의미
 		String str2 = null;
-		
+
 		// 빈문자열을 할당한다는 것은
 		// 빈문자열이라는 data 와 변수 str3가 연결된다는 의미
 		String str3 = "";
-		
-		
-		
+
+
+
 	}
+
   
 }
 
